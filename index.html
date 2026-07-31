@@ -70,6 +70,12 @@
   .hero-caps-tail { font-size:14px; color:rgba(245,240,232,.55); font-style:italic; width:100%; margin-top:6px; }
   .hero-sub { font-size:clamp(15.5px,2.4vw,18px); color:rgba(245,240,232,.8); max-width:620px; margin:0 auto 30px; line-height:1.8; }
   .hero-sub strong { color:var(--gold); }
+  .hero-counter { display:inline-flex; align-items:center; gap:9px; flex-wrap:wrap; justify-content:center; background:rgba(200,169,110,.12); border:1px solid rgba(200,169,110,.4); border-radius:999px; padding:8px 18px; margin:4px auto 10px; font-size:14.5px; color:var(--gold-light); font-weight:600; }
+  .hero-counter strong { color:#fff; }
+  .live-dot { width:9px; height:9px; border-radius:50%; background:#5DBD5D; animation:livePulse 1.6s infinite; flex-shrink:0; }
+  @keyframes livePulse { 0%{box-shadow:0 0 0 0 rgba(93,189,93,.55)} 70%{box-shadow:0 0 0 9px rgba(93,189,93,0)} 100%{box-shadow:0 0 0 0 rgba(93,189,93,0)} }
+  .hero-progress { width:min(300px,78%); height:7px; border-radius:99px; background:rgba(245,240,232,.15); margin:0 auto 24px; overflow:hidden; }
+  .hero-progress > span { display:block; height:100%; background:linear-gradient(90deg,var(--gold-dark),var(--gold)); border-radius:99px; }
   .btn-primary { display:inline-block; position:relative; background:linear-gradient(180deg,#EACE8F 0%,#C8A96E 52%,#B4914F 100%); color:#2C3020 !important; font-weight:800; font-size:17px; letter-spacing:.3px; line-height:1.25; padding:19px 42px; text-decoration:none; border:none; border-radius:7px; cursor:pointer; text-shadow:0 1px 0 rgba(255,255,255,.4); box-shadow:0 5px 0 var(--gold-dark), 0 11px 22px rgba(44,48,32,.32), inset 0 1px 0 rgba(255,255,255,.45); -webkit-font-smoothing:antialiased; -moz-osx-font-smoothing:grayscale; text-rendering:optimizeLegibility; transition:transform .12s ease, box-shadow .12s ease, background .3s ease; }
   .btn-primary:hover { background:linear-gradient(180deg,#F2DCA2 0%,#D4B87C 52%,#C29B58 100%); transform:translateY(-2px); box-shadow:0 7px 0 var(--gold-dark), 0 16px 30px rgba(44,48,32,.4), inset 0 1px 0 rgba(255,255,255,.5); }
   .btn-primary:active { transform:translateY(3px); box-shadow:0 2px 0 var(--gold-dark), 0 5px 12px rgba(44,48,32,.3), inset 0 1px 0 rgba(255,255,255,.4); }
@@ -403,6 +409,7 @@
   <div class="container">
     <span class="hero-stamp">Môi Giới Bất Động Sản Du Kích 5.0</span>
     <h1>Từ Môi Giới Truyền Thống Đến <em>Môi Giới BĐS AI 5.0</em></h1>
+    <p style="font-size:clamp(16px,2.6vw,20px);color:var(--gold-light);font-weight:600;max-width:660px;margin:14px auto 4px;line-height:1.6;">07 vũ khí AI thực chiến — học xong ứng dụng ngay để <strong style="color:#fff;">X3 năng suất</strong> và <strong style="color:#fff;">tiết kiệm 2–3 giờ mỗi ngày</strong>.</p>
 
     <div class="hero-caps">
       <span class="hero-cap">Poster & ảnh bán nhà</span>
@@ -412,17 +419,19 @@
       <span class="hero-cap">Kế hoạch bán hàng</span>
       <span class="hero-cap">Trợ lý AI riêng</span>
       <span class="hero-cap">Video Avatar biết nói</span>
-      <span class="hero-caps-tail">…mỗi ngày mở khóa 1 vũ khí — làm ra ngay 1 sản phẩm bán hàng dùng được trong ngày.</span>
+      <span class="hero-caps-tail">…mỗi ngày mở khóa 1 vũ khí — làm ra ngay 1 sản phẩm dùng được.</span>
     </div>
 
-    <p class="hero-sub">
-      7 ngày — 7 vũ khí AI — 7 tài sản marketing cho môi giới bất động sản. Mỗi ngày chỉ <strong>30 phút</strong> (15' học + 15' làm), <strong>học xong là có ngay 1 sản phẩm đăng bán hoặc gửi khách trong chính ngày hôm đó</strong>.
-    </p>
-    <p class="hero-benefit">Không lý thuyết dài dòng · Không cần biết lập trình · Không cần mua phần mềm đắt tiền · Chỉ cần điện thoại hoặc máy tính cùng ChatGPT, Gemini, Canva, CapCut…</p>
-    <div class="hero-secret"><strong>Khác biệt:</strong> mỗi buổi có sẵn prompt viết trước + app miễn phí — bạn không học "cách dùng AI", bạn <em>làm ra sản phẩm thật</em> ngay tại chỗ. Đây là lý do ai cũng làm được.</div>
+    <p class="hero-sub">Mỗi ngày chỉ <strong>30 phút</strong> (15' học + 15' làm) — không cần biết công nghệ, không cần thuê ai.</p>
+
+    <div class="hero-counter reveal">
+      <span class="live-dot"></span>
+      <span>Đã có <strong>23/30</strong> học viên · Ưu đãi Tháng 8/2026</span>
+    </div>
+    <div class="hero-progress reveal"><span style="width:77%"></span></div>
+
     <a href="/dang-ky" class="btn-primary">🎁 Nhận 3 Ngày Bonus Miễn Phí (Làm Được Ngay) →</a>
-    <p class="hero-gift">Tặng ngay <strong>3 Ngày Bonus</strong> — content bán hàng hàng loạt, check quy hoạch, định giá nhanh theo phong cách Du Kích.</p>
-    <p class="hero-note">Miễn phí 100% · Không cần thẻ ngân hàng · Bonus đầu tiên vào hộp thư ngay sau khi đăng ký<br>Đã biết mình cần gì? <a href="/dang-ky" style="color:var(--gold-light);text-decoration:underline;">Vào luôn 7 Ngày — 7 Vũ Khí AI — 499.000đ →</a></p>
+    <p class="hero-note">Miễn phí 100% · Không cần thẻ · Bonus đầu tiên vào hộp thư ngay khi đăng ký<br>Đã biết mình cần gì? <a href="/dang-ky" style="color:var(--gold-light);text-decoration:underline;">Vào luôn 7 Ngày · 499.000đ →</a></p>
   </div>
 </section>
 
@@ -431,25 +440,27 @@
 </div>
 
 
-<!-- ══ 1B. VIDEO DEMO / GIỚI THIỆU (đầu trang) ══
-     VỊ TRÍ VIDEO SỐ 1 — video ngắn 60–90s: Tiến chào + demo nhanh "bộ vũ khí AI" chạy thật.
-     CÁCH BẬT: giữ 1 trong 2 khối bên dưới (YouTube HOẶC file mp4), xóa khối .media-slot.
-     • YouTube: thay ID_VIDEO trong src.
-       <div class="container"><div class="video-embed">
-         <iframe src="https://www.youtube.com/embed/ID_VIDEO?rel=0&modestbranding=1" title="Giới thiệu Bộ Vũ Khí AI" allowfullscreen loading="lazy"></iframe>
-       </div></div>
-     • File mp4: đặt vào images/video/demo-vu-khi.mp4
-       <div class="container"><div class="video-embed">
-         <video controls preload="metadata" poster="images/video/demo-poster.jpg"><source src="images/video/demo-vu-khi.mp4" type="video/mp4"></video>
-       </div></div>
--->
-<section style="background:var(--olive-dark);padding:0 20px 56px;">
+<!-- ══ 1B. USP — "AI CHƯA NẠP NGHỀ" (đưa lên ngay dưới hero) ══
+     Muốn chèn video giới thiệu ở đây sau: thêm <div class="video-embed"><iframe src="...youtube..."></iframe></div> phía trên khối so sánh. -->
+<section style="background:var(--olive-dark);padding:6px 20px 60px;">
   <div class="container">
-    <div class="media-slot dark as-video">
-      <span class="media-slot-icon">▶</span>
-      <div class="media-slot-title">VỊ TRÍ VIDEO 1 — Video giới thiệu / demo bộ vũ khí AI</div>
-      <p class="media-slot-desc">Video ngắn 60–90 giây: Tiến chào và cho xem nhanh một vũ khí AI chạy thật (ví dụ: ra lệnh bằng miệng → có bài đăng). Đặt file vào <code>images/video/demo-vu-khi.mp4</code> hoặc dán link YouTube. Xem hướng dẫn trong file <code>HUONG-DAN-CHEN-ANH-VIDEO.md</code>.</p>
+    <span class="section-label reveal" style="color:var(--gold);">Sự thật ít ai nói</span>
+    <h2 class="reveal" style="color:var(--white);">AI không dở. Nó chỉ <em>chưa được nạp nghề</em> bất động sản Việt Nam.</h2>
+    <div class="divider reveal"></div>
+    <p class="reveal" style="color:rgba(245,240,232,.85);text-align:center;max-width:660px;margin:0 auto 24px;line-height:1.8;">9 trong 10 môi giới thử AI rồi bỏ — không phải AI kém, mà vì họ ra lệnh cho một cái AI <strong style="color:var(--gold-light);">chưa biết nghề</strong>, rồi mong nó cho ra kết quả của người trong nghề.</p>
+    <div class="reveal" style="display:flex;gap:16px;flex-wrap:wrap;max-width:820px;margin:0 auto;">
+      <div style="flex:1;min-width:260px;background:rgba(139,32,32,.14);border:1px solid rgba(255,120,120,.3);border-radius:10px;padding:22px 24px;">
+        <div style="font-size:12px;letter-spacing:1.5px;text-transform:uppercase;color:#FF9090;font-weight:800;margin-bottom:10px;">🤖 AI thông thường</div>
+        <p style="color:rgba(245,240,232,.82);font-size:15px;line-height:1.7;margin:0 0 12px;">Trả lời như sách dịch. Không hiểu "hẻm xe hơi", "sổ hồng riêng", "chủ cần tiền gấp". Bài viết chung chung, phải sửa lại nhiều.</p>
+        <div style="color:#FF9090;font-weight:700;font-size:14.5px;">→ Dùng vài lần rồi bỏ</div>
+      </div>
+      <div style="flex:1;min-width:260px;background:rgba(200,169,110,.14);border:2px solid var(--gold);border-radius:10px;padding:22px 24px;">
+        <div style="font-size:12px;letter-spacing:1.5px;text-transform:uppercase;color:var(--gold-light);font-weight:800;margin-bottom:10px;">⚔ AI của Du Kích</div>
+        <p style="color:#fff;font-size:15px;line-height:1.7;margin:0 0 12px;">Đã nén sẵn tư duy đọc tài sản, đọc tâm lý khách Việt, cách chốt của nghề. Bạn chỉ cần <strong>nhập thông tin căn nhà</strong>.</p>
+        <div style="color:var(--gold-light);font-weight:700;font-size:14.5px;">→ Ra đúng chất môi giới, dùng được ngay</div>
+      </div>
     </div>
+    <p class="reveal" style="text-align:center;color:rgba(245,240,232,.72);font-size:14.5px;margin-top:20px;">Đây chính là <strong style="color:var(--gold-light);">"Bộ Não Nghề"</strong> đã nạp sẵn — lý do ai cũng làm được, kể cả người không rành công nghệ.</p>
   </div>
 </section>
 
@@ -467,9 +478,10 @@
       <li><span class="pain-check">✔</span> Thuê designer tốn vài triệu mỗi tháng, mà vẫn phải chờ.</li>
       <li><span class="pain-check">✔</span> Đăng tin mỗi ngày nhưng ít khách hỏi.</li>
       <li><span class="pain-check">✔</span> Quên chăm sóc khách cũ — đến lúc nhớ ra thì họ đã mua chỗ khác.</li>
-      <li><span class="pain-check">✔</span> Mất khách vì trả lời chậm.</li>
+      <li><span class="pain-check">✔</span> Khách nhắn lúc 11h đêm, hay lúc bạn đang chạy ngoài đường — chậm 15 phút là họ đã đi xem với bên khác.</li>
       <li><span class="pain-check">✔</span> Khách hỏi "căn này giá vậy có hợp lý không?" — bạn trả lời theo cảm giác, không có căn cứ.</li>
       <li><span class="pain-check">✔</span> Biết AI đang thay đổi ngành, nhưng chưa biết dùng.</li>
+      <li><span class="pain-check">✔</span> Nhìn môi giới trẻ ra bài liên tục, video ngập TikTok/Reels — còn mình vẫn loay hoay gõ từng dòng caption theo cách cũ.</li>
     </ul>
 
     <div class="pain-verdict reveal">
@@ -500,15 +512,7 @@
 
     <p class="reveal">Vậy nên câu hỏi đúng không phải <em>"làm sao cố gắng nhiều hơn?"</em> mà là: <strong>làm sao được trang bị đầy đủ, khi bạn chưa đủ ngân sách thuê cả một đội?</strong></p>
 
-    <!-- ══ VỊ TRÍ VIDEO SỐ 2 — video Tiến giải thích "vì sao môi giới luôn ở thế yếu / vì sao AI đổi cuộc chơi" (2–4 phút).
-         CÁCH BẬT: xóa .media-slot bên dưới, bỏ comment khối video này, thay ID_VIDEO:
-         <div class="video-embed"><iframe src="https://www.youtube.com/embed/ID_VIDEO?rel=0&modestbranding=1" title="Vì sao môi giới ở thế yếu" allowfullscreen loading="lazy"></iframe></div>
-    -->
-    <div class="media-slot reveal">
-      <span class="media-slot-icon">🎬</span>
-      <div class="media-slot-title">VỊ TRÍ VIDEO 2 — Tiến giải thích lý do cốt lõi</div>
-      <p class="media-slot-desc">Video 2–4 phút: vì sao môi giới giỏi vẫn đuối, và vì sao "được trang bị" mới là lời giải. Dán link YouTube hoặc đặt <code>images/video/ly-do-cot-loi.mp4</code>.</p>
-    </div>
+    <!-- (Có thể chèn video Tiến giải thích lý do cốt lõi ở đây sau khi quay xong) -->
   </div>
 </section>
 
@@ -529,7 +533,8 @@
       <div class="founder-body">
         <h3>Tiến Du Kích</h3>
         <span class="founder-role">Founder · Bất Động Sản Du Kích</span>
-        <p>Nhiều năm thực chiến môi giới và đầu tư BĐS, tôi từng làm việc của bốn người cùng lúc: viết bài, chỉnh ảnh, chăm khách, đi chốt. Khi bắt đầu để AI gánh phần việc tay, tôi lấy lại được thời gian cho đúng việc tạo ra hoa hồng. Hành trình 7 ngày này là toàn bộ những gì tôi đã đúc kết — đóng gói thành 7 vũ khí, mỗi ngày làm ra một sản phẩm dùng được ngay, để anh em môi giới tự trang bị mà không cần giỏi công nghệ. <em>(Bạn có thể sửa đoạn giới thiệu này theo đúng giọng của mình.)</em></p>
+        <p>Tôi không phải dân ngồi phòng máy lạnh. Tôi cũng từng lăn lộn ngoài đường dắt khách, từng thức đêm làm sản phẩm tới 1–2 giờ sáng. Nhiều năm thực chiến môi giới và đầu tư, tôi có thói quen ghi chú lại từng câu chuyện nghề, từng bài học rút ra sau mỗi thương vụ.</p>
+        <p>Nay tôi đóng gói toàn bộ thành bộ vũ khí này — cùng một người bạn AI có bộ não suy luận cực nhanh và trí nhớ siêu hạng. Tôi tin bạn cần bộ công cụ này để trở thành phiên bản "Super" của chính mình. Sớm hay muộn, cơn bão AI cũng sẽ tràn qua khu vực của bạn — <strong>biết sớm, bạn giành được lợi thế trước.</strong></p>
       </div>
     </div>
   </div>
@@ -747,14 +752,16 @@
 <!-- ══ 7. BOOTCAMP 3 NGÀY MIỄN PHÍ ══ -->
 <section class="bootcamp" id="bootcamp">
   <div class="container">
-    <span class="section-label reveal">Bắt đầu miễn phí</span>
-    <h2 class="reveal">Trước khi quyết định gì — nhận 3 ngày bonus, miễn phí</h2>
+    <span class="section-label reveal">Nhận miễn phí ngay</span>
+    <h2 class="reveal">Bộ 03 Siêu Vũ Khí — anh em môi giới nào cũng cần</h2>
     <div class="divider reveal"></div>
+
+    <p class="reveal" style="text-align:center;max-width:680px;margin:0 auto 20px;line-height:1.85;">Ngay khi điền email, bạn nhận liền: <strong>Check Quy Hoạch</strong> ngay trên app do nhà nước quản lý · <strong>Tool Định Giá tài sản trong 30 phút</strong> · và <strong>tạo hàng loạt nội dung chuẩn tâm lý bán hàng bằng AI</strong> chỉ với một cú rê chuột. Ba lợi thế siêu cấp mà môi giới nào cũng muốn nắm giữ ngay.</p>
 
     <div class="bc-banner reveal">
       <span class="bc-banner-label">Quà tặng</span>
-      <h3>BONUS 3 NGÀY DÀNH CHO ANH EM MÔI GIỚI<br><em>Tặng kèm, miễn phí 100%</em></h3>
-      <p>Gửi ngay khi đăng ký · Học xong dùng được ngay để hỗ trợ tư vấn khách hàng</p>
+      <h3>BỘ 03 SIÊU VŨ KHÍ CHO ANH EM MÔI GIỚI<br><em>Tặng kèm, miễn phí 100%</em></h3>
+      <p>Gửi ngay khi đăng ký · Dùng được ngay để hỗ trợ tư vấn và bán hàng</p>
     </div>
 
     <div class="day-card reveal">
@@ -929,23 +936,15 @@
 </section>
 
 
-<!-- ══ 8B. VIDEO GIẢI PHÁP / TỔNG KẾT HÀNH TRÌNH ══
-     VỊ TRÍ VIDEO SỐ 3 — Tiến tổng kết: sau 7 ngày bạn có gì trong tay + mời hành động (2–5 phút).
-     CÁCH BẬT: xóa .media-slot bên dưới, bỏ comment và thay ID_VIDEO:
-     <div class="video-embed"><iframe src="https://www.youtube.com/embed/ID_VIDEO?rel=0&modestbranding=1" title="Toàn cảnh Hành Trình 7 Ngày" allowfullscreen loading="lazy"></iframe></div>
+<!-- ══ 8B. (Dành chỗ cho video tổng kết hành trình — chèn khi quay xong)
+     Khi có video, mở lại section bên dưới và thay ID_VIDEO:
+     <section style="background:var(--cream-dark);"><div class="container">
+       <span class="section-label reveal">Xem toàn cảnh</span>
+       <h2 class="reveal">Nghe Tiến kể trọn hành trình trong vài phút</h2>
+       <div class="divider reveal"></div>
+       <div class="video-embed"><iframe src="https://www.youtube.com/embed/ID_VIDEO?rel=0&modestbranding=1" title="Toàn cảnh Hành Trình 7 Ngày" allowfullscreen loading="lazy"></iframe></div>
+     </div></section>
 -->
-<section style="background:var(--cream-dark);">
-  <div class="container">
-    <span class="section-label reveal">Xem toàn cảnh</span>
-    <h2 class="reveal">Nghe Tiến kể trọn hành trình trong vài phút</h2>
-    <div class="divider reveal"></div>
-    <div class="media-slot reveal">
-      <span class="media-slot-icon">🎬</span>
-      <div class="media-slot-title">VỊ TRÍ VIDEO 3 — Video giải pháp / tổng kết hành trình</div>
-      <p class="media-slot-desc">Video 2–5 phút: sau 7 ngày bạn sở hữu gì, và lời mời đi tiếp. Dán link YouTube hoặc đặt <code>images/video/toan-canh-hanh-trinh.mp4</code>.</p>
-    </div>
-  </div>
-</section>
 
 
 <!-- ══ 9. THÂN — TÂM — TRÍ ══ -->
@@ -980,29 +979,20 @@
 </section>
 
 
-<!-- ══ 9.5 XEM THỬ KẾT QUẢ — 4 VỊ TRÍ ẢNH CHỜ CHỤP (ảnh 2→5)
-     KHI CÓ ẢNH: xóa 4 khối .media-slot bên dưới, bỏ comment khối .proof-shots ở cuối, thay src + caption. ══ -->
-<section style="background:var(--white);">
-  <div class="container">
-    <span class="section-label reveal">Xem thử trước khi tin</span>
-    <h2 class="reveal">Đây là thứ vũ khí AI làm ra — không phải mô tả bằng lời</h2>
-    <div class="divider reveal"></div>
-    <div class="proof-shots reveal">
-      <div class="media-slot"><span class="media-slot-icon">📷</span><div class="media-slot-title">ẢNH 2 — Bài viết AI tạo ra</div><p class="media-slot-desc">Ảnh chụp màn hình một bài Facebook do vũ khí AI viết. <code>images/proof/bai-viet.jpg</code></p></div>
-      <div class="media-slot"><span class="media-slot-icon">📷</span><div class="media-slot-title">ẢNH 3 — Hình tài sản đã xử lý</div><p class="media-slot-desc">Bộ ảnh BĐS đã chỉnh/đồng bộ nhận diện bằng AI. <code>images/proof/hinh-anh.jpg</code></p></div>
-      <div class="media-slot"><span class="media-slot-icon">📷</span><div class="media-slot-title">ẢNH 4 — Landing tìm nguồn nhà</div><p class="media-slot-desc">Landing page tìm nguồn nhà học viên dựng. <code>images/proof/landing.jpg</code></p></div>
-      <div class="media-slot"><span class="media-slot-icon">📷</span><div class="media-slot-title">ẢNH 5 — Form chủ nhà gửi về</div><p class="media-slot-desc">Thông tin chủ nhà tự gửi qua form. <code>images/proof/form.jpg</code></p></div>
-    </div>
-    <!-- BẢN THẬT — bỏ comment khi đã có 4 ảnh, đồng thời xóa 4 .media-slot phía trên:
-    <div class="proof-shots reveal">
-      <figure><img src="images/proof/bai-viet.jpg" alt="Bài viết do vũ khí AI tạo ra" loading="lazy"><figcaption>Bài viết ra trong 5 phút, đúng giọng môi giới</figcaption></figure>
-      <figure><img src="images/proof/hinh-anh.jpg" alt="Hình ảnh tài sản đã xử lý bằng AI" loading="lazy"><figcaption>Bộ ảnh tài sản đã đồng bộ nhận diện</figcaption></figure>
-      <figure><img src="images/proof/landing.jpg" alt="Landing page tìm nguồn nhà do học viên dựng" loading="lazy"><figcaption>Landing page tìm nguồn nhà, dựng trong 15 phút</figcaption></figure>
-      <figure><img src="images/proof/form.jpg" alt="Thông tin chủ nhà gửi về qua form tự động" loading="lazy"><figcaption>Chủ nhà tự gửi thông tin về, không cần gọi từng người</figcaption></figure>
-    </div>
-    -->
-  </div>
-</section>
+<!-- ══ 9.5 (Dành chỗ "Xem thử kết quả" — chèn khi có ảnh chụp sản phẩm thật do AI làm ra)
+     Khi có 4 ảnh, đặt vào images/proof/ và mở lại section bên dưới:
+     <section style="background:var(--white);"><div class="container">
+       <span class="section-label reveal">Xem thử trước khi tin</span>
+       <h2 class="reveal">Đây là thứ vũ khí AI làm ra — không phải mô tả bằng lời</h2>
+       <div class="divider reveal"></div>
+       <div class="proof-shots reveal">
+         <figure><img src="images/proof/bai-viet.jpg" alt="Bài viết do vũ khí AI tạo ra" loading="lazy"><figcaption>Bài viết ra trong 5 phút, đúng giọng môi giới</figcaption></figure>
+         <figure><img src="images/proof/hinh-anh.jpg" alt="Hình ảnh tài sản đã xử lý bằng AI" loading="lazy"><figcaption>Bộ ảnh tài sản đã đồng bộ nhận diện</figcaption></figure>
+         <figure><img src="images/proof/landing.jpg" alt="Landing page tìm nguồn nhà do học viên dựng" loading="lazy"><figcaption>Landing page tìm nguồn nhà, dựng trong 15 phút</figcaption></figure>
+         <figure><img src="images/proof/form.jpg" alt="Thông tin chủ nhà gửi về qua form tự động" loading="lazy"><figcaption>Chủ nhà tự gửi thông tin về, không cần gọi từng người</figcaption></figure>
+       </div>
+     </div></section>
+-->
 
 
 <!-- ══ 10. GALLERY ══ -->
