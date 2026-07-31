@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Thanh toán — Hành Trình Môi Giới BĐS Du Kích 5.0</title>
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Be+Vietnam+Pro:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --olive:#4A5240; --olive-dark:#2C3020; --gold:#C8A96E; --gold-dark:#8A6D2F; --gold-light:#E8C98A;
+    --cream:#F5F0E8; --ink:#1A1A14; --text-muted:#585848;
+    --border:rgba(74,82,64,.18); --green:#3d6b4f; --red:#8B2020;
+  }
+  * { box-sizing:border-box; margin:0; padding:0; }
+  body { font-family:'Be Vietnam Pro',sans-serif; background:var(--cream); color:var(--ink); line-height:1.6; padding:36px 16px 48px; }
+  .container { max-width:520px; margin:0 auto; background:#fff; padding:30px 26px; border-radius:10px; border:1px solid var(--border); box-shadow:0 8px 32px rgba(44,48,32,.08); }
+  .brand { font-family:'Playfair Display',serif; color:var(--gold-dark); font-size:12.5px; letter-spacing:1.2px; text-transform:uppercase; margin-bottom:12px; text-align:center; font-weight:700; }
+  h1 { font-family:'Playfair Display',serif; font-size:22px; margin-bottom:4px; color:var(--olive-dark); }
+  .lead { color:var(--text-muted); margin-bottom:22px; font-size:14px; }
+  .summary { background:var(--cream); border:1px solid var(--border); padding:18px 20px; border-radius:8px; margin-bottom:20px; }
+  .summary-row { display:flex; justify-content:space-between; gap:12px; padding:5px 0; font-size:14px; }
+  .summary-row.bump-row { color:var(--olive-dark); font-weight:600; }
+  .summary-total { font-size:23px; font-weight:800; color:var(--olive-dark); padding-top:12px; border-top:1px solid var(--border); margin-top:8px; font-family:'Playfair Display',serif; }
+  .qr-section { text-align:center; padding:16px 0 8px; }
+  .qr-section img { max-width:250px; width:100%; border:4px solid var(--border); border-radius:8px; background:#fff; }
+  .qr-label { font-size:12px; color:var(--text-muted); margin-top:8px; }
+  .info-box { background:var(--cream); border:1px solid var(--border); padding:12px 16px; border-radius:8px; margin-bottom:16px; }
+  .info-row { display:flex; justify-content:space-between; align-items:center; gap:10px; padding:7px 0; font-size:14px; border-bottom:1px solid var(--border); }
+  .info-row:last-child { border-bottom:none; }
+  .info-row > span { color:var(--text-muted); flex-shrink:0; }
+  .info-row strong { font-family:monospace; font-size:15px; color:var(--olive-dark); text-align:right; }
+  .copy-btn { background:transparent; border:1px solid var(--gold-dark); color:var(--gold-dark); font-size:12px; padding:3px 10px; border-radius:4px; cursor:pointer; font-family:inherit; margin-left:8px; }
+  .copy-btn:hover { background:rgba(200,169,110,.12); }
+  .ck-row { display:flex; align-items:center; }
+  .warn { background:rgba(200,169,110,.14); border-left:3px solid var(--gold); padding:12px 14px; font-size:13px; color:var(--text-muted); line-height:1.7; margin-bottom:16px; }
+  .warn strong { color:var(--olive-dark); }
+  .status { padding:14px; text-align:center; border-radius:8px; font-weight:600; font-size:15px; }
+  .status.pending { background:rgba(139,32,32,.07); color:var(--red); }
+  .status.paid { background:rgba(61,107,79,.12); color:var(--green); }
+  .pulse { display:inline-block; width:10px; height:10px; border-radius:50%; background:currentColor; margin-right:8px; vertical-align:middle; animation:pulse 1.5s ease-in-out infinite; }
+  @keyframes pulse { 0%,100%{opacity:1;} 50%{opacity:.3;} }
+  .timer { text-align:center; font-size:13px; color:var(--text-muted); margin-top:8px; }
+  .note { font-size:12px; color:var(--text-muted); margin-top:14px; text-align:center; line-height:1.7; }
+  .note a { color:var(--olive-dark); }
+</style>
+</head>
+<body>
+<div class="container">
+  <div class="brand">⚔ Môi Giới Bất Động Sản Du Kích 5.0</div>
+  <h1>Hoàn tất thanh toán</h1>
+  <p class="lead">Chuyển khoản đúng số tiền và đúng nội dung bên dưới — hệ thống xác nhận tự động, thường trong dưới 1 phút.</p>
+
+  <div class="summary">
+    <div class="summary-row"><span>7 Ngày · 7 Vũ Khí AI — Du Kích 5.0</span><span>499.000đ</span></div>
+    <div class="summary-row bump-row" id="coachRow" style="display:none;"><span>+ Kèm riêng 1–1 cùng Tiến (30 ngày)</span><span>688.000đ</span></div>
+    <div class="summary-row summary-total"><span>Tổng cộng</span><span id="total">499.000đ</span></div>
+  </div>
+
+  <div class="qr-section">
+    <img id="qrImg" alt="Mã QR thanh toán MB Bank">
+    <p class="qr-label">Quét bằng app ngân hàng bất kỳ — số tiền và nội dung đã điền sẵn</p>
+  </div>
+
+  <div class="info-box">
+    <div class="info-row"><span>Ngân hàng</span><strong>MB Bank</strong></div>
+    <div class="info-row"><span>Số tài khoản</span><strong>9239999923</strong></div>
+    <div class="info-row"><span>Chủ tài khoản</span><strong>LA VINH TIEN</strong></div>
+    <div class="info-row"><span>Số tiền</span><strong id="amount">499.000đ</strong></div>
+    <div class="info-row">
+      <span>Nội dung CK</span>
+      <div class="ck-row">
+        <strong id="ckContent">—</strong>
+        <button class="copy-btn" onclick="copyContent()">Sao chép</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="warn">
+    <strong>Quan trọng:</strong> phải ghi đúng nội dung chuyển khoản ở trên. Đây là cách hệ thống nhận ra đơn của bạn để mở quyền truy cập tự động. Nếu ghi sai, việc xác nhận sẽ phải làm tay và mất thêm thời gian.
+  </div>
+
+  <div class="status pending" id="statusBox">
+    <span class="pulse"></span><span id="statusText">Đang chờ giao dịch...</span>
+  </div>
+  <p class="timer" id="timerText"></p>
+
+  <p class="note">Đã chuyển nhưng trang không tự chuyển sau 2 phút? Nhắn Zalo <a href="https://zalo.me/0938139789" target="_blank">0938 139 789</a> kèm ảnh biên lai — Tiến xác nhận tay ngay.</p>
+</div>
+
+<script>
+  // ⚠️ Dán GAS_URL sau khi deploy Code.gs (giống hệt trong dang-ky.html)
+  const GAS_URL = 'https://script.google.com/macros/s/AKfycbxfsjsuBQZMrLvKiJdF3C3Wx7rEWx4y4SUmCIUv6sERRhUSl9Ow9W65k9SbxWfRAcT1/exec';
+
+  const order = JSON.parse(sessionStorage.getItem('order') || '{}');
+  if (!order.orderId) { window.location.href = '/dang-ky'; }
+
+  document.getElementById('ckContent').textContent = order.ckContent || '—';
+  if (order.coach) { document.getElementById('coachRow').style.display = 'flex'; }
+
+  function formatVnd(n){ return Number(n).toLocaleString('en-US').replace(/,/g,'.'); }
+
+  const amount = Number(order.totalAmount || 499000);
+  document.getElementById('qrImg').src =
+    'https://qr.sepay.vn/img?acc=9239999923&bank=MB&amount=' + amount +
+    '&des=' + encodeURIComponent(order.ckContent || '');
+  document.getElementById('amount').textContent = formatVnd(amount) + 'đ';
+  document.getElementById('total').textContent = formatVnd(amount) + 'đ';
+
+  function copyContent(){
+    const txt = order.ckContent || '';
+    if (navigator.clipboard) {
+      navigator.clipboard.writeText(txt).then(()=>alert('Đã sao chép: ' + txt));
+    } else {
+      const el = document.createElement('textarea');
+      el.value = txt; document.body.appendChild(el); el.select();
+      document.execCommand('copy'); document.body.removeChild(el);
+      alert('Đã sao chép: ' + txt);
+    }
+  }
+
+  let seconds = 0;
+  setInterval(()=>{
+    seconds++;
+    const m = Math.floor(seconds/60).toString().padStart(2,'0');
+    const s = (seconds%60).toString().padStart(2,'0');
+    document.getElementById('timerText').textContent = 'Đang chờ ' + m + ':' + s;
+  }, 1000);
+
+  async function pollStatus(){
+    try {
+      const res = await fetch(GAS_URL + '?action=getStatus&orderId=' + encodeURIComponent(order.orderId));
+      const json = await res.json();
+      if (json.status === 'PAID') {
+        const box = document.getElementById('statusBox');
+        box.className = 'status paid';
+        document.getElementById('statusText').textContent = '✓ Đã nhận thanh toán, đang chuyển trang...';
+        document.getElementById('timerText').textContent = '';
+        setTimeout(()=>{ window.location.href = '/xac-nhan'; }, 700);
+        return;
+      }
+    } catch (err) { console.error('poll failed', err); }
+    setTimeout(pollStatus, 2000);
+  }
+  pollStatus();
+</script>
+</body>
+</html>

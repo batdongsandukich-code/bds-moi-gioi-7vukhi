@@ -1,0 +1,10 @@
+{
+  "cleanUrls": true,
+  "trailingSlash": false,
+  "rewrites": [
+    { "source": "/dang-ky", "destination": "/dang-ky.html" },
+    { "source": "/cam-on", "destination": "/cam-on.html" },
+    { "source": "/thanh-toan", "destination": "/thanh-toan.html" },
+    { "source": "/xac-nhan", "destination": "/xac-nhan.html" }
+  ]
+}

@@ -1,0 +1,1236 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>7 Ngày · 7 Vũ Khí AI cho Môi Giới BĐS — Mỗi Ngày 30 Phút, Làm Ra Ngay 1 Sản Phẩm Bán Hàng</title>
+<meta name="description" content="7 ngày — 7 vũ khí AI — 7 tài sản marketing cho môi giới bất động sản. Mỗi ngày 30 phút (15' học + 15' làm), học xong tạo ra ngay 1 sản phẩm bán hàng dùng được trong ngày. Tặng 3 ngày bonus.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Môi Giới Bất Động Sản Du Kích 5.0 — Kiến Tạo Bộ Vũ Khí AI">
+<meta property="og:description" content="7 ngày — 7 vũ khí AI — 7 tài sản marketing. Mỗi ngày 30 phút, học xong làm ra ngay 1 sản phẩm bán hàng. Tặng 3 ngày bonus.">
+<meta property="og:locale" content="vi_VN">
+<!-- ẢNH CHIA SẺ MẠNG XÃ HỘI (Facebook/Zalo) — đặt file vào images/og-image.jpg (1200×630px), rồi bỏ comment 2 dòng dưới:
+<meta property="og:image" content="images/og-image.jpg">
+<meta name="twitter:card" content="summary_large_image">
+-->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=Be+Vietnam+Pro:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+<style>
+  /* Đồng bộ bảng màu thương hiệu Bất Động Sản Du Kích + accent gold thương hiệu */
+  :root {
+    --olive: #4A5240;
+    --olive-dark: #2C3020;
+    --gold: #C8A96E;
+    --gold-dark: #8A6D2F;
+    --gold-light: #E8C98A;
+    --cream: #F5F0E8;
+    --cream-dark: #EDE6D6;
+    --ink: #1A1A14;
+    --red-war: #8B2020;
+    --white: #FAFAF7;
+    --text-body: #2A2A1E;
+    --text-muted: #585848;
+  }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  html { scroll-behavior:smooth; }
+  body { font-family:'Be Vietnam Pro',sans-serif; background:var(--cream); color:var(--ink); overflow-x:hidden; font-size:17px; }
+  h1,h2,h3 { font-family:'Playfair Display',serif; }
+  h2 { font-size:clamp(26px,5vw,42px); line-height:1.2; color:var(--olive-dark); margin-bottom:24px; }
+  p { line-height:1.9; color:var(--text-body); margin-bottom:20px; font-size:17px; }
+  @media(max-width:600px){ body{font-size:16px;} p{font-size:16px;} }
+
+  .reading-bar { position:fixed; top:0; left:0; z-index:1001; height:3px; background:var(--gold-dark); width:0%; transition:width .1s linear; }
+
+  .sticky-bar { position:fixed; top:0; left:0; right:0; z-index:1000; background:rgba(44,48,32,.97); backdrop-filter:blur(8px); padding:10px 20px; display:flex; align-items:center; justify-content:space-between; transform:translateY(-100%); transition:transform .35s ease; border-bottom:1px solid rgba(200,169,110,.25); }
+  .sticky-bar.visible { transform:translateY(0); }
+  .sticky-bar-title { font-size:13px; font-weight:700; color:var(--white); letter-spacing:1px; }
+  .sticky-bar-title span { color:var(--gold); }
+  .sticky-note { font-size:12px; color:rgba(245,240,232,.7); white-space:nowrap; }
+  .sticky-note strong { color:var(--gold); }
+  .sticky-cta-btn { background:linear-gradient(180deg,#EACE8F 0%,#C8A96E 55%,#B4914F 100%); color:#2C3020 !important; font-size:12px; font-weight:800; padding:9px 20px; text-decoration:none; letter-spacing:.4px; white-space:nowrap; border-radius:5px; text-shadow:0 1px 0 rgba(255,255,255,.35); box-shadow:0 3px 0 var(--gold-dark), 0 5px 12px rgba(0,0,0,.28); -webkit-font-smoothing:antialiased; transition:transform .12s ease, box-shadow .12s ease, background .3s; flex-shrink:0; }
+  .sticky-cta-btn:hover { background:linear-gradient(180deg,#F2DCA2 0%,#D4B87C 55%,#C29B58 100%); transform:translateY(-1px); box-shadow:0 4px 0 var(--gold-dark), 0 7px 16px rgba(0,0,0,.34); }
+  .sticky-cta-btn:active { transform:translateY(2px); box-shadow:0 1px 0 var(--gold-dark), 0 3px 8px rgba(0,0,0,.28); }
+  @media(max-width:520px){ .sticky-note{display:none;} .sticky-bar-title{font-size:11px;} }
+
+  section { padding:64px 20px; }
+  .container { max-width:800px; margin:0 auto; }
+  .section-label { font-size:12px; letter-spacing:4px; text-transform:uppercase; color:var(--gold); margin-bottom:16px; display:block; font-weight:700; }
+  .divider { width:56px; height:3px; background:var(--gold); margin:0 0 40px; }
+
+  /* HERO */
+  .hero { background:var(--olive-dark); padding:64px 20px 56px; text-align:center; position:relative; overflow:hidden; }
+  .hero::before { content:''; position:absolute; inset:0; background:repeating-linear-gradient(45deg,transparent,transparent 40px,rgba(200,169,110,.035) 40px,rgba(200,169,110,.035) 41px); }
+  .hero > .container { position:relative; }
+  .hero-stamp { display:inline-block; border:1px solid var(--gold); color:var(--gold); font-size:11.5px; letter-spacing:3px; text-transform:uppercase; padding:7px 20px; margin-bottom:24px; font-weight:700; }
+  .hero h1 { font-size:clamp(28px,5.6vw,52px); line-height:1.24; color:var(--white); margin-bottom:22px; }
+  .hero h1 em { color:var(--gold); font-style:italic; }
+  .hero-caps { display:flex; flex-wrap:wrap; justify-content:center; gap:8px; max-width:640px; margin:0 auto 24px; }
+  .hero-cap { background:rgba(200,169,110,.1); border:1px solid rgba(200,169,110,.28); color:rgba(245,240,232,.9); font-size:13.5px; font-weight:600; padding:7px 14px; }
+  .hero-caps-tail { font-size:14px; color:rgba(245,240,232,.55); font-style:italic; width:100%; margin-top:6px; }
+  .hero-sub { font-size:clamp(15.5px,2.4vw,18px); color:rgba(245,240,232,.8); max-width:620px; margin:0 auto 30px; line-height:1.8; }
+  .hero-sub strong { color:var(--gold); }
+  .btn-primary { display:inline-block; position:relative; background:linear-gradient(180deg,#EACE8F 0%,#C8A96E 52%,#B4914F 100%); color:#2C3020 !important; font-weight:800; font-size:17px; letter-spacing:.3px; line-height:1.25; padding:19px 42px; text-decoration:none; border:none; border-radius:7px; cursor:pointer; text-shadow:0 1px 0 rgba(255,255,255,.4); box-shadow:0 5px 0 var(--gold-dark), 0 11px 22px rgba(44,48,32,.32), inset 0 1px 0 rgba(255,255,255,.45); -webkit-font-smoothing:antialiased; -moz-osx-font-smoothing:grayscale; text-rendering:optimizeLegibility; transition:transform .12s ease, box-shadow .12s ease, background .3s ease; }
+  .btn-primary:hover { background:linear-gradient(180deg,#F2DCA2 0%,#D4B87C 52%,#C29B58 100%); transform:translateY(-2px); box-shadow:0 7px 0 var(--gold-dark), 0 16px 30px rgba(44,48,32,.4), inset 0 1px 0 rgba(255,255,255,.5); }
+  .btn-primary:active { transform:translateY(3px); box-shadow:0 2px 0 var(--gold-dark), 0 5px 12px rgba(44,48,32,.3), inset 0 1px 0 rgba(255,255,255,.4); }
+  @media(max-width:600px){ .btn-primary{display:block;padding:18px 22px;font-size:16px;} }
+  .hero-benefit { font-size:clamp(15px,2.2vw,16.5px); color:rgba(245,240,232,.88); max-width:600px; margin:0 auto 14px; line-height:1.75; }
+  .hero-benefit strong { color:var(--gold-light); }
+  .hero-secret { background:rgba(200,169,110,.12); border:1px solid rgba(200,169,110,.3); padding:14px 18px; max-width:620px; margin:18px auto 26px; font-size:14.5px; color:rgba(245,240,232,.9); line-height:1.7; }
+  .hero-secret strong { color:var(--gold-light); }
+  .hero-gift { font-size:14.5px; color:var(--gold-light); margin-top:16px; line-height:1.7; }
+  .hero-gift strong { color:var(--white); }
+  .hero-note { margin-top:10px; font-size:12.5px; color:rgba(245,240,232,.4); }
+
+  .trust-bar { background:linear-gradient(90deg,#1A1E0F 0%,#2C3418 50%,#1A1E0F 100%); border-top:1px solid rgba(200,169,110,.28); border-bottom:1px solid rgba(200,169,110,.28); padding:14px 20px; text-align:center; }
+  .trust-bar p { color:var(--gold); font-weight:700; font-size:13px; letter-spacing:1.2px; margin:0; text-transform:uppercase; }
+
+  /* PAIN CHECKLIST */
+  .pain { background:var(--white); }
+  .pain-list { list-style:none; margin:32px 0 28px; }
+  .pain-list li { padding:15px 0; border-bottom:1px solid var(--cream-dark); display:flex; gap:14px; align-items:flex-start; font-size:16px; line-height:1.65; color:var(--text-body); }
+  .pain-check { color:var(--red-war); font-weight:900; flex-shrink:0; font-size:16px; }
+  .pain-verdict { background:var(--olive-dark); padding:26px 28px; border-left:4px solid var(--gold); }
+  .pain-verdict p { color:rgba(245,240,232,.9); margin:0; font-size:16.5px; }
+  .pain-verdict strong { color:var(--gold); }
+
+  /* ROOT CAUSE */
+  .callout-box { background:var(--olive-dark); padding:2px; margin:36px 0; border:2px solid var(--gold); }
+  .callout-inner { padding:36px 32px; text-align:center; }
+  .callout-label { font-size:11.5px; letter-spacing:4px; text-transform:uppercase; color:rgba(245,240,232,.5); font-weight:700; display:block; margin-bottom:12px; }
+  .callout-box h3 { font-size:clamp(22px,4.5vw,34px); color:var(--gold); margin-bottom:14px; line-height:1.22; }
+  .callout-box p { font-size:clamp(14px,2vw,16.5px); color:rgba(245,240,232,.8); max-width:560px; margin:0 auto; line-height:1.8; }
+
+  /* NOT-THIS / IS-THIS */
+  .notthis { background:var(--cream-dark); }
+  .notthis-row { display:flex; flex-wrap:wrap; gap:10px; justify-content:center; margin:8px 0 28px; }
+  .notthis-chip { background:var(--white); border:1px solid rgba(139,32,32,.22); color:var(--text-muted); font-size:14px; padding:9px 16px; text-decoration:line-through; }
+  .assistant-card { background:var(--olive-dark); border:1px solid rgba(200,169,110,.3); padding:34px 30px; text-align:center; }
+  .assistant-tag { display:inline-block; font-family:'JetBrains Mono',monospace; background:rgba(200,169,110,.14); border:1px solid rgba(200,169,110,.35); color:var(--gold); font-size:11.5px; letter-spacing:2px; padding:6px 14px; margin-bottom:18px; }
+  .assistant-card h3 { font-size:clamp(24px,5vw,36px); color:var(--white); margin-bottom:14px; line-height:1.2; }
+  .assistant-card h3 em { color:var(--gold); font-style:italic; }
+  .assistant-card p { color:rgba(245,240,232,.82); margin:0; font-size:16px; max-width:520px; margin-left:auto; margin-right:auto; }
+
+  /* MODULE GRID */
+  .modules { background:var(--white); }
+  .mod-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(228px,1fr)); gap:16px; margin-top:36px; }
+  .mod-card { background:var(--cream); border-top:3px solid var(--gold); padding:24px 22px; position:relative; transition:transform .2s,box-shadow .2s; }
+  .mod-card:hover { transform:translateY(-3px); box-shadow:0 10px 26px rgba(0,0,0,.09); }
+  .mod-icon { font-size:26px; display:block; margin-bottom:10px; }
+  .mod-card h4 { font-family:'JetBrains Mono',monospace; font-size:14.5px; font-weight:700; color:var(--gold-dark); letter-spacing:.5px; margin-bottom:8px; }
+  .mod-card p { font-size:14.5px; color:var(--text-muted); margin:0; line-height:1.7; }
+  .mod-time { display:block; margin-top:10px; font-size:12px; font-weight:700; letter-spacing:.8px; text-transform:uppercase; color:var(--gold); border-top:1px solid rgba(200,169,110,.25); padding-top:9px; }
+
+  /* HIRE REFRAME */
+  .hire { background:var(--olive-dark); }
+  .hire h2 { color:var(--white); }
+  .hire-lead { color:rgba(245,240,232,.75); }
+  .hire-card { background:#141A12; border:1px solid rgba(200,169,110,.25); padding:0; margin-top:32px; overflow:hidden; }
+  .hire-head { background:rgba(200,169,110,.1); padding:16px 24px; border-bottom:1px solid rgba(200,169,110,.2); font-family:'JetBrains Mono',monospace; font-size:12px; letter-spacing:2px; text-transform:uppercase; color:var(--gold); }
+  .hire-row { display:flex; justify-content:space-between; gap:16px; padding:14px 24px; border-bottom:1px solid rgba(245,240,232,.07); font-size:15px; }
+  .hire-row:last-child { border-bottom:none; }
+  .hire-row span { color:rgba(245,240,232,.55); }
+  .hire-row strong { color:var(--white); text-align:right; }
+  .hire-row strong em { color:var(--gold); font-style:normal; }
+  .hire-disclaimer { background:rgba(200,169,110,.09); border-left:3px solid var(--gold); padding:16px 20px; margin-top:22px; }
+  .hire-disclaimer p { font-size:14px; color:rgba(245,240,232,.75); margin:0; line-height:1.7; }
+
+  /* BOOTCAMP */
+  .bootcamp { background:var(--cream-dark); }
+  .bc-banner { background:var(--olive-dark); border:2px solid var(--gold); padding:30px 28px; text-align:center; margin-bottom:36px; }
+  .bc-banner-label { font-size:11.5px; letter-spacing:4px; text-transform:uppercase; color:var(--gold); font-weight:800; display:block; margin-bottom:10px; }
+  .bc-banner h3 { font-size:clamp(22px,4.6vw,34px); color:var(--white); line-height:1.2; margin-bottom:12px; }
+  .bc-banner h3 em { color:var(--gold-light); font-style:italic; }
+  .bc-banner p { color:rgba(245,240,232,.7); font-size:14.5px; margin:0; }
+  .day-card { background:var(--white); border-left:4px solid var(--gold); padding:24px 26px; margin-bottom:16px; }
+  .day-num { font-family:'JetBrains Mono',monospace; font-size:11.5px; letter-spacing:2.5px; text-transform:uppercase; color:var(--gold-dark); font-weight:700; display:block; margin-bottom:7px; }
+  .day-card h4 { font-family:'Playfair Display',serif; font-size:clamp(18px,2.6vw,22px); color:var(--olive-dark); margin-bottom:14px; }
+  .day-out { list-style:none; margin:0; padding:0; }
+  .day-out li { font-size:14.5px; color:var(--text-muted); padding:6px 0 6px 22px; position:relative; line-height:1.6; }
+  .day-out li::before { content:'✓'; position:absolute; left:0; color:var(--gold-dark); font-weight:900; }
+  .day-time { display:inline-block; margin-top:12px; font-size:12.5px; font-weight:700; color:var(--gold); background:rgba(200,169,110,.12); padding:5px 12px; }
+  .bc-result { background:var(--olive-dark); border:1px solid rgba(200,169,110,.3); padding:30px 28px; text-align:center; margin-top:8px; }
+  .bc-result-label { font-size:11.5px; letter-spacing:3px; text-transform:uppercase; color:var(--gold); font-weight:800; display:block; margin-bottom:16px; }
+  .bc-tally { display:flex; flex-wrap:wrap; justify-content:center; gap:14px; margin-bottom:18px; }
+  .bc-tally-item { min-width:96px; }
+  .bc-tally-num { font-family:'Playfair Display',serif; font-size:34px; color:var(--gold); display:block; line-height:1; font-weight:900; }
+  .bc-tally-label { font-size:12.5px; color:rgba(245,240,232,.6); display:block; margin-top:5px; }
+  .bc-result p { color:rgba(245,240,232,.85); margin:0; font-size:15.5px; font-style:italic; }
+
+  /* ROADMAP */
+  .roadmap { background:var(--white); }
+  .rm-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(150px,1fr)); gap:10px; margin-top:32px; }
+  .rm-item { background:var(--cream); border-left:3px solid var(--gold); padding:14px 14px; }
+  .rm-day { font-family:'JetBrains Mono',monospace; font-size:11px; letter-spacing:1.5px; color:var(--gold); font-weight:700; display:block; margin-bottom:5px; }
+  .rm-name { font-size:14px; font-weight:700; color:var(--olive-dark); line-height:1.35; display:block; }
+  .rm-sub { font-size:11.5px; color:var(--text-muted); line-height:1.45; display:block; margin-top:5px; }
+  .rm-item.rm-final .rm-sub { color:rgba(245,240,232,.6); }
+  .rm-item.rm-final { background:var(--olive-dark); border-left-color:var(--gold); }
+  .rm-item.rm-final .rm-day { color:var(--gold); }
+  .rm-item.rm-final .rm-name { color:var(--white); }
+  .rm-note { background:rgba(200,169,110,.1); border-left:3px solid var(--gold); padding:16px 20px; margin-top:24px; }
+  .rm-note p { font-size:14.5px; color:var(--text-muted); margin:0; line-height:1.75; }
+
+  /* BỘ NÃO NGHỀ — differentiator */
+  .brain { background:var(--olive-dark); position:relative; overflow:hidden; }
+  .brain::before { content:''; position:absolute; inset:0; background:repeating-linear-gradient(45deg,transparent,transparent 40px,rgba(200,169,110,.03) 40px,rgba(200,169,110,.03) 41px); }
+  .brain > .container { position:relative; }
+  .brain h2 { color:var(--white); }
+  .brain > .container > p { color:rgba(245,240,232,.82); }
+  .brain-problem { background:rgba(139,32,32,.16); border-left:4px solid var(--red-war); padding:20px 22px; margin:28px 0; }
+  .brain-problem p { color:rgba(245,240,232,.88); margin:0; font-size:15.5px; }
+  .brain-problem strong { color:#FF9090; }
+  .brain-steps { display:grid; grid-template-columns:repeat(3,1fr); gap:14px; margin:30px 0 22px; }
+  @media(max-width:640px){ .brain-steps{grid-template-columns:1fr;} }
+  .brain-step { background:rgba(200,169,110,.08); border:1px solid rgba(200,169,110,.28); padding:22px 20px; }
+  .brain-step-no { font-family:'Playfair Display',serif; font-size:32px; color:var(--gold); display:block; line-height:1; font-weight:900; margin-bottom:10px; }
+  .brain-step-name { font-size:13px; letter-spacing:2px; text-transform:uppercase; color:var(--gold); font-weight:800; display:block; margin-bottom:8px; }
+  .brain-step p { font-size:14px; color:rgba(245,240,232,.78); margin:0; line-height:1.7; }
+  .brain-compare { width:100%; border-collapse:collapse; margin:26px 0 20px; }
+  .brain-compare th { text-align:left; font-size:11.5px; letter-spacing:1.5px; text-transform:uppercase; color:rgba(245,240,232,.5); font-weight:700; padding:10px 12px; border-bottom:1px solid rgba(200,169,110,.25); }
+  .brain-compare th:last-child { color:var(--gold); }
+  .brain-compare td { font-size:14px; color:rgba(245,240,232,.75); padding:12px; border-bottom:1px solid rgba(245,240,232,.08); vertical-align:top; line-height:1.6; }
+  .brain-compare td:first-child { color:rgba(245,240,232,.5); width:26%; }
+  .brain-compare td:last-child { color:var(--white); font-weight:600; }
+  .brain-compare td:first-child { width:20%; }
+  .brain-math { background:rgba(200,169,110,.1); border-left:3px solid var(--gold); padding:14px 18px; font-size:15px; color:rgba(245,240,232,.88) !important; margin:0 0 22px !important; line-height:1.75; }
+  .brain-math strong { color:var(--gold-light); }
+  @media(max-width:600px){ .brain-compare td,.brain-compare th{font-size:12.5px;padding:9px 8px;} }
+  .brain-close { background:rgba(200,169,110,.1); border:2px solid var(--gold); padding:24px 26px; margin-top:8px; }
+  .brain-close p { margin:0; font-size:16px; color:var(--white); line-height:1.75; }
+  .brain-close strong { color:var(--gold-light); }
+
+  /* SO SÁNH BOOTCAMP vs HÀNH TRÌNH */
+  .compare-box { display:flex; align-items:stretch; gap:14px; margin:30px 0 18px; }
+  @media(max-width:640px){ .compare-box{flex-direction:column;} .compare-arrow{transform:rotate(90deg);} }
+  .compare-col { flex:1; background:var(--cream); border:1px solid var(--cream-dark); border-top:3px solid rgba(74,82,64,.25); padding:20px 18px; }
+  .compare-col.compare-main { background:var(--olive-dark); border-top-color:var(--gold); border-color:rgba(200,169,110,.3); }
+  .compare-tag { font-size:10.5px; letter-spacing:2px; text-transform:uppercase; font-weight:800; color:var(--text-muted); display:block; margin-bottom:10px; }
+  .compare-main .compare-tag { color:var(--gold); }
+  .compare-col p { font-size:15px; font-weight:600; color:var(--olive-dark); margin:0 0 12px; line-height:1.6; }
+  .compare-main p { color:var(--white); }
+  .compare-out { font-size:13.5px; color:var(--text-muted); display:block; border-top:1px solid rgba(74,82,64,.14); padding-top:10px; }
+  .compare-main .compare-out { color:var(--gold-light); border-top-color:rgba(200,169,110,.25); }
+  .compare-arrow { display:flex; align-items:center; font-size:22px; color:var(--gold); flex-shrink:0; }
+
+  /* CƠ CHẾ AI CŨNG LÀM ĐƯỢC */
+  .proof-box { background:var(--cream); border:2px solid var(--gold); padding:28px 26px; margin-top:32px; }
+  .proof-label { font-size:11px; letter-spacing:3.5px; text-transform:uppercase; color:var(--gold); font-weight:800; display:block; margin-bottom:10px; }
+  .proof-title { font-family:'Playfair Display',serif; font-size:clamp(19px,3.4vw,26px); color:var(--olive-dark); margin-bottom:8px; line-height:1.28; }
+  .proof-lead { font-size:15px; color:var(--text-muted); margin-bottom:20px; }
+  .proof-list { list-style:none; margin:0; padding:0; counter-reset:pf; }
+  .proof-list li { position:relative; padding:12px 0 12px 42px; border-bottom:1px solid rgba(74,82,64,.12); font-size:14.5px; color:var(--text-body); line-height:1.7; counter-increment:pf; }
+  .proof-list li:last-child { border-bottom:none; }
+  .proof-list li::before { content:counter(pf); position:absolute; left:0; top:12px; width:26px; height:26px; background:var(--olive-dark); color:var(--gold); border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:12.5px; font-weight:800; }
+  .proof-list strong { color:var(--olive-dark); }
+
+  /* NHỊP HỌC */
+  .batch-box { background:var(--olive-dark); border:2px solid var(--gold); padding:28px 26px; margin-top:32px; }
+  .batch-label { font-size:11px; letter-spacing:3.5px; text-transform:uppercase; color:var(--gold); font-weight:800; display:block; margin-bottom:10px; }
+  .batch-title { font-family:'Playfair Display',serif; font-size:clamp(19px,3.4vw,26px); color:var(--white); margin-bottom:20px; line-height:1.25; }
+  .batch-grid { display:grid; grid-template-columns:1fr 1fr; gap:14px; margin-bottom:18px; }
+  @media(max-width:560px){ .batch-grid{grid-template-columns:1fr;} }
+  .batch-item { background:rgba(200,169,110,.08); border:1px solid rgba(200,169,110,.25); padding:16px 18px; }
+  .batch-no { font-family:'JetBrains Mono',monospace; font-size:11px; letter-spacing:2px; color:var(--gold); font-weight:700; display:block; margin-bottom:6px; }
+  .batch-range { font-size:16.5px; font-weight:800; color:var(--white); display:block; margin-bottom:4px; }
+  .batch-sub { font-size:12.5px; color:rgba(245,240,232,.55); display:block; line-height:1.5; }
+  .batch-live { background:rgba(200,169,110,.14); border-left:3px solid var(--gold); padding:13px 16px; font-size:14.5px; color:var(--gold-light) !important; margin:0 0 16px !important; line-height:1.7; }
+  .batch-live strong { color:var(--white); }
+  .batch-note { font-size:13.5px; color:rgba(245,240,232,.62) !important; margin:0 !important; line-height:1.75; }
+  .batch-note strong { color:var(--gold); }
+
+  /* THAN TAM TRI */
+  .philosophy { background:var(--olive-dark); text-align:center; }
+  .philosophy h2 { color:var(--white); }
+  .philosophy > .container > p.lead { color:rgba(245,240,232,.7); max-width:560px; margin:0 auto 36px; }
+  .ttt-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:16px; }
+  @media(max-width:640px){ .ttt-grid{grid-template-columns:1fr;} }
+  .ttt-card { border:1px solid rgba(200,169,110,.28); padding:30px 20px; background:rgba(200,169,110,.05); }
+  .ttt-key { font-family:'Playfair Display',serif; font-size:30px; color:var(--gold); display:block; margin-bottom:10px; letter-spacing:3px; font-weight:900; }
+  .ttt-promise { font-size:17px; font-weight:700; color:var(--white); display:block; margin-bottom:10px; }
+  .ttt-desc { font-size:13.5px; color:rgba(245,240,232,.6); line-height:1.7; margin:0; }
+  .philosophy-quote { border-top:1px solid rgba(200,169,110,.25); margin-top:38px; padding-top:30px; }
+  .philosophy-quote p { font-family:'Playfair Display',serif; font-style:italic; font-size:clamp(16px,2.4vw,20px); color:var(--gold-light); line-height:1.7; max-width:640px; margin:0 auto; }
+
+  /* GALLERY */
+  .gallery-section { background:var(--ink); padding:64px 20px; }
+  .gallery-section h2 { color:var(--white); }
+  .gallery-section .section-label { color:var(--gold); }
+  .gallery-lead { color:rgba(245,240,232,.62); }
+  .gallery-grid { display:grid; grid-template-columns:repeat(2,1fr); gap:12px; max-width:900px; margin:0 auto; }
+  .gallery-item { position:relative; overflow:hidden; background:var(--olive-dark); aspect-ratio:16/10; }
+  .gallery-item.wide { grid-column:span 2; aspect-ratio:21/9; }
+  .gallery-item img { width:100%; height:100%; object-fit:cover; transition:transform .5s ease; display:block; }
+  .gallery-item:hover img { transform:scale(1.04); }
+  .gallery-caption { position:absolute; bottom:0; left:0; right:0; background:linear-gradient(transparent,rgba(20,24,12,.93)); color:rgba(245,240,232,.92); font-size:13px; font-weight:600; padding:26px 14px 12px; }
+  @media(max-width:640px){ .gallery-grid{grid-template-columns:1fr;} .gallery-item.wide{grid-column:span 1;} }
+
+  /* PRICING */
+  .pricing { background:var(--cream-dark); }
+  .price-ladder { display:grid; gap:14px; margin-top:32px; }
+  .pl-card { background:var(--white); border:1px solid rgba(74,82,64,.16); padding:24px 26px; display:flex; flex-wrap:wrap; gap:14px; align-items:center; justify-content:space-between; }
+  .pl-card.pl-free { border-left:4px solid var(--gold); }
+  .pl-card.pl-main { border-left:4px solid rgba(74,82,64,.3); }
+  .pl-card.pl-deal { background:var(--olive-dark); border:2px solid var(--gold); }
+  .pl-info { flex:1; min-width:230px; }
+  .pl-name { font-weight:800; font-size:16.5px; color:var(--olive-dark); margin-bottom:5px; }
+  .pl-desc { font-size:13.5px; color:var(--text-muted); line-height:1.6; }
+  .pl-price { font-family:'Playfair Display',serif; font-size:26px; font-weight:900; color:var(--olive-dark); white-space:nowrap; }
+  .pl-card.pl-free .pl-price { color:var(--gold-dark); }
+  .pl-card.pl-deal .pl-name { color:var(--white); }
+  .pl-card.pl-deal .pl-desc { color:rgba(245,240,232,.68); }
+  .pl-card.pl-deal .pl-price { color:var(--gold); }
+  .pl-strike { display:block; font-size:14px; font-weight:400; color:var(--text-muted); text-decoration:line-through; font-family:'Be Vietnam Pro',sans-serif; }
+  .pl-card.pl-deal .pl-strike { color:rgba(245,240,232,.4); }
+  .price-logic { background:var(--white); border-left:3px solid var(--gold); padding:18px 22px; margin-top:22px; }
+  .price-logic p { font-size:14.5px; color:var(--text-muted); margin:0; line-height:1.8; }
+  .price-cta-wrap { text-align:center; margin-top:32px; }
+  .price-secure { font-size:12.5px; color:var(--text-muted); margin-top:14px; }
+
+  /* XEM THỬ KẾT QUẢ — screenshot sản phẩm AI */
+  .proof-shots { display:grid; grid-template-columns:repeat(2,1fr); gap:16px; margin-top:32px; }
+  @media(max-width:640px){ .proof-shots{grid-template-columns:1fr;} }
+  .proof-shots figure { margin:0; }
+  .proof-shots img { width:100%; border:1px solid var(--cream-dark); border-radius:6px; display:block; }
+  .proof-shots figcaption { font-size:13px; color:var(--text-muted); margin-top:8px; line-height:1.6; }
+
+  /* ══ MEDIA: VIDEO EMBED (responsive 16:9) ══ */
+  .video-embed { position:relative; width:100%; aspect-ratio:16/9; background:var(--olive-dark); border:1px solid var(--gold-dark); border-radius:8px; overflow:hidden; margin:30px 0; }
+  .video-embed iframe, .video-embed video { position:absolute; inset:0; width:100%; height:100%; border:0; display:block; object-fit:cover; }
+
+  /* ══ MEDIA: SLOT PLACEHOLDER (vị trí chờ chèn ảnh/video) ══ */
+  .media-slot { border:2px dashed var(--gold); background:rgba(74,82,64,.06); border-radius:8px; padding:44px 24px; text-align:center; margin:30px 0; }
+  .media-slot.as-video { aspect-ratio:16/9; display:flex; flex-direction:column; align-items:center; justify-content:center; }
+  .media-slot.dark { background:rgba(200,169,110,.07); border-color:var(--gold); }
+  .media-slot-icon { font-size:38px; display:block; margin-bottom:12px; opacity:.85; }
+  .media-slot-title { font-family:'Playfair Display',serif; font-size:clamp(17px,3vw,21px); color:var(--olive-dark); margin-bottom:8px; line-height:1.3; }
+  .media-slot.dark .media-slot-title { color:var(--gold-light); }
+  .media-slot-desc { font-size:13.5px; color:var(--text-muted); max-width:540px; margin:0 auto; line-height:1.7; }
+  .media-slot.dark .media-slot-desc { color:rgba(245,240,232,.75); }
+  .media-slot code { background:rgba(0,0,0,.07); padding:2px 7px; border-radius:4px; font-family:'JetBrains Mono',monospace; font-size:12px; color:var(--gold-dark); }
+  .media-slot.dark code { background:rgba(0,0,0,.35); color:var(--gold-light); }
+
+  /* ══ MEDIA: FOUNDER (chân dung + bio) ══ */
+  .founder-block { display:flex; gap:28px; align-items:center; background:var(--cream); border:1px solid var(--cream-dark); border-left:4px solid var(--gold); padding:28px; margin:34px 0; }
+  .founder-photo { flex-shrink:0; width:150px; height:190px; object-fit:cover; border-radius:6px; background:var(--olive-dark); display:block; }
+  .founder-photo-slot { flex-shrink:0; width:150px; height:190px; border:2px dashed var(--gold); border-radius:6px; background:rgba(74,82,64,.06); display:flex; flex-direction:column; align-items:center; justify-content:center; text-align:center; padding:10px; font-size:11.5px; color:var(--text-muted); line-height:1.5; }
+  .founder-photo-slot span { font-size:28px; margin-bottom:6px; opacity:.85; }
+  .founder-body h3 { font-size:clamp(20px,3.6vw,24px); color:var(--olive-dark); margin-bottom:4px; }
+  .founder-role { font-size:12px; letter-spacing:1.5px; text-transform:uppercase; color:var(--gold-dark); font-weight:700; margin-bottom:14px; display:block; }
+  .founder-body p { font-size:15px; margin-bottom:0; }
+  @media(max-width:600px){ .founder-block{flex-direction:column; text-align:center; padding:24px 20px;} .founder-photo,.founder-photo-slot{width:140px;height:178px;} }
+
+  /* TIMELINE 5 CHIẾN DỊCH */
+  .camp-list { display:grid; gap:14px; margin-top:34px; }
+  .camp { background:var(--cream); border:1px solid var(--cream-dark); border-left:4px solid var(--gold); padding:22px 24px; }
+  .camp-zero { background:rgba(200,169,110,.16); border-left-color:var(--gold-dark); }
+  .camp-final { background:var(--olive-dark); border-color:rgba(200,169,110,.3); }
+  .camp-head { display:flex; align-items:flex-start; gap:14px; margin-bottom:12px; }
+  .camp-icon { font-size:26px; flex-shrink:0; line-height:1.2; }
+  .camp-no { font-family:'JetBrains Mono',monospace; font-size:11px; letter-spacing:1.8px; text-transform:uppercase; color:var(--gold-dark); font-weight:700; display:block; margin-bottom:5px; }
+  .camp-final .camp-no { color:var(--gold); }
+  .camp-name { font-family:'Playfair Display',serif; font-size:clamp(17px,2.6vw,21px); color:var(--olive-dark); margin:0; line-height:1.25; }
+  .camp-final .camp-name { color:var(--white); }
+  .camp-desc { font-size:14.5px; color:var(--text-muted); margin:0; line-height:1.75; }
+  .camp-final .camp-desc { color:rgba(245,240,232,.8); }
+  .camp-days { list-style:none; margin:0; padding:0; }
+  .camp-days li { font-size:14px; color:var(--text-muted); padding:8px 0 8px 18px; position:relative; border-bottom:1px solid rgba(74,82,64,.1); line-height:1.6; }
+  .camp-days li:last-child { border-bottom:none; }
+  .camp-days li::before { content:'▸'; position:absolute; left:0; color:var(--gold); font-weight:900; }
+  .camp-days b { color:var(--olive-dark); font-weight:700; }
+  .camp-days em { color:var(--text-muted); font-style:normal; opacity:.75; font-size:13px; display:block; margin-top:2px; }
+  @media(max-width:600px){ .camp{padding:18px 18px;} .camp-icon{font-size:22px;} }
+
+  /* URGENCY BAR */
+  .urgency-bar { display:grid; gap:10px; max-width:640px; margin:0 auto 30px; }
+  .urgency-item { display:flex; align-items:flex-start; gap:12px; background:rgba(200,169,110,.18); border:1px solid rgba(138,109,47,.45); padding:13px 18px; font-size:14.5px; color:var(--text-body); line-height:1.6; text-align:left; }
+  .urgency-item strong { color:var(--gold-dark); }
+  .urgency-item.urgency-hot { background:rgba(139,32,32,.1); border-color:rgba(139,32,32,.4); }
+  .urgency-item.urgency-hot strong { color:var(--red-war); }
+  .urgency-icon { font-size:17px; flex-shrink:0; }
+
+  /* FAQ */
+  .faq-section { background:var(--white); }
+  .faq-section h2 { text-align:center; }
+  .faq-list { margin-top:36px; }
+  .faq-item { border-bottom:1px solid var(--cream-dark); }
+  .faq-q { width:100%; background:none; border:none; text-align:left; padding:20px 0; font-family:'Playfair Display',serif; font-size:16.5px; color:var(--olive-dark); font-weight:700; cursor:pointer; display:flex; justify-content:space-between; align-items:center; gap:16px; transition:color .2s; }
+  .faq-q:hover { color:var(--gold-dark); }
+  .faq-arrow { color:var(--gold-dark); font-size:18px; flex-shrink:0; transition:transform .3s; }
+  .faq-q.open .faq-arrow { transform:rotate(90deg); }
+  .faq-a { max-height:0; overflow:hidden; transition:max-height .4s ease,padding .3s ease; padding:0; }
+  .faq-item.open .faq-a { max-height:600px; padding:0 0 20px; }
+  .faq-a p { font-size:14.5px; color:var(--text-muted); line-height:1.85; margin:0; }
+
+  /* HONESTY */
+  .honesty-box { background:var(--white); border:1px dashed var(--gold); padding:20px 22px; margin-top:28px; }
+  .honesty-box p { margin:0; font-size:14.5px; color:var(--text-muted); }
+
+  /* FINAL CTA */
+  .final-cta { background:var(--olive-dark); text-align:center; padding:80px 20px; position:relative; overflow:hidden; }
+  .final-cta::before { content:''; position:absolute; inset:0; background:repeating-linear-gradient(-45deg,transparent,transparent 40px,rgba(200,169,110,.03) 40px,rgba(200,169,110,.03) 41px); }
+  .final-cta > .container { position:relative; }
+  .final-cta h2 { color:var(--white); max-width:640px; margin:0 auto 20px; }
+  .final-cta p.lead { color:rgba(245,240,232,.68); max-width:520px; margin:0 auto 32px; }
+  .final-quote-box { max-width:620px; margin:0 auto 34px; border:2px solid rgba(200,169,110,.35); padding:28px 30px; background:rgba(200,169,110,.06); }
+  .final-quote-text { font-family:'Playfair Display',serif; font-size:clamp(16px,2.3vw,20px); font-style:italic; color:var(--white); line-height:1.7; margin:0; }
+  .final-sig { margin-top:34px; }
+  .final-sig-line { width:70px; height:2px; background:var(--gold); opacity:.5; margin:0 auto 18px; }
+  .final-name { font-family:'Playfair Display',serif; font-size:clamp(22px,4vw,30px); font-style:italic; color:var(--white); margin:0; letter-spacing:1px; }
+  .final-rank { font-size:12px; letter-spacing:2px; text-transform:uppercase; color:rgba(245,240,232,.5); margin-top:8px; }
+
+  footer { background:var(--ink); padding:30px 20px; text-align:center; }
+  footer p { margin:0; color:rgba(255,255,255,.35); font-size:12.5px; line-height:1.8; }
+  footer p+p { margin-top:8px; }
+
+  .reveal { opacity:0; transform:translateY(24px); transition:opacity .6s ease,transform .6s ease; }
+  .reveal.visible { opacity:1; transform:translateY(0); }
+</style>
+</head>
+<body>
+
+<div class="reading-bar" id="readingBar"></div>
+
+<div class="sticky-bar" id="stickyBar">
+  <div class="sticky-bar-title">⚔ Môi Giới <span>Du Kích 5.0</span></div>
+  <div class="sticky-note">Tặng <strong>3 ngày bonus</strong> · hoặc vào luôn 7 ngày <strong>499k</strong></div>
+  <a href="/dang-ky" class="sticky-cta-btn">Nhận Bonus Miễn Phí →</a>
+</div>
+
+
+<!-- ══ 1. HERO ══ -->
+<section class="hero">
+  <div class="container">
+    <span class="hero-stamp">Môi Giới Bất Động Sản Du Kích 5.0</span>
+    <h1>Từ Môi Giới Truyền Thống Đến <em>Môi Giới BĐS AI 5.0</em></h1>
+
+    <div class="hero-caps">
+      <span class="hero-cap">Poster & ảnh bán nhà</span>
+      <span class="hero-cap">Video giới thiệu BĐS</span>
+      <span class="hero-cap">Video TikTok / Reels</span>
+      <span class="hero-cap">Quảng cáo Facebook</span>
+      <span class="hero-cap">Kế hoạch bán hàng</span>
+      <span class="hero-cap">Trợ lý AI riêng</span>
+      <span class="hero-cap">Video Avatar biết nói</span>
+      <span class="hero-caps-tail">…mỗi ngày mở khóa 1 vũ khí — làm ra ngay 1 sản phẩm bán hàng dùng được trong ngày.</span>
+    </div>
+
+    <p class="hero-sub">
+      7 ngày — 7 vũ khí AI — 7 tài sản marketing cho môi giới bất động sản. Mỗi ngày chỉ <strong>30 phút</strong> (15' học + 15' làm), <strong>học xong là có ngay 1 sản phẩm đăng bán hoặc gửi khách trong chính ngày hôm đó</strong>.
+    </p>
+    <p class="hero-benefit">Không lý thuyết dài dòng · Không cần biết lập trình · Không cần mua phần mềm đắt tiền · Chỉ cần điện thoại hoặc máy tính cùng ChatGPT, Gemini, Canva, CapCut…</p>
+    <div class="hero-secret"><strong>Khác biệt:</strong> mỗi buổi có sẵn prompt viết trước + app miễn phí — bạn không học "cách dùng AI", bạn <em>làm ra sản phẩm thật</em> ngay tại chỗ. Đây là lý do ai cũng làm được.</div>
+    <a href="/dang-ky" class="btn-primary">🎁 Nhận 3 Ngày Bonus Miễn Phí (Làm Được Ngay) →</a>
+    <p class="hero-gift">Tặng ngay <strong>3 Ngày Bonus</strong> — content bán hàng hàng loạt, check quy hoạch, định giá nhanh theo phong cách Du Kích.</p>
+    <p class="hero-note">Miễn phí 100% · Không cần thẻ ngân hàng · Bonus đầu tiên vào hộp thư ngay sau khi đăng ký<br>Đã biết mình cần gì? <a href="/dang-ky" style="color:var(--gold-light);text-decoration:underline;">Vào luôn 7 Ngày — 7 Vũ Khí AI — 499.000đ →</a></p>
+  </div>
+</section>
+
+<div class="trust-bar">
+  <p>⚡ 15 phút mở khóa + 15 phút thực hành mỗi ngày &nbsp;·&nbsp; ⬡ Học bằng việc thật của bạn &nbsp;·&nbsp; ⊕ AI được nạp nghề sẵn, bạn chỉ ra lệnh</p>
+</div>
+
+
+<!-- ══ 1B. VIDEO DEMO / GIỚI THIỆU (đầu trang) ══
+     VỊ TRÍ VIDEO SỐ 1 — video ngắn 60–90s: Tiến chào + demo nhanh "bộ vũ khí AI" chạy thật.
+     CÁCH BẬT: giữ 1 trong 2 khối bên dưới (YouTube HOẶC file mp4), xóa khối .media-slot.
+     • YouTube: thay ID_VIDEO trong src.
+       <div class="container"><div class="video-embed">
+         <iframe src="https://www.youtube.com/embed/ID_VIDEO?rel=0&modestbranding=1" title="Giới thiệu Bộ Vũ Khí AI" allowfullscreen loading="lazy"></iframe>
+       </div></div>
+     • File mp4: đặt vào images/video/demo-vu-khi.mp4
+       <div class="container"><div class="video-embed">
+         <video controls preload="metadata" poster="images/video/demo-poster.jpg"><source src="images/video/demo-vu-khi.mp4" type="video/mp4"></video>
+       </div></div>
+-->
+<section style="background:var(--olive-dark);padding:0 20px 56px;">
+  <div class="container">
+    <div class="media-slot dark as-video">
+      <span class="media-slot-icon">▶</span>
+      <div class="media-slot-title">VỊ TRÍ VIDEO 1 — Video giới thiệu / demo bộ vũ khí AI</div>
+      <p class="media-slot-desc">Video ngắn 60–90 giây: Tiến chào và cho xem nhanh một vũ khí AI chạy thật (ví dụ: ra lệnh bằng miệng → có bài đăng). Đặt file vào <code>images/video/demo-vu-khi.mp4</code> hoặc dán link YouTube. Xem hướng dẫn trong file <code>HUONG-DAN-CHEN-ANH-VIDEO.md</code>.</p>
+    </div>
+  </div>
+</section>
+
+
+<!-- ══ 2. PAIN CHECKLIST ══ -->
+<section class="pain">
+  <div class="container">
+    <span class="section-label reveal">Trước khi đi tiếp</span>
+    <h2 class="reveal">Bạn có đang gặp tình trạng này?</h2>
+    <div class="divider reveal"></div>
+
+    <ul class="pain-list reveal">
+      <li><span class="pain-check">✔</span> Viết một bài Facebook mất hơn 1 giờ — viết xong đọc lại vẫn thấy nhạt.</li>
+      <li><span class="pain-check">✔</span> Muốn làm video nhưng không biết bắt đầu từ đâu.</li>
+      <li><span class="pain-check">✔</span> Thuê designer tốn vài triệu mỗi tháng, mà vẫn phải chờ.</li>
+      <li><span class="pain-check">✔</span> Đăng tin mỗi ngày nhưng ít khách hỏi.</li>
+      <li><span class="pain-check">✔</span> Quên chăm sóc khách cũ — đến lúc nhớ ra thì họ đã mua chỗ khác.</li>
+      <li><span class="pain-check">✔</span> Mất khách vì trả lời chậm.</li>
+      <li><span class="pain-check">✔</span> Khách hỏi "căn này giá vậy có hợp lý không?" — bạn trả lời theo cảm giác, không có căn cứ.</li>
+      <li><span class="pain-check">✔</span> Biết AI đang thay đổi ngành, nhưng chưa biết dùng.</li>
+    </ul>
+
+    <div class="pain-verdict reveal">
+      <p>Nếu bạn tick từ <strong>3 dấu ✔ trở lên</strong> — vấn đề không phải bạn thiếu cố gắng. Bạn đang làm việc của 4 người cùng lúc: người viết, người thiết kế, người chăm khách, và người bán hàng. <strong>Bạn đang thiếu một bộ vũ khí.</strong></p>
+    </div>
+  </div>
+</section>
+
+
+<!-- ══ 3. ROOT CAUSE ══ -->
+<section style="background:var(--cream-dark);">
+  <div class="container">
+    <span class="section-label reveal">Lý do cốt lõi</span>
+    <h2 class="reveal">Vấn đề không nằm ở việc bạn chưa đủ giỏi</h2>
+    <div class="divider reveal"></div>
+
+    <p class="reveal">Một môi giới giỏi vẫn chỉ có 24 giờ. Trong 24 giờ đó, phần lớn thời gian bị đốt vào những việc <em>không phải bán hàng</em>: ngồi nghĩ caption, chỉnh ảnh, dựng video, gõ lại cùng một câu trả lời cho người thứ mười.</p>
+
+    <p class="reveal">Việc thật sự tạo ra hoa hồng — gặp khách, hiểu nhu cầu, dẫn đi xem, chốt — lại là việc bị dồn xuống cuối ngày, lúc bạn đã hết pin.</p>
+
+    <div class="callout-box reveal">
+      <div class="callout-inner">
+        <span class="callout-label">Điểm mấu chốt</span>
+        <h3>Khách hàng của bạn không mất đi. Họ chỉ chuyển sang người trả lời nhanh hơn bạn.</h3>
+        <p>Trong cùng một ngày, người được trang bị sẽ đăng nhiều hơn, phản hồi nhanh hơn, có nguồn nhà và nguồn khách đều hơn. Không phải vì họ giỏi hơn — mà vì họ không phải tự tay làm hết.</p>
+      </div>
+    </div>
+
+    <p class="reveal">Vậy nên câu hỏi đúng không phải <em>"làm sao cố gắng nhiều hơn?"</em> mà là: <strong>làm sao được trang bị đầy đủ, khi bạn chưa đủ ngân sách thuê cả một đội?</strong></p>
+
+    <!-- ══ VỊ TRÍ VIDEO SỐ 2 — video Tiến giải thích "vì sao môi giới luôn ở thế yếu / vì sao AI đổi cuộc chơi" (2–4 phút).
+         CÁCH BẬT: xóa .media-slot bên dưới, bỏ comment khối video này, thay ID_VIDEO:
+         <div class="video-embed"><iframe src="https://www.youtube.com/embed/ID_VIDEO?rel=0&modestbranding=1" title="Vì sao môi giới ở thế yếu" allowfullscreen loading="lazy"></iframe></div>
+    -->
+    <div class="media-slot reveal">
+      <span class="media-slot-icon">🎬</span>
+      <div class="media-slot-title">VỊ TRÍ VIDEO 2 — Tiến giải thích lý do cốt lõi</div>
+      <p class="media-slot-desc">Video 2–4 phút: vì sao môi giới giỏi vẫn đuối, và vì sao "được trang bị" mới là lời giải. Dán link YouTube hoặc đặt <code>images/video/ly-do-cot-loi.mp4</code>.</p>
+    </div>
+  </div>
+</section>
+
+
+<!-- ══ 3B. NGƯỜI HƯỚNG DẪN (founder) ══ -->
+<section style="background:var(--white);">
+  <div class="container">
+    <span class="section-label reveal">Người hướng dẫn</span>
+    <h2 class="reveal">Người đi trước, đã tự trang bị cho mình</h2>
+    <div class="divider reveal"></div>
+
+    <!-- VỊ TRÍ ẢNH SỐ 1 — chân dung Tiến (dọc, ~3:4). Lấy lại từ dự án cũ: tien-chien-hao.jpg
+         CÁCH BẬT: xóa <div class="founder-photo-slot">...</div>, thay bằng:
+         <img class="founder-photo" src="images/founder/tien-chan-dung.jpg" alt="Tiến Du Kích — Founder Bất Động Sản Du Kích"> -->
+    <div class="founder-block reveal">
+      <img class="founder-photo" src="images/founder/tien-chan-dung.jpg" alt="Tiến Du Kích — Founder Bất Động Sản Du Kích">
+
+      <div class="founder-body">
+        <h3>Tiến Du Kích</h3>
+        <span class="founder-role">Founder · Bất Động Sản Du Kích</span>
+        <p>Nhiều năm thực chiến môi giới và đầu tư BĐS, tôi từng làm việc của bốn người cùng lúc: viết bài, chỉnh ảnh, chăm khách, đi chốt. Khi bắt đầu để AI gánh phần việc tay, tôi lấy lại được thời gian cho đúng việc tạo ra hoa hồng. Hành trình 7 ngày này là toàn bộ những gì tôi đã đúc kết — đóng gói thành 7 vũ khí, mỗi ngày làm ra một sản phẩm dùng được ngay, để anh em môi giới tự trang bị mà không cần giỏi công nghệ. <em>(Bạn có thể sửa đoạn giới thiệu này theo đúng giọng của mình.)</em></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ══ 4. GIỚI THIỆU NHÂN VẬT ══ -->
+<section class="notthis">
+  <div class="container">
+    <span class="section-label reveal">Thứ bạn sắp xây</span>
+    <h2 class="reveal">Không phải một trang bị lẻ. Là một bộ vũ khí của riêng bạn.</h2>
+    <div class="divider reveal"></div>
+
+    <p class="reveal">Đây không phải khóa dạy bạn "cách dùng ChatGPT". Những thứ dưới đây chỉ là nguyên liệu — không phải đích đến:</p>
+
+    <div class="notthis-row reveal">
+      <span class="notthis-chip">ChatGPT</span>
+      <span class="notthis-chip">Canva</span>
+      <span class="notthis-chip">Gemini</span>
+      <span class="notthis-chip">Vài prompt copy trên mạng</span>
+    </div>
+
+    <div class="assistant-card reveal">
+      <span class="assistant-tag">BỘ VŨ KHÍ AI</span>
+      <h3>Bạn sẽ tự tay dựng <em>bộ vũ khí AI</em> — cấu hình theo đúng cách bạn bán hàng, trên đúng tài sản bạn đang bán</h3>
+      <p>Cùng một trang bị, mười môi giới dùng ra mười kết quả khác nhau. Khác biệt nằm ở chỗ bộ vũ khí đó có được cấu hình theo đúng thị trường bạn làm, đúng loại tài sản bạn bán, đúng cách bạn nói chuyện với khách — hay không.</p>
+    </div>
+  </div>
+</section>
+
+
+<!-- ══ 5. SAU 7 NGÀY BẠN SỞ HỮU ══ -->
+<section class="modules">
+  <div class="container">
+    <span class="section-label reveal">7 ngày · 7 vũ khí</span>
+    <h2 class="reveal">Mỗi ngày mở khóa 1 vũ khí AI — làm ra ngay 1 sản phẩm bán hàng</h2>
+    <div class="divider reveal"></div>
+    <p class="reveal">Khách hàng không mua bài học. Họ mua <strong>kết quả sau mỗi ngày</strong>. Sau 7 ngày, bạn không chỉ "biết dùng AI" — bạn sở hữu một bộ công cụ đã tự tay làm ra, dùng được ngay vào công việc môi giới.</p>
+
+    <div class="compare-box reveal">
+      <div class="compare-col">
+        <span class="compare-tag">🎁 3 ngày bonus</span>
+        <p>Content bán hàng · check quy hoạch · định giá nhanh</p>
+        <span class="compare-out">→ Hỗ trợ tư vấn khách ngay</span>
+      </div>
+      <div class="compare-arrow">→</div>
+      <div class="compare-col compare-main">
+        <span class="compare-tag">💰 7 ngày chính</span>
+        <p>7 vũ khí AI làm marketing: hình ảnh, video, quảng cáo, trợ lý riêng</p>
+        <span class="compare-out">→ Mỗi ngày 1 sản phẩm dùng được</span>
+      </div>
+    </div>
+    <p class="reveal" style="text-align:center;font-style:italic;color:var(--text-muted);font-size:15px;">Biết dùng AI mà không làm ra được sản phẩm thì vẫn chỉ là biết. Ở đây, học xong là có sản phẩm trong tay.</p>
+
+    <div class="mod-grid reveal">
+      <div class="mod-card">
+        <span class="mod-icon">🖼️</span>
+        <h4>NGÀY 1 · THIẾT KẾ HÌNH ẢNH BĐS</h4>
+        <p>Poster bán nhà, ảnh Facebook thu hút, banner quảng cáo, hình đồng bộ thương hiệu cá nhân.<br><strong>→ Có ngay bộ hình để đăng / gửi khách.</strong></p>
+        <span class="mod-time">Ngày 1 · 30 phút</span>
+      </div>
+      <div class="mod-card">
+        <span class="mod-icon">🎙️</span>
+        <h4>NGÀY 2 · GIỌNG NÓI & VIDEO GIỚI THIỆU</h4>
+        <p>Giọng đọc AI mang dấu ấn cá nhân, video giới thiệu bất động sản, video gửi khách.<br><strong>→ Có ngay 1 video chuyên nghiệp.</strong></p>
+        <span class="mod-time">Ngày 2 · 30 phút</span>
+      </div>
+      <div class="mod-card">
+        <span class="mod-icon">🎬</span>
+        <h4>NGÀY 3 · VIDEO MARKETING</h4>
+        <p>Video TikTok, Facebook Reels, Shorts, video bắt trend cho từng bất động sản.<br><strong>→ Có ngay video để đăng, hút khách tiềm năng.</strong></p>
+        <span class="mod-time">Ngày 3 · 30 phút</span>
+      </div>
+      <div class="mod-card">
+        <span class="mod-icon">📣</span>
+        <h4>NGÀY 4 · QUẢNG CÁO FACEBOOK</h4>
+        <p>Tiêu đề thu hút, nội dung quảng cáo, lời kêu gọi hành động, nhiều phiên bản để thử.<br><strong>→ Có ngay bộ quảng cáo sẵn sàng chạy.</strong></p>
+        <span class="mod-time">Ngày 4 · 30 phút</span>
+      </div>
+      <div class="mod-card">
+        <span class="mod-icon">📅</span>
+        <h4>NGÀY 5 · QUẢN LÝ CÔNG VIỆC & KẾ HOẠCH</h4>
+        <p>Lịch làm việc thông minh, danh sách ưu tiên, kế hoạch chăm sóc khách hàng.<br><strong>→ Biết chính xác hôm nay làm gì để ra doanh số.</strong></p>
+        <span class="mod-time">Ngày 5 · 30 phút</span>
+      </div>
+      <div class="mod-card">
+        <span class="mod-icon">🤖</span>
+        <h4>NGÀY 6 · TRỢ LÝ AI CÁ NHÂN</h4>
+        <p>Trợ lý trả lời câu hỏi, viết nội dung, phân tích bất động sản, hỗ trợ tư vấn khách.<br><strong>→ Sở hữu 1 trợ lý AI theo phong cách của bạn.</strong></p>
+        <span class="mod-time">Ngày 6 · 30 phút</span>
+      </div>
+      <div class="mod-card">
+        <span class="mod-icon">🎥</span>
+        <h4>NGÀY 7 · HÌNH ẢNH BIẾT NÓI (AVATAR AI)</h4>
+        <p>Video Avatar AI, video giới thiệu dự án, video tư vấn, video xây thương hiệu cá nhân.<br><strong>→ Có ngay video AI chuyên nghiệp để bán hàng.</strong></p>
+        <span class="mod-time">Ngày 7 · 30 phút</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ══ 5B. BỘ NÃO NGHỀ — differentiator mạnh nhất ══ -->
+<section class="brain">
+  <div class="container">
+    <span class="section-label reveal">Bí quyết của chương trình</span>
+    <h2 class="reveal">Bạn không phải dạy AI. Nó đã được nạp nghề sẵn.</h2>
+    <div class="divider reveal"></div>
+
+    <p class="reveal">Mọi khóa AI trên thị trường đều dạy bạn <em>cách dùng trang bị</em>. Không ai giải bài toán thật đằng sau.</p>
+
+    <div class="brain-problem reveal">
+      <p><strong>Bài toán thật: AI không biết nghề môi giới bất động sản Việt Nam.</strong><br><br>
+      Hỏi nó "viết bài bán căn nhà hẻm 4m ở Gò Vấp" — nó trả về thứ nghe như sách dịch từ tiếng Anh. Không hiểu "hẻm xe hơi", không biết "sổ hồng riêng" khác gì sổ chung, không biết khách Việt sợ điều gì khi xuống cọc, không biết chủ nhà nói "cần bán gấp" thật sự nghĩa là gì.<br><br>
+      Đây là lý do <strong>9 trong 10 môi giới thử AI rồi bỏ</strong> — không phải AI dở, mà là AI chưa được nạp nghề.</p>
+    </div>
+
+    <p class="reveal">Muốn sửa, phải mô tả toàn bộ chuyên môn nghề cho AI hiểu. Việc đó cần hai thứ cùng lúc mà hầu hết môi giới không có: <strong>hiểu nghề đủ sâu</strong> và <strong>biết cách viết cho AI đọc</strong>.</p>
+
+    <p class="reveal"><strong>Tôi đã làm sẵn phần khó đó.</strong> Toàn bộ chuyên môn nghề — đọc tài sản, đọc động lực chủ nhà, đọc nhu cầu khách mua, định giá, xử lý từ chối, trình bày ký gửi — cùng cách vận hành từng trang bị, đã được nén và đóng gói thành file chuyên môn. Việc của bạn chỉ còn ba bước:</p>
+
+    <div class="brain-steps reveal">
+      <div class="brain-step">
+        <span class="brain-step-no">①</span>
+        <span class="brain-step-name">Nạp</span>
+        <p>Đưa file chuyên môn vào AI. Làm một lần, mất 15 phút.</p>
+      </div>
+      <div class="brain-step">
+        <span class="brain-step-no">②</span>
+        <span class="brain-step-name">Ra lệnh</span>
+        <p>Dùng câu lệnh có sẵn, chỉ đổi phần trong <code>[ngoặc]</code>.</p>
+      </div>
+      <div class="brain-step">
+        <span class="brain-step-no">③</span>
+        <span class="brain-step-name">Làm</span>
+        <p>Thực hành ngay trên bất động sản bạn đang bán thật. Chúng ta làm cùng nhau.</p>
+      </div>
+    </div>
+
+    <table class="brain-compare reveal">
+      <tr>
+        <th></th>
+        <th>Thuê team marketing</th>
+        <th>Tự mò AI</th>
+        <th>Du Kích 5.0</th>
+      </tr>
+      <tr>
+        <td>Chi phí</td>
+        <td><strong style="color:#FF9090;">15–20 triệu / tháng</strong><br><span style="font-size:12.5px;opacity:.7">trả đều hằng tháng</span></td>
+        <td>Miễn phí tiền,<br><span style="font-size:12.5px;opacity:.7">nhưng mất 1–2 tháng thử sai</span></td>
+        <td><strong>499.000đ</strong><br><span style="font-size:12.5px;opacity:.7">một lần, dùng mãi</span></td>
+      </tr>
+      <tr>
+        <td>Bạn nhận được</td>
+        <td>Người làm thay — nghỉ là đứng</td>
+        <td>Kiến thức về AI</td>
+        <td>Bộ vũ khí đã nạp nghề + câu lệnh sẵn</td>
+      </tr>
+      <tr>
+        <td>Việc bạn phải làm</td>
+        <td>Tuyển, đào tạo, quản lý, trả lương</td>
+        <td>Tự nghĩ câu lệnh, tự dạy nghề cho AI</td>
+        <td>Nạp bộ trang bị, ra lệnh, làm</td>
+      </tr>
+      <tr>
+        <td>Kết quả nhận về</td>
+        <td>Tuỳ người bạn thuê</td>
+        <td>Chung chung, phải sửa nhiều</td>
+        <td>Đúng nghề, đúng thị trường, dùng được</td>
+      </tr>
+      <tr>
+        <td>Ai làm được</td>
+        <td>Người có ngân sách</td>
+        <td>Người giỏi công nghệ</td>
+        <td>Ai cũng làm được</td>
+      </tr>
+    </table>
+
+    <p class="brain-math reveal">Một tháng thuê team bằng <strong>15–20 lần</strong> chi phí trọn bộ vũ khí này. Và team thì tháng nào cũng phải trả — bộ vũ khí thì mua một lần, giữ luôn.</p>
+
+    <div class="brain-close reveal">
+      <p><strong>Đây là lý do tôi dám nói: học viên nào cũng thực hành được.</strong><br>
+      Vì phần khó nhất — biến chuyên môn nghề thành thứ AI hiểu được — đã xong trước khi bạn vào học. Bạn không bắt đầu từ trang giấy trắng. Bạn bắt đầu từ một bộ não đã biết nghề.</p>
+    </div>
+  </div>
+</section>
+
+
+<!-- ══ 6. ĐÂY KHÔNG PHẢI KHÓA HỌC ══ -->
+<section class="hire">
+  <div class="container">
+    <span class="section-label reveal">Cách nhìn khác</span>
+    <h2 class="reveal">Đây không phải một khóa học. Đây là quá trình tự trang bị.</h2>
+    <div class="divider reveal"></div>
+    <p class="hire-lead reveal">Nếu thuê đủ người làm những việc này — content, designer, chạy ads, dựng landing page — bạn mất 15–25 triệu mỗi tháng. Còn bộ vũ khí này:</p>
+
+    <div class="hire-card reveal">
+      <div class="hire-head">Bảng kê vũ khí</div>
+      <div class="hire-row"><span>Số vũ khí</span><strong><em>7 + 3 bonus</em></strong></div>
+      <div class="hire-row"><span>Chi phí hằng tháng sau khi có</span><strong>0đ</strong></div>
+      <div class="hire-row"><span>Quyền sở hữu</span><strong>Của bạn, dùng mãi</strong></div>
+      <div class="hire-row"><span>Thời gian đào tạo</span><strong>7 ngày · mỗi ngày 30 phút (15' học + 15' làm)</strong></div>
+      <div class="hire-row"><span>Chạy trên</span><strong>Tài sản bạn đang bán thật</strong></div>
+      <div class="hire-row"><span>Học lại chu kỳ sau</span><strong>Miễn phí, không giới hạn</strong></div>
+      <div class="hire-row"><span>Người vận hành</span><strong><em>Chính bạn</em></strong></div>
+    </div>
+
+    <div class="hire-disclaimer reveal">
+      <p><strong style="color:var(--gold);">Nói cho rõ:</strong> AI không thay thế bạn, và trang này không hứa điều đó. Vũ khí làm phần việc tay — dựng nội dung, chạy hệ thống, phân tích dữ liệu. Còn việc gặp khách, hiểu người, tư vấn và ra quyết định vẫn là việc của bạn. Được trang bị tốt giúp bạn có thêm thời gian để làm đúng phần đó.</p>
+    </div>
+  </div>
+</section>
+
+
+<!-- ══ 7. BOOTCAMP 3 NGÀY MIỄN PHÍ ══ -->
+<section class="bootcamp" id="bootcamp">
+  <div class="container">
+    <span class="section-label reveal">Bắt đầu miễn phí</span>
+    <h2 class="reveal">Trước khi quyết định gì — nhận 3 ngày bonus, miễn phí</h2>
+    <div class="divider reveal"></div>
+
+    <div class="bc-banner reveal">
+      <span class="bc-banner-label">Quà tặng</span>
+      <h3>BONUS 3 NGÀY DÀNH CHO ANH EM MÔI GIỚI<br><em>Tặng kèm, miễn phí 100%</em></h3>
+      <p>Gửi ngay khi đăng ký · Học xong dùng được ngay để hỗ trợ tư vấn khách hàng</p>
+    </div>
+
+    <div class="day-card reveal">
+      <span class="day-num">Bonus 1</span>
+      <h4>AI Viết Content Bán Hàng Hàng Loạt</h4>
+      <ul class="day-out">
+        <li>Hệ thống prompt viết bài bán nhà trong 5 phút</li>
+        <li>Viết hàng chục phiên bản quảng cáo để thử nghiệm</li>
+        <li>Tăng tốc soạn nội dung với Wispr Flow (nói thay vì gõ)</li>
+      </ul>
+      <span class="day-time">Hết cảnh ngồi cả giờ nghĩ một bài đăng</span>
+    </div>
+
+    <div class="day-card reveal">
+      <span class="day-num">Bonus 2</span>
+      <h4>Check Quy Hoạch Theo Phong Cách BĐS Du Kích</h4>
+      <ul class="day-out">
+        <li>Kiểm tra quy hoạch của một thửa đất</li>
+        <li>Đọc và hiểu đúng thông tin quy hoạch</li>
+        <li>Nhận diện rủi ro trước khi tư vấn khách hàng</li>
+      </ul>
+      <span class="day-time">Tư vấn có căn cứ, không nói mò</span>
+    </div>
+
+    <div class="day-card reveal">
+      <span class="day-num">Bonus 3</span>
+      <h4>Định Giá Nhanh Theo Phong Cách BĐS Du Kích</h4>
+      <ul class="day-out">
+        <li>Ước lượng giá thị trường của một bất động sản</li>
+        <li>So sánh với các bất động sản tương đồng</li>
+        <li>Đưa ra mức giá tham khảo nhanh để tư vấn khách</li>
+      </ul>
+      <span class="day-time">Khách hỏi giá — trả lời có cơ sở trong vài phút</span>
+    </div>
+
+    <div class="bc-result reveal">
+      <span class="bc-result-label">Sau 3 ngày bonus, bạn đã</span>
+      <div class="bc-tally">
+        <div class="bc-tally-item"><span class="bc-tally-num">5'</span><span class="bc-tally-label">viết xong 1 bài bán nhà</span></div>
+        <div class="bc-tally-item"><span class="bc-tally-num">3</span><span class="bc-tally-label">công cụ hỗ trợ tư vấn</span></div>
+        <div class="bc-tally-item"><span class="bc-tally-num">0đ</span><span class="bc-tally-label">hoàn toàn miễn phí</span></div>
+      </div>
+      <p>Không phải bài tập mẫu. Là công cụ chạy thật trên công việc thật của bạn — và bạn tự thấy AI có giúp được nghề môi giới hay không, bằng kết quả chứ không bằng lời tôi nói.</p>
+    </div>
+
+    <div style="text-align:center; margin-top:32px;">
+      <a href="/dang-ky" class="btn-primary reveal">🎁 Nhận 3 Ngày Bonus Miễn Phí (Làm Được Ngay) →</a>
+    </div>
+  </div>
+</section>
+
+
+<!-- ══ 8. LỘ TRÌNH 7 NGÀY ══ -->
+<section class="roadmap">
+  <div class="container">
+    <span class="section-label reveal">Chương trình chính</span>
+    <h2 class="reveal">Hành Trình 7 Ngày — 7 Vũ Khí AI</h2>
+    <div class="divider reveal"></div>
+    <p class="reveal">Mỗi ngày chỉ <strong>30 phút (15 phút học + 15 phút thực hành)</strong>. Mỗi ngày mở khóa 1 vũ khí và <strong>làm ra ngay 1 sản phẩm dùng được trong ngày</strong>. Bắt đầu từ hôm bạn đăng ký — không chờ khai giảng, không học chay.</p>
+
+    <div class="camp-list reveal">
+      <div class="camp">
+        <div class="camp-head">
+          <span class="camp-icon">🖼️</span>
+          <div>
+            <span class="camp-no">Ngày 1 · 30 phút</span>
+            <h3 class="camp-name">AI Thiết Kế Hình Ảnh Bất Động Sản</h3>
+          </div>
+        </div>
+        <p class="camp-desc">Poster bán nhà, ảnh Facebook thu hút, banner quảng cáo, hình đồng bộ thương hiệu cá nhân. <strong>→ Sau 30 phút: có ngay bộ hình để đăng Facebook, Zalo hoặc gửi khách.</strong></p>
+      </div>
+
+      <div class="camp">
+        <div class="camp-head">
+          <span class="camp-icon">🎙️</span>
+          <div>
+            <span class="camp-no">Ngày 2 · 30 phút</span>
+            <h3 class="camp-name">AI Nhân Bản Giọng Nói & Video Giới Thiệu</h3>
+          </div>
+        </div>
+        <p class="camp-desc">Giọng đọc AI mang dấu ấn cá nhân, video giới thiệu bất động sản, video gửi khách hàng. <strong>→ Sau 30 phút: có ngay một video chuyên nghiệp, không cần thu âm nhiều lần.</strong></p>
+      </div>
+
+      <div class="camp">
+        <div class="camp-head">
+          <span class="camp-icon">🎬</span>
+          <div>
+            <span class="camp-no">Ngày 3 · 30 phút</span>
+            <h3 class="camp-name">AI Video Marketing Cho Môi Giới</h3>
+          </div>
+        </div>
+        <p class="camp-desc">Video TikTok, Facebook Reels, Shorts, video bắt trend cho từng bất động sản. <strong>→ Sau 30 phút: có ngay video để đăng và thu hút khách hàng tiềm năng.</strong></p>
+      </div>
+
+      <div class="camp">
+        <div class="camp-head">
+          <span class="camp-icon">📣</span>
+          <div>
+            <span class="camp-no">Ngày 4 · 30 phút</span>
+            <h3 class="camp-name">AI Viết Quảng Cáo Facebook Hiệu Quả</h3>
+          </div>
+        </div>
+        <p class="camp-desc">Tiêu đề thu hút, nội dung quảng cáo, lời kêu gọi hành động, nhiều phiên bản để thử nghiệm. <strong>→ Sau 30 phút: có ngay bộ quảng cáo sẵn sàng chạy hoặc đăng lên Facebook.</strong></p>
+      </div>
+
+      <div class="camp">
+        <div class="camp-head">
+          <span class="camp-icon">📅</span>
+          <div>
+            <span class="camp-no">Ngày 5 · 30 phút</span>
+            <h3 class="camp-name">AI Quản Lý Công Việc & Kế Hoạch Bán Hàng</h3>
+          </div>
+        </div>
+        <p class="camp-desc">Lịch làm việc thông minh, danh sách ưu tiên, kế hoạch chăm sóc khách hàng. <strong>→ Sau 30 phút: biết chính xác hôm nay cần làm gì để ra doanh số, thay vì làm theo cảm tính.</strong></p>
+      </div>
+
+      <div class="camp">
+        <div class="camp-head">
+          <span class="camp-icon">🤖</span>
+          <div>
+            <span class="camp-no">Ngày 6 · 30 phút</span>
+            <h3 class="camp-name">Xây Dựng Trợ Lý AI Cá Nhân</h3>
+          </div>
+        </div>
+        <p class="camp-desc">Trợ lý trả lời câu hỏi, viết nội dung, phân tích bất động sản, hỗ trợ tư vấn khách hàng. <strong>→ Sau 30 phút: sở hữu một trợ lý AI hoạt động theo đúng phong cách của riêng bạn.</strong></p>
+      </div>
+
+      <div class="camp camp-final">
+        <div class="camp-head">
+          <span class="camp-icon">🎥</span>
+          <div>
+            <span class="camp-no">Ngày 7 · 30 phút</span>
+            <h3 class="camp-name">AI Hình Ảnh Biết Nói (Avatar AI)</h3>
+          </div>
+        </div>
+        <p class="camp-desc">Video Avatar AI, video giới thiệu dự án, video tư vấn bất động sản, video xây dựng thương hiệu cá nhân. <strong>→ Sau 30 phút: có ngay video AI chuyên nghiệp để dùng trong marketing và bán hàng.</strong></p>
+      </div>
+    </div>
+
+    <div class="proof-box reveal">
+      <span class="proof-label">Cam kết về cách dạy</span>
+      <h3 class="proof-title">Ai cũng làm được — 6 lớp chống bỏ giữa đường</h3>
+      <p class="proof-lead">Phần lớn người mua khóa online không hoàn thành. Không phải vì họ kém, mà vì thiết kế khóa học đòi hỏi quá nhiều ở người đang bận. Đây là cách hành trình này được thiết kế để bạn không rơi vào nhóm đó:</p>
+      <ul class="proof-list">
+        <li><strong>Mỗi ngày đúng một việc.</strong> Không bao giờ có 2 việc trong một ngày. Người bận nhất vẫn làm được một việc.</li>
+        <li><strong>Prompt viết sẵn, copy dán là chạy.</strong> Chỗ cần đổi để trong <code>[ngoặc vuông]</code>. Bạn không phải tự nghĩ prompt bao giờ.</li>
+        <li><strong>Có bản mẫu đã làm xong để đối chiếu.</strong> Bạn thấy kết quả đúng trông thế nào trước khi tự làm.</li>
+        <li><strong>Có mức tối thiểu rõ ràng.</strong> Mỗi ngày ghi rõ "làm đến đây là ĐẠT" — không cần hoàn hảo mới được đi tiếp.</li>
+        <li><strong>Bí thì nhắn theo cú pháp cố định.</strong> Gõ <code>#N4 em đang tắc ở…</code> trong nhóm Zalo. Tiến trả lời nhanh, và cả nhóm học ké được.</li>
+        <li><strong>Bộ Não Nghề nạp sẵn.</strong> Bạn không bắt đầu từ trang giấy trắng — chuyên môn nghề đã nén thành file, nạp một lần là AI biết nghề. Đây là lớp quan trọng nhất, vì nó xoá đúng khoảng trống khiến người ta bỏ giữa đường: hiểu bài nhưng mở AI ra thì không biết gõ gì.</li>
+      </ul>
+    </div>
+
+    <div class="batch-box reveal">
+      <span class="batch-label">Nhịp học</span>
+      <h3 class="batch-title">Vào là bắt đầu ngay — mỗi ngày 1 vũ khí, không chờ khai giảng</h3>
+      <div class="batch-grid">
+        <div class="batch-item">
+          <span class="batch-no">Ngay khi đăng ký</span>
+          <span class="batch-range">Vũ khí Ngày 1</span>
+          <span class="batch-sub">Vào hộp thư bạn ngay — làm được luôn trong hôm nay.</span>
+        </div>
+        <div class="batch-item">
+          <span class="batch-no">7 ngày kế tiếp</span>
+          <span class="batch-range">Mỗi ngày 1 vũ khí</span>
+          <span class="batch-sub">Ngày 2 → 7 tự động mở, học lúc nào trong ngày cũng được.</span>
+        </div>
+      </div>
+      <p class="batch-note">Toàn bộ học chung <strong>một nhóm Zalo</strong> — luôn có người học cùng và hỏi đáp suốt hành trình. Nội dung là <strong>của bạn, dùng mãi</strong>: học lại bao nhiêu lần cũng được, không tốn thêm phí.<br><br>3 ngày bonus <strong>gửi ngay qua email khi bạn đăng ký</strong> — không phải chờ ngày nào.</p>
+    </div>
+  </div>
+</section>
+
+
+<!-- ══ 8B. VIDEO GIẢI PHÁP / TỔNG KẾT HÀNH TRÌNH ══
+     VỊ TRÍ VIDEO SỐ 3 — Tiến tổng kết: sau 7 ngày bạn có gì trong tay + mời hành động (2–5 phút).
+     CÁCH BẬT: xóa .media-slot bên dưới, bỏ comment và thay ID_VIDEO:
+     <div class="video-embed"><iframe src="https://www.youtube.com/embed/ID_VIDEO?rel=0&modestbranding=1" title="Toàn cảnh Hành Trình 7 Ngày" allowfullscreen loading="lazy"></iframe></div>
+-->
+<section style="background:var(--cream-dark);">
+  <div class="container">
+    <span class="section-label reveal">Xem toàn cảnh</span>
+    <h2 class="reveal">Nghe Tiến kể trọn hành trình trong vài phút</h2>
+    <div class="divider reveal"></div>
+    <div class="media-slot reveal">
+      <span class="media-slot-icon">🎬</span>
+      <div class="media-slot-title">VỊ TRÍ VIDEO 3 — Video giải pháp / tổng kết hành trình</div>
+      <p class="media-slot-desc">Video 2–5 phút: sau 7 ngày bạn sở hữu gì, và lời mời đi tiếp. Dán link YouTube hoặc đặt <code>images/video/toan-canh-hanh-trinh.mp4</code>.</p>
+    </div>
+  </div>
+</section>
+
+
+<!-- ══ 9. THÂN — TÂM — TRÍ ══ -->
+<section class="philosophy">
+  <div class="container">
+    <span class="section-label reveal">Triết lý Bất Động Sản Du Kích</span>
+    <h2 class="reveal">Không phải làm nhiều hơn. Là làm khác đi.</h2>
+    <p class="lead reveal">Mọi thứ trong 7 ngày này đều quy về ba điều:</p>
+
+    <div class="ttt-grid reveal">
+      <div class="ttt-card">
+        <span class="ttt-key">THÂN</span>
+        <span class="ttt-promise">Làm nhanh hơn</span>
+        <p class="ttt-desc">Bớt việc tay. Bớt những đêm ngồi máy đến 1 giờ sáng chỉ để xong một cái ảnh đăng.</p>
+      </div>
+      <div class="ttt-card">
+        <span class="ttt-key">TÂM</span>
+        <span class="ttt-promise">Làm nhẹ hơn</span>
+        <p class="ttt-desc">Bớt áp lực "hôm nay đăng gì". Bớt cảm giác một mình gánh cả một phòng marketing.</p>
+      </div>
+      <div class="ttt-card">
+        <span class="ttt-key">TRÍ</span>
+        <span class="ttt-promise">Làm thông minh hơn</span>
+        <p class="ttt-desc">Bán hàng dựa trên hệ thống có thể lặp lại, không dựa vào cảm tính từng ngày.</p>
+      </div>
+    </div>
+
+    <div class="philosophy-quote reveal">
+      <p>"Môi Giới Bất Động Sản Du Kích 5.0 không chỉ là một khóa học AI, mà là hành trình 7 ngày giúp mỗi môi giới nâng cấp Thân — Tâm — Trí: làm nhanh hơn, làm nhẹ hơn và làm thông minh hơn để thích nghi và phát triển trong kỷ nguyên AI."</p>
+    </div>
+  </div>
+</section>
+
+
+<!-- ══ 9.5 XEM THỬ KẾT QUẢ — 4 VỊ TRÍ ẢNH CHỜ CHỤP (ảnh 2→5)
+     KHI CÓ ẢNH: xóa 4 khối .media-slot bên dưới, bỏ comment khối .proof-shots ở cuối, thay src + caption. ══ -->
+<section style="background:var(--white);">
+  <div class="container">
+    <span class="section-label reveal">Xem thử trước khi tin</span>
+    <h2 class="reveal">Đây là thứ vũ khí AI làm ra — không phải mô tả bằng lời</h2>
+    <div class="divider reveal"></div>
+    <div class="proof-shots reveal">
+      <div class="media-slot"><span class="media-slot-icon">📷</span><div class="media-slot-title">ẢNH 2 — Bài viết AI tạo ra</div><p class="media-slot-desc">Ảnh chụp màn hình một bài Facebook do vũ khí AI viết. <code>images/proof/bai-viet.jpg</code></p></div>
+      <div class="media-slot"><span class="media-slot-icon">📷</span><div class="media-slot-title">ẢNH 3 — Hình tài sản đã xử lý</div><p class="media-slot-desc">Bộ ảnh BĐS đã chỉnh/đồng bộ nhận diện bằng AI. <code>images/proof/hinh-anh.jpg</code></p></div>
+      <div class="media-slot"><span class="media-slot-icon">📷</span><div class="media-slot-title">ẢNH 4 — Landing tìm nguồn nhà</div><p class="media-slot-desc">Landing page tìm nguồn nhà học viên dựng. <code>images/proof/landing.jpg</code></p></div>
+      <div class="media-slot"><span class="media-slot-icon">📷</span><div class="media-slot-title">ẢNH 5 — Form chủ nhà gửi về</div><p class="media-slot-desc">Thông tin chủ nhà tự gửi qua form. <code>images/proof/form.jpg</code></p></div>
+    </div>
+    <!-- BẢN THẬT — bỏ comment khi đã có 4 ảnh, đồng thời xóa 4 .media-slot phía trên:
+    <div class="proof-shots reveal">
+      <figure><img src="images/proof/bai-viet.jpg" alt="Bài viết do vũ khí AI tạo ra" loading="lazy"><figcaption>Bài viết ra trong 5 phút, đúng giọng môi giới</figcaption></figure>
+      <figure><img src="images/proof/hinh-anh.jpg" alt="Hình ảnh tài sản đã xử lý bằng AI" loading="lazy"><figcaption>Bộ ảnh tài sản đã đồng bộ nhận diện</figcaption></figure>
+      <figure><img src="images/proof/landing.jpg" alt="Landing page tìm nguồn nhà do học viên dựng" loading="lazy"><figcaption>Landing page tìm nguồn nhà, dựng trong 15 phút</figcaption></figure>
+      <figure><img src="images/proof/form.jpg" alt="Thông tin chủ nhà gửi về qua form tự động" loading="lazy"><figcaption>Chủ nhà tự gửi thông tin về, không cần gọi từng người</figcaption></figure>
+    </div>
+    -->
+  </div>
+</section>
+
+
+<!-- ══ 10. GALLERY ══ -->
+<section class="gallery-section">
+  <div class="container">
+    <span class="section-label reveal" style="text-align:center;display:block;">Hình ảnh thực tế</span>
+    <h2 class="reveal" style="text-align:center;">Tiểu Đoàn Du Kích</h2>
+    <p class="gallery-lead reveal" style="text-align:center;max-width:520px;margin:0 auto 32px;">Cộng đồng Bất Động Sản Du Kích — nơi bạn sẽ học và thực chiến cùng anh em.</p>
+    <div class="gallery-grid reveal">
+      <div class="gallery-item wide">
+        <img src="images/gallery/g1.jpg" alt="Đội ngũ Tiểu Đoàn Du Kích tập hợp trước giờ xuất trận" loading="lazy">
+        <div class="gallery-caption">Đội ngũ chiến binh — sẵn sàng xuất trận</div>
+      </div>
+      <div class="gallery-item">
+        <img src="images/gallery/g2.jpg" alt="Học viên tập hợp khởi động buổi huấn luyện ngoài trời" loading="lazy">
+        <div class="gallery-caption">Tập hợp khởi động buổi huấn luyện</div>
+      </div>
+      <div class="gallery-item">
+        <img src="images/gallery/g3.jpg" alt="Tiến Du Kích phát biểu tại buổi huấn luyện thực địa" loading="lazy">
+        <div class="gallery-caption">Chỉ huy trưởng phát biểu tại trại</div>
+      </div>
+      <div class="gallery-item">
+        <img src="images/gallery/g4.jpg" alt="Tĩnh tâm chuẩn bị tinh thần trước buổi huấn luyện" loading="lazy">
+        <div class="gallery-caption">Tĩnh tâm trước khi xuất trận</div>
+      </div>
+      <div class="gallery-item">
+        <img src="images/gallery/g5.jpg" alt="Rà soát tài liệu và hồ sơ thực chiến 1-1 cùng học viên" loading="lazy">
+        <div class="gallery-caption">Rà soát hồ sơ thực chiến 1–1</div>
+      </div>
+      <div class="gallery-item wide">
+        <img src="images/gallery/g6.jpg" alt="Buổi chia sẻ vòng tròn cùng học viên bên hồ" loading="lazy">
+        <div class="gallery-caption">Buổi chia sẻ vòng tròn cùng học viên</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ══ 11. GIÁ ══ -->
+<section class="pricing">
+  <div class="container">
+    <span class="section-label reveal">Đầu tư của bạn</span>
+    <h2 class="reveal">Hai đường vào — bạn chọn đường nào cũng được</h2>
+
+    <div class="urgency-bar reveal">
+      <div class="urgency-item">
+        <span class="urgency-icon">⏰</span>
+        <span>Giá <strong>499.000đ</strong> là giá khuyến mãi ra mắt — sau đó về niêm yết <strong>1.000.000đ</strong> (tiết kiệm 501.000đ)</span>
+      </div>
+      <div class="urgency-item urgency-hot" id="coachSlots">
+        <span class="urgency-icon">⚠</span>
+        <span>Gói kèm riêng 1–1: <strong>chỉ 10 suất mỗi đợt</strong></span>
+      </div>
+    </div>
+    <div class="divider reveal"></div>
+    <p class="reveal">Không có đường nào "đúng" hơn. Người muốn thử trước thì đi đường 1. Người đã biết mình cần gì và không muốn chờ thì đi đường 2.</p>
+
+    <div class="price-ladder reveal">
+      <div class="pl-card pl-free">
+        <div class="pl-info">
+          <div class="pl-name">Đường 1 — Nhận 3 ngày bonus, miễn phí</div>
+          <div class="pl-desc">Content bán hàng hàng loạt + check quy hoạch + định giá nhanh theo phong cách Du Kích. Học xong dùng được ngay để hỗ trợ tư vấn khách. Rồi quyết định có đi tiếp hay không.</div>
+        </div>
+        <div class="pl-price">Miễn phí<span class="pl-strike">tặng kèm, miễn phí 100%</span></div>
+      </div>
+
+      <div class="pl-card pl-deal">
+        <div class="pl-info">
+          <div class="pl-name">Đường 2 — Vào luôn 7 Ngày · 7 Vũ Khí AI</div>
+          <div class="pl-desc">Trọn 7 ngày, mỗi ngày 1 vũ khí: hình ảnh BĐS · giọng nói & video · video marketing · quảng cáo Facebook · kế hoạch bán hàng · trợ lý AI · avatar biết nói. <strong style="color:var(--gold-light);">Tặng luôn 3 ngày bonus</strong> gửi ngay trong email xác nhận.</div>
+        </div>
+        <div class="pl-price">499.000đ<span class="pl-strike">Niêm yết 1.000.000đ</span></div>
+      </div>
+
+      <div class="pl-card pl-main" style="border-left:4px solid var(--gold);">
+        <div class="pl-info">
+          <div class="pl-name">🎖 Thêm: Kèm riêng 1–1 cùng Tiến trong 30 ngày</div>
+          <div class="pl-desc">3 buổi gọi riêng 45 phút · kênh Zalo riêng suốt 30 ngày · Tiến trực tiếp sửa bài, hình, video đầu tiên của bạn · huấn luyện bộ vũ khí theo đúng cách bán của bạn.<br><strong style="color:var(--red-war);">Chỉ 10 người mỗi đợt</strong> — vì đây là thời gian thật của một người, không phải phần mềm.</div>
+        </div>
+        <div class="pl-price">+688.000đ<span class="pl-strike">tùy chọn khi đăng ký</span></div>
+      </div>
+    </div>
+
+    <div class="price-logic reveal">
+      <p><strong style="color:var(--olive-dark);">Vì sao đi đường 2 lại rẻ hơn giá niêm yết?</strong><br>
+      499.000đ là giá khuyến mãi ra mắt — áp dụng cho cả người mua thẳng hôm nay và người hoàn thành 3 ngày bonus rồi mới quyết định. Tôi không muốn phạt người sẵn sàng đi ngay, cũng không muốn ép người cần thử trước. Khi hành trình 7 ngày hoàn thiện đầy đủ, giá về đúng 1.000.000đ niêm yết.</p>
+    </div>
+
+    <div class="price-cta-wrap">
+      <a href="/dang-ky" class="btn-primary reveal">⚔ Sở Hữu Trọn Bộ 7 Vũ Khí AI BĐS 5.0 — Ưu Đãi 499K →</a>
+      <p class="price-secure reveal">Cả hai đường đều bắt đầu ở cùng một trang. Chọn miễn phí thì không mất phí và không cần cam kết gì.</p>
+    </div>
+  </div>
+</section>
+
+
+<!-- ══ 12. FAQ ══ -->
+<section class="faq-section">
+  <div class="container">
+    <span class="section-label reveal" style="text-align:center; display:block;">Câu hỏi thường gặp</span>
+    <h2 class="reveal">Có thể bạn đang thắc mắc</h2>
+
+    <div class="faq-list reveal">
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">Tôi không giỏi công nghệ, học được không? <span class="faq-arrow">›</span></button>
+        <div class="faq-a"><p>Được. Hành trình này thiết kế cho người bắt đầu từ 0 — không cần biết lập trình, không cần biết viết prompt. Bạn làm theo từng bước, copy đúng mẫu, điền thông tin sản phẩm của mình vào. Nếu vướng, hỏi thẳng trong nhóm Zalo.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">Tôi bận đi khách suốt, có theo được 30 phút mỗi ngày không? <span class="faq-arrow">›</span></button>
+        <div class="faq-a"><p>Bài học <strong>tối đa 15 phút</strong>, rồi 15 phút bạn làm ngay theo hướng dẫn. Học lúc nào cũng được trong ngày, không cần có mặt đúng giờ. Nửa sau là <em>làm việc thật trên sản phẩm bạn đang bán</em>, không phải ngồi nghe. Học xong là bạn đã có bài đăng, có hình, có video để dùng luôn.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">3 ngày bonus có miễn phí thật, hay vào rồi bị bán hàng liên tục? <span class="faq-arrow">›</span></button>
+        <div class="faq-a"><p>Miễn phí thật, không cần thẻ, không tự động trừ tiền. Còn chuyện mời tham gia hành trình 7 ngày — có, tôi nói thẳng: sau 3 ngày bonus tôi sẽ giới thiệu hành trình chính. Nhưng giá 499.000đ là như nhau dù bạn mua trước hay sau 3 ngày bonus, nên tôi không có lý do gì để gây áp lực. Bạn hoàn toàn có thể lấy trọn 3 ngày miễn phí rồi dừng ở đó — phần bạn làm ra trong 3 ngày vẫn là của bạn.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">AI viết bài liệu có bị "nhạt", nghe như máy? <span class="faq-arrow">›</span></button>
+        <div class="faq-a"><p>Nếu chỉ gõ "viết cho tôi bài bán nhà" thì có — và đó là lý do phần lớn người dùng AI thấy nó vô dụng. Trọng tâm của hành trình này là <strong>huấn luyện vũ khí theo đúng cách bán của bạn</strong>: cách bạn nói chuyện với khách, những câu bạn hay dùng, cách bạn xử lý từ chối. Cùng một trang bị, khác nhau ở chỗ đó.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">Tôi có phải trả phí cho các công cụ AI không? <span class="faq-arrow">›</span></button>
+        <div class="faq-a"><p>Toàn bộ 3 ngày bonus làm được bằng trang bị bản miễn phí. Trong hành trình 7 ngày, có một vài phần nếu dùng bản trả phí sẽ nhanh và mượt hơn — nhưng đều có phương án miễn phí thay thế, và tôi sẽ nói rõ chỗ nào nên đầu tư, chỗ nào không cần.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">AI có thay tôi đi gặp khách và chốt deal được không? <span class="faq-arrow">›</span></button>
+        <div class="faq-a"><p>Không, và tôi không hứa điều đó. AI làm phần việc tay: viết nháp, dựng hình, nhắc việc, gợi ý hướng xử lý. Việc gặp khách, đọc cảm xúc người đối diện, tư vấn và ra quyết định vẫn là việc của bạn — cũng là phần khiến khách chọn bạn thay vì người khác. Trợ lý chỉ giúp bạn có thêm thời gian để làm tốt phần đó.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">Bao giờ tôi bắt đầu được? Có phải chờ lâu không? <span class="faq-arrow">›</span></button>
+        <div class="faq-a"><p><strong>Ngay hôm nay.</strong> Không có khái niệm chờ khai giảng ở đây.<br><br><strong>3 ngày bonus:</strong> nội dung ngày 1 vào hộp thư bạn ngay sau khi đăng ký. Ngày 2 và ngày 3 tự động gửi mỗi 24 giờ sau đó.<br><br><strong>Hành trình 7 ngày:</strong> sau khi thanh toán, vũ khí Ngày 1 vào hộp thư ngay; Ngày 2 → 7 tự động gửi mỗi 24 giờ. Học lúc nào trong ngày cũng được, không cần có mặt đúng giờ.<br><br>Nội dung là <strong>của bạn, dùng mãi</strong> — xem lại bao nhiêu lần cũng được, không tốn thêm phí. Có nhóm Zalo chung để hỏi đáp suốt hành trình.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">Gói "kèm riêng 1–1" có gì mà đắt hơn cả hành trình? <span class="faq-arrow">›</span></button>
+        <div class="faq-a"><p>Vì nó là <strong>thời gian thật của một người</strong>, không phải bản ghi hay tài liệu. Hành trình 7 ngày có thể phục vụ 1.000 người cùng lúc; gói kèm riêng chỉ nhận 10 người mỗi đợt, và mỗi người chiếm của tôi khoảng 2,5 giờ gọi riêng cộng hỗ trợ Zalo suốt 30 ngày.<br><br>Bạn nhận được: 3 buổi gọi 45 phút (đầu — giữa — cuối), kênh Zalo riêng không phải nhóm chung, tôi trực tiếp xem và sửa bài viết/hình/video đầu tiên bạn làm ra, và cấu hình bộ vũ khí theo đúng thị trường và cách bán của bạn thay vì dùng mẫu chung.<br><br>Nói thẳng: <strong>phần lớn người học không cần gói này.</strong> Hành trình 7 ngày tự nó đã đủ để bạn làm được. Gói kèm riêng dành cho người muốn đi nhanh hơn và không muốn tự mò.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">Tôi nên chọn đường miễn phí hay mua luôn 499.000đ? <span class="faq-arrow">›</span></button>
+        <div class="faq-a"><p>Tôi trả lời thật, không đẩy bạn về phía tốn tiền hơn:<br><br><strong>Chọn miễn phí</strong> nếu bạn chưa từng dùng AI để làm việc, hoặc còn nghi ngờ liệu nó có thật sự giúp được nghề môi giới. Ba ngày bonus là đủ để bạn biết câu trả lời — bằng chính kết quả bạn làm ra, không phải bằng lời tôi nói.<br><br><strong>Mua luôn</strong> nếu bạn đã dùng AI ở mức cơ bản và biết mình đang thiếu hệ thống, hoặc bạn biết tính mình dễ trì hoãn khi thứ gì đó miễn phí. Đi đường này bạn vẫn nhận trọn 3 ngày bonus (tặng kèm trong email xác nhận), và có thêm trọn 7 vũ khí chính.<br><br>Cả hai đường đều bắt đầu được ngay hôm nay và giá 499.000đ là như nhau dù mua trước hay sau bonus — nên chọn miễn phí trước cũng không mất gì.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">Có "Định giá nhanh" trong 3 ngày bonus — vậy khác gì khóa Định Giá BĐS 30 Phút? <span class="faq-arrow">›</span></button>
+        <div class="faq-a"><p>Hai thứ khác nhau về mục đích, và tôi nói rõ để bạn không mua trùng:<br><br><strong>Bonus định giá nhanh</strong> dạy bạn dùng AI để ra <em>khoảng giá tham khảo ngay tại chỗ</em> — khi đang ngồi với khách, khách hỏi "giá này hợp lý không", bạn cần trả lời có căn cứ trong vòng vài phút. Đây là kỹ năng phản xạ trong lúc tư vấn.<br><br><strong>Khóa Định Giá BĐS 30 Phút</strong> (bán riêng) dạy <em>phương pháp định giá đầy đủ 3 lớp</em> — đi khảo sát thực địa, khai thác giá giao dịch thật, cross-check nhiều nguồn — kèm tool định giá riêng. Đây là quy trình bạn dùng khi thật sự sắp xuống tiền hoặc cần con số đủ chắc để đàm phán.<br><br>Nói ngắn: bonus này giúp bạn <strong>trả lời nhanh</strong>. Khóa Định Giá giúp bạn <strong>chắc chắn đúng</strong>. Không mua khóa Định Giá vẫn học được hành trình này bình thường.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">Tôi không phải môi giới BĐS, học được không? <span class="faq-arrow">›</span></button>
+        <div class="faq-a"><p>Nguyên lý các kỹ năng này dùng được cho hầu hết nghề bán hàng. Nhưng toàn bộ ví dụ, mẫu bài, kịch bản và tình huống từ chối trong hành trình đều lấy từ nghề môi giới bất động sản. Nếu bạn ở ngành khác, bạn vẫn học được cách làm — chỉ cần tự đổi ví dụ sang ngành mình.</p></div>
+      </div>
+    </div>
+
+    <div class="honesty-box reveal">
+      <p><strong style="color:var(--olive-dark);">Xin nói thẳng một điều:</strong> đây là hành trình mới, nên <strong>chưa có phản hồi học viên và chưa có ảnh chụp kết quả</strong> để đưa lên đây. Tôi không mượn phản hồi của khóa khác, cũng không dùng ảnh minh hoạ mua sẵn để làm bạn tin.<br><br>Cách kiểm chứng thật nhất: nhận 3 ngày bonus miễn phí, làm thử, rồi tự nhìn kết quả bạn làm ra. Không hài lòng thì dừng — bạn không mất gì.</p>
+    </div>
+  </div>
+</section>
+
+
+<!-- ══ 13. FINAL CTA ══ -->
+<section class="final-cta">
+  <div class="container">
+    <span class="section-label reveal" style="color:var(--gold);">Quyết định của bạn</span>
+    <h2 class="reveal">Đừng để bị tụt lại phía sau. Đào tạo hôm nay để dẫn đầu ngày mai.</h2>
+    <p class="lead reveal">3 ngày bonus, miễn phí, bắt đầu ngay hôm nay. Học xong là có ngay công cụ dùng được vào việc bán hàng — hoặc bạn vẫn đứng đúng chỗ cũ.</p>
+
+    <div class="final-quote-box reveal">
+      <p class="final-quote-text">"Đối thủ của bạn không giỏi hơn. Họ chỉ được trang bị tốt hơn. Và việc trang bị — bạn có thể bắt đầu ngay trong 30 phút tới."</p>
+    </div>
+
+    <a href="/dang-ky" class="btn-primary reveal">🎁 Nhận 3 Ngày Bonus Miễn Phí — Bắt Đầu Trong 1 Phút →</a>
+
+    <div class="final-sig reveal">
+      <div class="final-sig-line"></div>
+      <div class="final-name">Tiến Du Kích</div>
+      <div class="final-rank">Founder, Bất Động Sản Du Kích</div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p>⚔ Bất Động Sản Du Kích — Môi Giới Bất Động Sản Du Kích 5.0</p>
+  <p>© 2026 BĐS Du Kích. Mọi quyền được bảo lưu.</p>
+  <p>AI là trang bị hỗ trợ năng suất, không thay thế vai trò tư vấn và quyết định của môi giới. Kết quả thực tế phụ thuộc vào mức độ áp dụng của từng người.</p>
+</footer>
+
+<script>
+  const reveals = document.querySelectorAll('.reveal');
+  const revObs = new IntersectionObserver(entries=>{
+    entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('visible'); revObs.unobserve(e.target); } });
+  },{threshold:0.12});
+  reveals.forEach(el=>revObs.observe(el));
+
+  const bar = document.getElementById('stickyBar');
+  window.addEventListener('scroll',()=>{
+    if(window.scrollY>window.innerHeight*0.6) bar.classList.add('visible');
+    else bar.classList.remove('visible');
+    const rb = document.getElementById('readingBar');
+    if(rb){
+      const pct = (window.scrollY/(document.body.scrollHeight-window.innerHeight))*100;
+      rb.style.width = Math.min(pct,100)+'%';
+    }
+  },{passive:true});
+
+
+  // Số suất kèm riêng 1-1 — lấy SỐ THẬT từ backend, không bịa
+  (function loadCoachSlots(){
+    const GAS_URL = 'https://script.google.com/macros/s/AKfycbxfsjsuBQZMrLvKiJdF3C3Wx7rEWx4y4SUmCIUv6sERRhUSl9Ow9W65k9SbxWfRAcT1/exec';
+    if (GAS_URL.indexOf('__') === 0) return;
+    fetch(GAS_URL + '?action=count')
+      .then(r=>r.json())
+      .then(d=>{
+        if(!d || !d.success || d.coachSlotsLeft === undefined) return;
+        const el = document.getElementById('coachSlots');
+        if(!el) return;
+        const left = d.coachSlotsLeft;
+        el.querySelector('span:last-child').innerHTML = (left <= 0)
+          ? 'Gói kèm riêng 1–1: <strong>đã hết suất đợt này</strong>'
+          : 'Gói kèm riêng 1–1: <strong>còn ' + left + '/10 suất</strong> cho đợt này';
+      })
+      .catch(()=>{});
+  })();
+
+  function toggleFaq(btn){
+    const item = btn.parentElement;
+    const isOpen = item.classList.contains('open');
+    document.querySelectorAll('.faq-item.open').forEach(i=>i.classList.remove('open'));
+    document.querySelectorAll('.faq-q.open').forEach(b=>b.classList.remove('open'));
+    if(!isOpen){ item.classList.add('open'); btn.classList.add('open'); }
+  }
+</script>
+
+</body>
+</html>

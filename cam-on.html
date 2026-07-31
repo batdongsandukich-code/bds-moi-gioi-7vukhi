@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Đăng ký thành công — Du Kích 5.0</title>
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Be+Vietnam+Pro:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --olive:#4A5240; --olive-dark:#2C3020; --gold:#C8A96E; --gold-dark:#8A6D2F; --gold-light:#E8C98A;
+    --cream:#F5F0E8; --ink:#1A1A14; --text-muted:#585848;
+    --border:rgba(74,82,64,.18); --green:#3d6b4f;
+  }
+  * { box-sizing:border-box; margin:0; padding:0; }
+  body { font-family:'Be Vietnam Pro',sans-serif; background:var(--cream); color:var(--ink); line-height:1.6; padding:40px 20px; }
+  .container { max-width:560px; margin:0 auto; background:#fff; padding:40px 32px; border-radius:10px; border:1px solid var(--border); box-shadow:0 8px 32px rgba(44,48,32,.08); text-align:center; }
+  .check { width:72px; height:72px; background:var(--gold-dark); color:#fff; border-radius:50%; display:inline-flex; align-items:center; justify-content:center; font-size:36px; margin-bottom:20px; }
+  h1 { font-family:'Playfair Display',serif; font-size:26px; margin-bottom:8px; color:var(--olive-dark); }
+  .lead { color:var(--text-muted); margin-bottom:8px; font-size:15px; }
+  .lead strong { color:var(--olive-dark); }
+  .urgent { background:rgba(200,169,110,.14); border:1px solid rgba(200,169,110,.4); padding:16px 18px; margin:24px 0 8px; text-align:left; }
+  .urgent p { font-size:14.5px; color:var(--text-muted); margin:0; line-height:1.7; }
+  .urgent strong { color:var(--olive-dark); }
+  .steps { text-align:left; margin:24px 0 0; }
+  .step { display:flex; gap:14px; padding:16px 0; border-bottom:1px solid var(--border); }
+  .step:last-child { border-bottom:none; }
+  .step-num { background:var(--gold); color:#2C3020; min-width:30px; height:30px; border-radius:50%; display:flex; align-items:center; justify-content:center; font-weight:800; font-size:14px; flex-shrink:0; }
+  .step-text { flex:1; }
+  .step-title { font-weight:700; font-size:15px; margin-bottom:4px; color:var(--olive-dark); }
+  .step-desc { font-size:14px; color:var(--text-muted); line-height:1.7; }
+  .zalo-btn { display:block; margin:26px auto 0; background:#0068FF; color:#fff; font-weight:800; font-size:16px; padding:17px 28px; border-radius:8px; text-decoration:none; transition:opacity .2s; }
+  .zalo-btn:hover { opacity:.9; }
+  .zalo-note { font-size:12.5px; color:var(--text-muted); margin-top:10px; }
+  .ps { background:var(--olive-dark); padding:20px 22px; margin-top:28px; text-align:left; border-left:4px solid var(--gold); }
+  .ps p { font-size:14px; color:rgba(245,240,232,.85); margin:0; line-height:1.75; }
+  .ps strong { color:var(--gold-light); }
+  footer { text-align:center; margin-top:24px; font-size:12.5px; color:var(--text-muted); }
+  footer a { color:var(--olive-dark); }
+</style>
+</head>
+<body>
+<div class="container">
+  <div class="check">✓</div>
+  <h1>Đã ghi nhận đăng ký!</h1>
+  <p class="lead">Chào <strong id="leadName">bạn</strong>, 3 ngày bonus của bạn đã sẵn sàng.</p>
+
+  <div class="urgent">
+    <p><strong>Kỹ năng ngày số một đang được gửi vào email của bạn ngay lúc này</strong> — không phải chờ đợt nào. Ngày 2 và ngày 3 sẽ tự động vào hộp thư mỗi 24 giờ sau đó.<br><br>Việc còn lại: vào nhóm Zalo để hỏi đáp và học cùng anh em. Mất khoảng 10 giây.</p>
+  </div>
+
+  <a href="https://zalo.me/g/ringeu56i7vnuv6ftvop" target="_blank" class="zalo-btn">
+    → Vào nhóm Zalo Du Kích 5.0 ngay
+  </a>
+  <p class="zalo-note">Nhấn nút trên, sau đó nhắn trong nhóm: <strong>"Em đăng ký Bonus 3 ngày"</strong> để được điểm danh.</p>
+
+  <div class="steps">
+    <div class="step">
+      <div class="step-num">1</div>
+      <div class="step-text">
+        <div class="step-title">Kiểm tra email</div>
+        <div class="step-desc">Email kèm <strong>nội dung kỹ năng ngày số một</strong> đã được gửi tới <strong id="leadEmail">email của bạn</strong>. Nếu không thấy, kiểm tra tab Promotions hoặc Spam.</div>
+      </div>
+    </div>
+    <div class="step">
+      <div class="step-num">2</div>
+      <div class="step-text">
+        <div class="step-title">Chuẩn bị trước 1 thứ duy nhất</div>
+        <div class="step-desc">Chọn sẵn <strong>một sản phẩm bạn đang bán thật</strong> (một căn nhà, một lô đất, một dự án) — Cả 3 buổi làm trực tiếp trên sản phẩm đó, không làm ví dụ giả.</div>
+      </div>
+    </div>
+    <div class="step">
+      <div class="step-num">3</div>
+      <div class="step-text">
+        <div class="step-title">Làm ngay 30 phút hôm nay</div>
+        <div class="step-desc">Ba buổi bonus, mỗi buổi 15 phút học + 15 phút thực hành. Ngày 2 và ngày 3 tự động đến — bạn không phải nhớ gì cả, chỉ cần làm.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="ps">
+    <p><strong>Một lời nhắc thật lòng:</strong> phần lớn người đăng ký các chương trình miễn phí sẽ không làm gì cả. Không phải vì họ thiếu năng lực — mà vì miễn phí thì không đau, không đau thì dễ trì hoãn. Nếu bạn đã đến được đây, hãy làm cho xong kỹ năng ngày số một. Chỉ 30 phút. Kết quả cụ thể trong tay sẽ giúp bạn tự đi hết phần còn lại.</p>
+  </div>
+
+  <footer>Cần hỗ trợ? Zalo <a href="https://zalo.me/0938139789" target="_blank">0938 139 789</a> · <a href="mailto:Batdongsandukich@gmail.com">Batdongsandukich@gmail.com</a></footer>
+</div>
+
+<script>
+  const lead = JSON.parse(sessionStorage.getItem('bootcampLead') || '{}');
+  if (lead.name) { document.getElementById('leadName').textContent = lead.name; }
+  if (lead.email) { document.getElementById('leadEmail').textContent = lead.email; }
+  sessionStorage.removeItem('bootcampLead');
+</script>
+</body>
+</html>

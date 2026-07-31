@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Thanh toán thành công — Hành Trình Du Kích 5.0</title>
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Be+Vietnam+Pro:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --olive:#4A5240; --olive-dark:#2C3020; --gold:#C8A96E; --gold-light:#E8C98A;
+    --cream:#F5F0E8; --ink:#1A1A14; --text-muted:#585848;
+    --border:rgba(74,82,64,.18); --green:#3d6b4f;
+  }
+  * { box-sizing:border-box; margin:0; padding:0; }
+  body { font-family:'Be Vietnam Pro',sans-serif; background:var(--cream); color:var(--ink); line-height:1.6; padding:36px 16px 48px; }
+  .container { max-width:560px; margin:0 auto; background:#fff; padding:38px 28px; border-radius:10px; border:1px solid var(--border); box-shadow:0 8px 32px rgba(44,48,32,.08); text-align:center; }
+  .check { width:72px; height:72px; background:var(--green); color:#fff; border-radius:50%; display:inline-flex; align-items:center; justify-content:center; font-size:36px; margin-bottom:18px; }
+  h1 { font-family:'Playfair Display',serif; font-size:25px; margin-bottom:8px; color:var(--olive-dark); }
+  .lead { color:var(--text-muted); margin-bottom:6px; font-size:15px; }
+  .lead strong { color:var(--olive-dark); }
+  .info { background:var(--cream); border:1px solid var(--border); padding:16px 18px; border-radius:8px; text-align:left; margin:22px 0 8px; }
+  .info-row { display:flex; justify-content:space-between; gap:10px; padding:6px 0; font-size:14px; border-bottom:1px solid var(--border); }
+  .info-row:last-child { border-bottom:none; }
+  .info-row strong { color:var(--olive-dark); text-align:right; }
+  .coach-box { display:none; background:var(--olive-dark); border-left:4px solid var(--gold); padding:18px 20px; margin:20px 0 0; text-align:left; border-radius:0 6px 6px 0; }
+  .coach-box.show { display:block; }
+  .coach-label { font-size:10.5px; letter-spacing:2.5px; text-transform:uppercase; color:var(--gold); font-weight:800; display:block; margin-bottom:8px; }
+  .coach-box p { font-size:14px; color:rgba(245,240,232,.88); margin:0; line-height:1.75; }
+  .coach-box strong { color:var(--gold-light); }
+  .steps { text-align:left; margin:24px 0 0; }
+  .step { display:flex; gap:14px; padding:15px 0; border-bottom:1px solid var(--border); }
+  .step:last-child { border-bottom:none; }
+  .step-num { background:var(--gold); color:#2C3020; min-width:30px; height:30px; border-radius:50%; display:flex; align-items:center; justify-content:center; font-weight:800; font-size:14px; flex-shrink:0; }
+  .step-title { font-weight:700; font-size:15px; margin-bottom:4px; color:var(--olive-dark); }
+  .step-desc { font-size:14px; color:var(--text-muted); line-height:1.7; }
+  .zalo-btn { display:block; margin:24px auto 0; background:#0068FF; color:#fff; font-weight:800; font-size:16px; padding:16px 26px; border-radius:8px; text-decoration:none; transition:opacity .2s; }
+  .zalo-btn:hover { opacity:.9; }
+  .zalo-note { font-size:12.5px; color:var(--text-muted); margin-top:10px; }
+  footer { text-align:center; margin-top:22px; font-size:12.5px; color:var(--text-muted); }
+  footer a { color:var(--olive-dark); }
+</style>
+</head>
+<body>
+<div class="container">
+  <div class="check">✓</div>
+  <h1>Thanh toán thành công!</h1>
+  <p class="lead">Chào <strong id="orderName">bạn</strong>, bạn đã chính thức vào Hành Trình 7 Ngày · 7 Vũ Khí AI.</p>
+
+  <div class="info">
+    <div class="info-row"><span>Mã đơn</span><strong id="orderId">—</strong></div>
+    <div class="info-row"><span>Email</span><strong id="orderEmail">—</strong></div>
+    <div class="info-row"><span>Số tiền</span><strong id="orderAmount">—</strong></div>
+    <div class="info-row"><span>Chương trình</span><strong>Hành Trình Du Kích 5.0 — 7 ngày · 7 vũ khí AI</strong></div>
+  </div>
+
+  <div class="coach-box" id="coachBox">
+    <span class="coach-label">Bạn đã chọn kèm riêng 1–1</span>
+    <p>Tiến sẽ liên hệ trực tiếp qua Zalo <strong>trong vòng 24 giờ</strong> để xếp lịch buổi gọi đầu tiên và mở kênh Zalo riêng cho bạn. Chuẩn bị sẵn <strong>một sản phẩm bạn đang bán thật</strong> để buổi đầu đi vào việc luôn, không mất thời gian làm quen.</p>
+  </div>
+
+  <a href="https://zalo.me/g/ringeu56i7vnuv6ftvop" target="_blank" class="zalo-btn">
+    → Vào nhóm Zalo học viên ngay
+  </a>
+  <p class="zalo-note">Vào nhóm rồi nhắn mã đơn <strong id="orderIdInline">—</strong> để được điểm danh và mở quyền truy cập.</p>
+
+  <div class="steps">
+    <div class="step">
+      <div class="step-num">1</div>
+      <div>
+        <div class="step-title">Kiểm tra email</div>
+        <div class="step-desc">Email xác nhận đã được gửi tới <strong id="orderEmailInline">email của bạn</strong> — trong đó có <strong>quà bất ngờ: trọn bộ 3 ngày Bonus</strong> (content bán hàng, check quy hoạch, định giá nhanh), tặng kèm không tính phí. Nếu không thấy email, kiểm tra tab Promotions hoặc Spam.</div>
+      </div>
+    </div>
+    <div class="step">
+      <div class="step-num">2</div>
+      <div>
+        <div class="step-title">Chuẩn bị một sản phẩm thật</div>
+        <div class="step-desc">Chọn sẵn một căn nhà, lô đất hoặc dự án bạn đang bán. Cả 7 ngày làm trực tiếp trên sản phẩm đó — không làm ví dụ giả.</div>
+      </div>
+    </div>
+    <div class="step">
+      <div class="step-num">3</div>
+      <div>
+        <div class="step-title">Bắt đầu ngay hôm nay</div>
+        <div class="step-desc">Vũ khí Ngày 1 vào hộp thư bạn ngay, các ngày 2 → 7 tự động gửi mỗi 24 giờ. Học lúc nào trong ngày cũng được, không chờ khai giảng. Nội dung là của bạn, xem lại bao nhiêu lần cũng được.</div>
+      </div>
+    </div>
+  </div>
+
+  <footer>Cần hỗ trợ? Zalo <a href="https://zalo.me/0938139789" target="_blank">0938 139 789</a> · <a href="mailto:Batdongsandukich@gmail.com">Batdongsandukich@gmail.com</a></footer>
+</div>
+
+<script>
+  const order = JSON.parse(sessionStorage.getItem('order') || '{}');
+  if (order.orderId) {
+    document.getElementById('orderId').textContent = order.orderId;
+    document.getElementById('orderIdInline').textContent = order.orderId;
+    document.getElementById('orderName').textContent = order.name || 'bạn';
+    document.getElementById('orderEmail').textContent = order.email || '—';
+    document.getElementById('orderEmailInline').textContent = order.email || 'email của bạn';
+    const amt = Number(order.totalAmount || 0).toLocaleString('en-US').replace(/,/g,'.');
+    document.getElementById('orderAmount').textContent = amt + 'đ';
+    if (order.coach) { document.getElementById('coachBox').classList.add('show'); }
+  }
+  sessionStorage.removeItem('order');
+</script>
+</body>
+</html>
