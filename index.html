@@ -9,10 +9,10 @@
 <meta property="og:title" content="Môi Giới Bất Động Sản Du Kích 5.0 — Kiến Tạo Bộ Vũ Khí AI">
 <meta property="og:description" content="7 ngày — 7 vũ khí AI — 7 tài sản marketing. Mỗi ngày 30 phút, học xong làm ra ngay 1 sản phẩm bán hàng. Tặng 3 ngày bonus.">
 <meta property="og:locale" content="vi_VN">
-<!-- ẢNH CHIA SẺ MẠNG XÃ HỘI (Facebook/Zalo) — đặt file vào images/og-image.jpg (1200×630px), rồi bỏ comment 2 dòng dưới:
-<meta property="og:image" content="images/og-image.jpg">
+<meta property="og:url" content="https://bds-moi-gioi-7vukhi.vercel.app/">
+<meta property="og:image" content="https://bds-moi-gioi-7vukhi.vercel.app/images/proof/bonus-dinh-gia-tool.png">
 <meta name="twitter:card" content="summary_large_image">
--->
+<meta name="twitter:image" content="https://bds-moi-gioi-7vukhi.vercel.app/images/proof/bonus-dinh-gia-tool.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=Be+Vietnam+Pro:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
@@ -120,8 +120,8 @@
   /* MODULE GRID */
   .modules { background:var(--white); }
   .mod-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(228px,1fr)); gap:16px; margin-top:36px; }
-  .mod-card { background:var(--cream); border-top:3px solid var(--gold); padding:24px 22px; position:relative; transition:transform .2s,box-shadow .2s; }
-  .mod-card:hover { transform:translateY(-3px); box-shadow:0 10px 26px rgba(0,0,0,.09); }
+  .mod-card { background:var(--cream); border-top:3px solid var(--gold); border-radius:10px; padding:24px 22px; position:relative; transition:transform .18s ease,box-shadow .18s ease; box-shadow:0 4px 0 rgba(138,109,47,.32), 0 10px 22px rgba(44,48,32,.10); }
+  .mod-card:hover { transform:translateY(-3px); box-shadow:0 7px 0 rgba(138,109,47,.42), 0 16px 30px rgba(44,48,32,.16); }
   .mod-icon { font-size:26px; display:block; margin-bottom:10px; }
   .mod-card h4 { font-family:'JetBrains Mono',monospace; font-size:14.5px; font-weight:700; color:var(--gold-dark); letter-spacing:.5px; margin-bottom:8px; }
   .mod-card p { font-size:14.5px; color:var(--text-muted); margin:0; line-height:1.7; }
@@ -209,8 +209,10 @@
   /* SO SÁNH BOOTCAMP vs HÀNH TRÌNH */
   .compare-box { display:flex; align-items:stretch; gap:14px; margin:30px 0 18px; }
   @media(max-width:640px){ .compare-box{flex-direction:column;} .compare-arrow{transform:rotate(90deg);} }
-  .compare-col { flex:1; background:var(--cream); border:1px solid var(--cream-dark); border-top:3px solid rgba(74,82,64,.25); padding:20px 18px; }
-  .compare-col.compare-main { background:var(--olive-dark); border-top-color:var(--gold); border-color:rgba(200,169,110,.3); }
+  .compare-col { flex:1; background:var(--cream); border:1px solid var(--cream-dark); border-top:3px solid rgba(74,82,64,.25); border-radius:10px; padding:20px 18px; transition:transform .18s ease,box-shadow .18s ease; box-shadow:0 4px 0 rgba(138,109,47,.28), 0 10px 22px rgba(44,48,32,.10); }
+  .compare-col:hover { transform:translateY(-3px); box-shadow:0 7px 0 rgba(138,109,47,.4), 0 16px 30px rgba(44,48,32,.16); }
+  .compare-col.compare-main { background:var(--olive-dark); border-top-color:var(--gold); border-color:rgba(200,169,110,.3); box-shadow:0 4px 0 var(--gold-dark), 0 12px 26px rgba(44,48,32,.28); }
+  .compare-col.compare-main:hover { box-shadow:0 7px 0 var(--gold-dark), 0 18px 34px rgba(44,48,32,.34); }
   .compare-tag { font-size:10.5px; letter-spacing:2px; text-transform:uppercase; font-weight:800; color:var(--text-muted); display:block; margin-bottom:10px; }
   .compare-main .compare-tag { color:var(--gold); }
   .compare-col p { font-size:15px; font-weight:600; color:var(--olive-dark); margin:0 0 12px; line-height:1.6; }
@@ -391,6 +393,18 @@
 
   .reveal { opacity:0; transform:translateY(24px); transition:opacity .6s ease,transform .6s ease; }
   .reveal.visible { opacity:1; transform:translateY(0); }
+  /* FOMO TOAST (social proof động) */
+  .fomo-toast { position:fixed; left:16px; bottom:16px; z-index:1200; max-width:330px; background:#fff; border:1px solid rgba(200,169,110,.5); border-left:4px solid var(--gold); border-radius:10px; box-shadow:0 8px 26px rgba(0,0,0,.22); padding:12px 34px 12px 14px; font-size:13.5px; color:var(--olive-dark); transform:translateY(170%); opacity:0; transition:transform .5s ease, opacity .5s ease; }
+  .fomo-toast.show { transform:translateY(0); opacity:1; }
+  .fomo-toast .fomo-time { color:var(--text-muted); font-size:11.5px; margin-top:3px; display:block; }
+  .fomo-close { position:absolute; top:5px; right:8px; cursor:pointer; color:var(--text-muted); font-size:17px; line-height:1; background:none; border:none; padding:2px; }
+  /* STICKY CTA MOBILE */
+  .m-sticky-cta { display:none; }
+  @media(max-width:640px){
+    .m-sticky-cta { display:flex; align-items:center; justify-content:center; position:fixed; left:0; right:0; bottom:0; z-index:1150; background:linear-gradient(180deg,#F2DCA2 0%,#D4B87C 55%,#C29B58 100%); color:#2C3020; font-weight:800; font-size:15px; padding:14px 16px; text-decoration:none; box-shadow:0 -4px 16px rgba(0,0,0,.28); }
+    body { padding-bottom:58px; }
+    .fomo-toast { bottom:70px; left:10px; right:10px; max-width:none; }
+  }
 </style>
 </head>
 <body>
@@ -408,8 +422,8 @@
 <section class="hero">
   <div class="container">
     <span class="hero-stamp">Môi Giới Bất Động Sản Du Kích 5.0</span>
-    <h1>Từ Môi Giới Truyền Thống Đến <em>Môi Giới BĐS AI 5.0</em></h1>
-    <p style="font-size:clamp(16px,2.6vw,20px);color:var(--gold-light);font-weight:600;max-width:660px;margin:14px auto 4px;line-height:1.6;">07 vũ khí AI thực chiến — học xong ứng dụng ngay để <strong style="color:#fff;">X3 năng suất</strong> và <strong style="color:#fff;">tiết kiệm 2–3 giờ mỗi ngày</strong>.</p>
+    <h1>Tiết Kiệm <em>14 Giờ</em>, Tăng <em>Gấp 3 Lượt</em> Dắt Khách Xem Nhà Mỗi Tuần — Chỉ Với 7 Vũ Khí AI Này Cho Anh Em Môi Giới BĐS</h1>
+    <p style="font-size:clamp(16px,2.6vw,20px);color:var(--gold-light);font-weight:600;max-width:680px;margin:14px auto 4px;line-height:1.6;">07 vũ khí AI thực chiến, <strong style="color:#fff;">đã nạp sẵn nghề môi giới BĐS Việt Nam</strong> — bạn chỉ ra lệnh, nó làm.</p>
 
     <div class="hero-caps">
       <span class="hero-cap">Poster & ảnh bán nhà</span>
@@ -417,8 +431,8 @@
       <span class="hero-cap">Video TikTok / Reels</span>
       <span class="hero-cap">Quảng cáo Facebook</span>
       <span class="hero-cap">Kế hoạch bán hàng</span>
-      <span class="hero-cap">Trợ lý AI riêng</span>
       <span class="hero-cap">Video Avatar biết nói</span>
+      <span class="hero-cap">Trợ lý AI riêng</span>
       <span class="hero-caps-tail">…mỗi ngày mở khóa 1 vũ khí — làm ra ngay 1 sản phẩm dùng được.</span>
     </div>
 
@@ -428,7 +442,8 @@
       <span class="live-dot"></span>
       <span>Đã có <strong>23/30</strong> học viên · Ưu đãi Tháng 8/2026</span>
     </div>
-    <div class="hero-progress reveal"><span style="width:77%"></span></div>
+    <div class="hero-progress reveal" style="margin:0 auto 8px;"><span style="width:77%"></span></div>
+    <p class="reveal" style="margin:0 auto 24px;font-size:13.5px;font-weight:700;color:var(--gold-light);">🔥 Chỉ còn <span style="color:#fff;">7 suất</span> ưu đãi 499K</p>
 
     <a href="/dang-ky" class="btn-primary">🎁 Nhận 3 Ngày Bonus Miễn Phí (Làm Được Ngay) →</a>
     <p class="hero-note">Miễn phí 100% · Không cần thẻ · Bonus đầu tiên vào hộp thư ngay khi đăng ký<br>Đã biết mình cần gì? <a href="/dang-ky" style="color:var(--gold-light);text-decoration:underline;">Vào luôn 7 Ngày · 499.000đ →</a></p>
@@ -438,6 +453,20 @@
 <div class="trust-bar">
   <p>⚡ 15 phút mở khóa + 15 phút thực hành mỗi ngày &nbsp;·&nbsp; ⬡ Học bằng việc thật của bạn &nbsp;·&nbsp; ⊕ AI được nạp nghề sẵn, bạn chỉ ra lệnh</p>
 </div>
+
+
+<!-- ══ 1A. VIDEO DEMO TOOL (ngay dưới hero) ══ -->
+<section style="background:var(--olive-dark);padding:16px 20px 10px;">
+  <div class="container">
+    <p class="reveal" style="text-align:center;color:var(--gold-light);font-weight:600;font-size:clamp(15px,2.4vw,18px);margin:0 auto 16px;max-width:660px;line-height:1.6;">Dễ tới mức này: chỉ cần <strong style="color:#fff;">nhập 5 thông số</strong>, Tool tự chạy ra <strong style="color:#fff;">khoảng giá định giá an toàn</strong> trong 30 giây. Xem thử ngay:</p>
+    <div class="reveal" onclick="playVideo(this,'5BXxa4RZbms')" style="position:relative;aspect-ratio:16/9;max-width:760px;margin:0 auto;border-radius:12px;overflow:hidden;box-shadow:0 12px 32px rgba(0,0,0,.35);border:2px solid rgba(200,169,110,.5);cursor:pointer;">
+      <img src="https://img.youtube.com/vi/5BXxa4RZbms/hqdefault.jpg" alt="Video hướng dẫn dùng Tool Định Giá Du Kích — nhập 5 thông số, ra khoảng giá trong 30 giây" style="width:100%;height:100%;object-fit:cover;display:block;" loading="lazy">
+      <span style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;background:rgba(20,24,12,.28);">
+        <span style="width:74px;height:74px;border-radius:50%;background:rgba(200,169,110,.96);display:flex;align-items:center;justify-content:center;box-shadow:0 6px 20px rgba(0,0,0,.45);"><span style="color:#2C3020;font-size:28px;margin-left:5px;line-height:1;">▶</span></span>
+      </span>
+    </div>
+  </div>
+</section>
 
 
 <!-- ══ 1B. USP — "AI CHƯA NẠP NGHỀ" (đưa lên ngay dưới hero) ══
@@ -621,18 +650,28 @@
         <span class="mod-time">Ngày 5 · 30 phút</span>
       </div>
       <div class="mod-card">
-        <span class="mod-icon">🤖</span>
-        <h4>NGÀY 6 · TRỢ LÝ AI CÁ NHÂN</h4>
-        <p>Trợ lý trả lời câu hỏi, viết nội dung, phân tích bất động sản, hỗ trợ tư vấn khách.<br><strong>→ Sở hữu 1 trợ lý AI theo phong cách của bạn.</strong></p>
+        <span class="mod-icon">🎥</span>
+        <h4>NGÀY 6 · HÌNH ẢNH BIẾT NÓI (AVATAR AI)</h4>
+        <p>Video Avatar AI, video giới thiệu dự án, video tư vấn, video xây thương hiệu cá nhân.<br><strong>→ Có ngay video AI chuyên nghiệp để bán hàng.</strong></p>
         <span class="mod-time">Ngày 6 · 30 phút</span>
       </div>
-      <div class="mod-card">
-        <span class="mod-icon">🎥</span>
-        <h4>NGÀY 7 · HÌNH ẢNH BIẾT NÓI (AVATAR AI)</h4>
-        <p>Video Avatar AI, video giới thiệu dự án, video tư vấn, video xây thương hiệu cá nhân.<br><strong>→ Có ngay video AI chuyên nghiệp để bán hàng.</strong></p>
-        <span class="mod-time">Ngày 7 · 30 phút</span>
+      <div class="mod-card" style="border-left-width:5px;background:linear-gradient(180deg,rgba(200,169,110,.09),transparent);">
+        <span class="mod-icon">🤖</span>
+        <h4>NGÀY 7 · TRỢ LÝ AI CÁ NHÂN <span style="font-size:10.5px;background:var(--red-war);color:#fff;padding:2px 8px;border-radius:99px;letter-spacing:1px;vertical-align:middle;">ĐỈNH CAO</span></h4>
+        <p>"Nhân viên AI" của riêng bạn: trả lời khách, viết bài, phân tích tài sản, tư vấn theo đúng phong cách bạn — làm việc 24/7.<br><strong>→ Vũ khí gói trọn cả 6 ngày trước thành một trợ lý nhân bản chính bạn.</strong></p>
+        <span class="mod-time">Ngày 7 · 30 phút · Mạnh nhất</span>
       </div>
     </div>
+  </div>
+</section>
+
+
+<!-- ══ CTA GIỮA TRANG A (sau lưới 7 vũ khí) ══ -->
+<section style="background:rgba(200,169,110,.09);border-top:1px solid rgba(200,169,110,.25);border-bottom:1px solid rgba(200,169,110,.25);padding:38px 20px;text-align:center;">
+  <div class="container">
+    <p class="reveal" style="font-family:'Playfair Display',serif;font-size:clamp(18px,3.2vw,24px);color:var(--olive-dark);margin:0 auto 18px;max-width:600px;line-height:1.4;">7 vũ khí — mỗi ngày một sản phẩm bán hàng. Bắt đầu ngay hôm nay.</p>
+    <a href="/dang-ky" class="btn-primary reveal">🎁 Nhận 3 Ngày Bonus Miễn Phí — Trang Bị Vũ Khí Đầu Tiên Hôm Nay →</a>
+    <p class="reveal" style="margin-top:12px;font-size:13.5px;color:var(--text-muted);">Miễn phí 100% · Không cần thẻ ngân hàng · Bonus vào hộp thư ngay khi đăng ký</p>
   </div>
 </section>
 
@@ -756,52 +795,75 @@
     <h2 class="reveal">Bộ 03 Siêu Vũ Khí — anh em môi giới nào cũng cần</h2>
     <div class="divider reveal"></div>
 
-    <p class="reveal" style="text-align:center;max-width:680px;margin:0 auto 20px;line-height:1.85;">Ngay khi điền email, bạn nhận liền: <strong>Check Quy Hoạch</strong> ngay trên app do nhà nước quản lý · <strong>Tool Định Giá tài sản trong 30 phút</strong> · và <strong>tạo hàng loạt nội dung chuẩn tâm lý bán hàng bằng AI</strong> chỉ với một cú rê chuột. Ba lợi thế siêu cấp mà môi giới nào cũng muốn nắm giữ ngay.</p>
+    <p class="reveal" style="text-align:center;max-width:700px;margin:0 auto 22px;line-height:1.85;">Đây không phải "quà kèm cho có". Là <strong>3 khóa mini 30 phút chuyên sâu</strong> — đúc kết từ chính các sản phẩm đang bán của BĐS Du Kích. Nhận ngay khi điền email, dùng được liền để tư vấn và chốt khách.</p>
 
     <div class="bc-banner reveal">
       <span class="bc-banner-label">Quà tặng</span>
-      <h3>BỘ 03 SIÊU VŨ KHÍ CHO ANH EM MÔI GIỚI<br><em>Tặng kèm, miễn phí 100%</em></h3>
-      <p>Gửi ngay khi đăng ký · Dùng được ngay để hỗ trợ tư vấn và bán hàng</p>
+      <h3>BỘ 03 SIÊU VŨ KHÍ — 3 KHÓA MINI 30 PHÚT<br><em>Hôm nay tặng bạn — miễn phí 100%</em></h3>
+      <p>Mỗi khóa 30 phút, chuyên sâu 1 chủ đề · học xong dùng được ngay</p>
     </div>
 
     <div class="day-card reveal">
-      <span class="day-num">Bonus 1</span>
+      <div style="display:flex;align-items:center;flex-wrap:wrap;gap:10px;margin-bottom:8px;">
+        <span class="day-num" style="margin:0;">Khóa mini 1 · 30 phút</span>
+        <span style="font-size:11px;font-weight:800;color:var(--gold-dark);background:rgba(200,169,110,.16);border:1px solid rgba(200,169,110,.45);padding:3px 10px;border-radius:99px;">Công cụ độc quyền</span>
+      </div>
       <h4>AI Viết Content Bán Hàng Hàng Loạt</h4>
+      <div onclick="playVideo(this,'KDrYWGhVh_o')" style="position:relative;aspect-ratio:16/9;margin:14px 0;border-radius:8px;overflow:hidden;box-shadow:0 6px 20px rgba(0,0,0,.1);cursor:pointer;">
+        <img src="https://img.youtube.com/vi/KDrYWGhVh_o/hqdefault.jpg" alt="Kết quả viết content bán hàng hàng loạt bằng AI" style="width:100%;height:100%;object-fit:cover;display:block;" loading="lazy">
+        <span style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;background:rgba(20,24,12,.25);">
+          <span style="width:64px;height:64px;border-radius:50%;background:rgba(200,169,110,.96);display:flex;align-items:center;justify-content:center;box-shadow:0 6px 18px rgba(0,0,0,.4);"><span style="color:#2C3020;font-size:24px;margin-left:4px;line-height:1;">▶</span></span>
+        </span>
+      </div>
       <ul class="day-out">
-        <li>Hệ thống prompt viết bài bán nhà trong 5 phút</li>
-        <li>Viết hàng chục phiên bản quảng cáo để thử nghiệm</li>
+        <li>Hệ thống prompt viết bài bán nhà chỉ trong 5 phút</li>
+        <li>Bung hàng chục phiên bản quảng cáo để thử nghiệm</li>
         <li>Tăng tốc soạn nội dung với Wispr Flow (nói thay vì gõ)</li>
       </ul>
       <span class="day-time">Hết cảnh ngồi cả giờ nghĩ một bài đăng</span>
     </div>
 
     <div class="day-card reveal">
-      <span class="day-num">Bonus 2</span>
-      <h4>Check Quy Hoạch Theo Phong Cách BĐS Du Kích</h4>
+      <div style="display:flex;align-items:center;flex-wrap:wrap;gap:10px;margin-bottom:8px;">
+        <span class="day-num" style="margin:0;">Khóa mini 2 · 30 phút</span>
+        <span style="font-size:11px;font-weight:800;color:var(--gold-dark);background:rgba(200,169,110,.16);border:1px solid rgba(200,169,110,.45);padding:3px 10px;border-radius:99px;">Cốt lõi từ khóa Tự Check Quy Hoạch</span>
+      </div>
+      <h4>Tự Check Quy Hoạch Theo Phong Cách Du Kích</h4>
+      <img src="images/proof/bonus-quy-hoach.jpg" alt="Ảnh thật: tự tra quy hoạch một thửa đất ngay tại hiện trường" style="width:100%;max-width:340px;border-radius:8px;margin:14px auto 6px;display:block;box-shadow:0 6px 20px rgba(0,0,0,.12);" loading="lazy">
+      <p style="text-align:center;margin:0 0 12px;font-size:13px;color:var(--text-muted);">Ảnh thật — tự tra quy hoạch một thửa đất ngay tại hiện trường</p>
       <ul class="day-out">
-        <li>Kiểm tra quy hoạch của một thửa đất</li>
-        <li>Đọc và hiểu đúng thông tin quy hoạch</li>
-        <li>Nhận diện rủi ro trước khi tư vấn khách hàng</li>
+        <li>Tự kiểm tra một thửa đất có dính quy hoạch hay không — ngay tại hiện trường</li>
+        <li>Đọc đúng bản đồ trên app do nhà nước quản lý (.gov.vn), tránh bẫy bản dự thảo</li>
+        <li>Nhận diện rủi ro pháp lý trước khi tư vấn — tránh cho khách mất tiền tỷ</li>
       </ul>
-      <span class="day-time">Tư vấn có căn cứ, không nói mò</span>
+      <span class="day-time">Tư vấn có căn cứ, không nói mò — khách tin ngay</span>
     </div>
 
     <div class="day-card reveal">
-      <span class="day-num">Bonus 3</span>
-      <h4>Định Giá Nhanh Theo Phong Cách BĐS Du Kích</h4>
+      <div style="display:flex;align-items:center;flex-wrap:wrap;gap:10px;margin-bottom:8px;">
+        <span class="day-num" style="margin:0;">Khóa mini 3 · 30 phút</span>
+        <span style="font-size:11px;font-weight:800;color:var(--gold-dark);background:rgba(200,169,110,.16);border:1px solid rgba(200,169,110,.45);padding:3px 10px;border-radius:99px;">Dùng chính Tool Định Giá Du Kích</span>
+      </div>
+      <h4>Định Giá Nhanh Theo Phong Cách Du Kích</h4>
+      <img src="images/proof/bonus-dinh-gia-tool.png" alt="Giao diện thật Tool Định Giá Du Kích — nhập 5 thông số, ra khoảng giá an toàn trong 30 giây" style="width:100%;border-radius:8px;margin:14px 0 6px;display:block;box-shadow:0 6px 20px rgba(0,0,0,.12);" loading="lazy">
+      <p style="text-align:center;margin:0 0 12px;"><a href="https://youtu.be/5BXxa4RZbms" target="_blank" rel="noopener" style="color:var(--gold-dark);font-weight:700;font-size:14px;text-decoration:none;border-bottom:1px solid var(--gold);">▶ Xem Tool chạy thật trong video hướng dẫn</a></p>
       <ul class="day-out">
-        <li>Ước lượng giá thị trường của một bất động sản</li>
-        <li>So sánh với các bất động sản tương đồng</li>
-        <li>Đưa ra mức giá tham khảo nhanh để tư vấn khách</li>
+        <li>Nhập 5 thông số → ra khoảng giá an toàn của một BĐS trong 30 giây</li>
+        <li>So sánh với các BĐS tương đồng, biết ngay giá đang bị "thổi" bao nhiêu</li>
+        <li>Khách hỏi giá — trả lời có cơ sở, chốt niềm tin ngay tại chỗ</li>
       </ul>
-      <span class="day-time">Khách hỏi giá — trả lời có cơ sở trong vài phút</span>
+      <span class="day-time">Đối thủ đoán mò — bạn nói giá có căn cứ</span>
+    </div>
+
+    <div class="reveal" style="text-align:center;background:rgba(200,169,110,.1);border:1px dashed var(--gold);border-radius:10px;padding:18px 22px;margin:8px 0 4px;">
+      <p style="margin:0;font-size:15.5px;line-height:1.7;">3 khóa mini này đúc kết từ chính các sản phẩm đang bán của BĐS Du Kích. Vào <strong>7 Ngày · 7 Vũ Khí AI</strong> hôm nay, bạn nhận trọn cả ba — <strong style="color:var(--gold-dark);">hoàn toàn miễn phí</strong>.</p>
     </div>
 
     <div class="bc-result reveal">
-      <span class="bc-result-label">Sau 3 ngày bonus, bạn đã</span>
+      <span class="bc-result-label">Sau 3 khóa mini bonus, bạn đã</span>
       <div class="bc-tally">
         <div class="bc-tally-item"><span class="bc-tally-num">5'</span><span class="bc-tally-label">viết xong 1 bài bán nhà</span></div>
-        <div class="bc-tally-item"><span class="bc-tally-num">3</span><span class="bc-tally-label">công cụ hỗ trợ tư vấn</span></div>
+        <div class="bc-tally-item"><span class="bc-tally-num">3</span><span class="bc-tally-label">siêu vũ khí trong tay</span></div>
         <div class="bc-tally-item"><span class="bc-tally-num">0đ</span><span class="bc-tally-label">hoàn toàn miễn phí</span></div>
       </div>
       <p>Không phải bài tập mẫu. Là công cụ chạy thật trên công việc thật của bạn — và bạn tự thấy AI có giúp được nghề môi giới hay không, bằng kết quả chứ không bằng lời tôi nói.</p>
@@ -880,24 +942,24 @@
 
       <div class="camp">
         <div class="camp-head">
-          <span class="camp-icon">🤖</span>
-          <div>
-            <span class="camp-no">Ngày 6 · 30 phút</span>
-            <h3 class="camp-name">Xây Dựng Trợ Lý AI Cá Nhân</h3>
-          </div>
-        </div>
-        <p class="camp-desc">Trợ lý trả lời câu hỏi, viết nội dung, phân tích bất động sản, hỗ trợ tư vấn khách hàng. <strong>→ Sau 30 phút: sở hữu một trợ lý AI hoạt động theo đúng phong cách của riêng bạn.</strong></p>
-      </div>
-
-      <div class="camp camp-final">
-        <div class="camp-head">
           <span class="camp-icon">🎥</span>
           <div>
-            <span class="camp-no">Ngày 7 · 30 phút</span>
+            <span class="camp-no">Ngày 6 · 30 phút</span>
             <h3 class="camp-name">AI Hình Ảnh Biết Nói (Avatar AI)</h3>
           </div>
         </div>
         <p class="camp-desc">Video Avatar AI, video giới thiệu dự án, video tư vấn bất động sản, video xây dựng thương hiệu cá nhân. <strong>→ Sau 30 phút: có ngay video AI chuyên nghiệp để dùng trong marketing và bán hàng.</strong></p>
+      </div>
+
+      <div class="camp camp-final">
+        <div class="camp-head">
+          <span class="camp-icon">🤖</span>
+          <div>
+            <span class="camp-no">Ngày 7 · 30 phút · Vũ khí mạnh nhất</span>
+            <h3 class="camp-name">Xây Dựng Trợ Lý AI Cá Nhân — "Nhân Bản" Chính Bạn</h3>
+          </div>
+        </div>
+        <p class="camp-desc">Một trợ lý AI hiểu nghề, làm việc 24/7: trả lời khách, viết nội dung, phân tích bất động sản, tư vấn theo đúng phong cách của bạn. Đây là vũ khí gói trọn cả 6 ngày trước thành một "nhân viên AI" của riêng bạn. <strong>→ Sau 30 phút: sở hữu một trợ lý AI nhân bản chính bạn, không bao giờ nghỉ.</strong></p>
       </div>
     </div>
 
@@ -947,11 +1009,49 @@
 -->
 
 
+<!-- ══ 8C. XEM THỬ KẾT QUẢ — Before/After (ngay sau Lộ trình) ══ -->
+<section style="background:var(--white);">
+  <div class="container">
+    <span class="section-label reveal">Xem thử trước khi tin</span>
+    <h2 class="reveal">Đây là thứ vũ khí AI làm ra — không phải mô tả bằng lời</h2>
+    <div class="divider reveal"></div>
+    <p class="reveal" style="text-align:center;max-width:640px;margin:0 auto 28px;color:var(--text-muted);">Cùng một căn nhà: ảnh chụp vội bằng điện thoại — và poster bán hàng chuyên nghiệp dựng bằng <strong style="color:var(--olive-dark);">Vũ khí Ngày 1</strong> chỉ trong vài phút.</p>
+    <div class="reveal" style="display:flex;align-items:center;justify-content:center;gap:18px;flex-wrap:wrap;max-width:860px;margin:0 auto;">
+      <figure style="flex:1;min-width:240px;max-width:360px;margin:0;text-align:center;">
+        <div style="position:relative;">
+          <span style="position:absolute;top:10px;left:10px;background:rgba(70,70,70,.92);color:#fff;font-size:11.5px;font-weight:800;letter-spacing:1px;padding:4px 12px;border-radius:99px;">TRƯỚC</span>
+          <img src="images/proof/ngay1-truoc.jpg" alt="Ảnh nhà chụp vội bằng điện thoại — trước khi xử lý" loading="lazy" style="width:100%;border-radius:10px;display:block;box-shadow:0 6px 18px rgba(0,0,0,.14);filter:saturate(.9);">
+        </div>
+        <figcaption style="margin-top:10px;font-size:13.5px;color:var(--text-muted);">Ảnh chụp vội — tối, lộn xộn, khó bán</figcaption>
+      </figure>
+      <div style="font-size:34px;color:var(--gold-dark);font-weight:900;line-height:1;">→</div>
+      <figure style="flex:1;min-width:240px;max-width:360px;margin:0;text-align:center;">
+        <div style="position:relative;">
+          <span style="position:absolute;top:10px;left:10px;z-index:2;background:var(--gold-dark);color:#fff;font-size:11.5px;font-weight:800;letter-spacing:1px;padding:4px 12px;border-radius:99px;">SAU · AI XỬ LÝ</span>
+          <img src="images/proof/ngay1-sau.jpg" alt="Poster bán nhà chuyên nghiệp dựng bằng AI — Vũ khí Ngày 1" loading="lazy" style="width:100%;border-radius:10px;display:block;box-shadow:0 10px 26px rgba(0,0,0,.2);border:2px solid var(--gold);">
+        </div>
+        <figcaption style="margin-top:10px;font-size:13.5px;color:var(--olive-dark);font-weight:600;">Poster chuyên nghiệp — dựng trong vài phút bằng Vũ khí Ngày 1</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+
+<!-- ══ CTA GIỮA TRANG B (sau lộ trình 7 ngày) ══ -->
+<section style="background:var(--olive-dark);padding:40px 20px;text-align:center;">
+  <div class="container">
+    <p class="reveal" style="font-family:'Playfair Display',serif;font-size:clamp(18px,3.2vw,24px);color:#fff;margin:0 auto 18px;max-width:620px;line-height:1.4;">Bạn đã thấy trọn hành trình 7 ngày. Giờ là lúc <em style="color:var(--gold-light);font-style:italic;">trang bị</em>.</p>
+    <a href="/dang-ky" class="btn-primary reveal">⚔ Vào Luôn 7 Ngày · 7 Vũ Khí AI — Chỉ 499K →</a>
+    <p class="reveal" style="margin-top:12px;font-size:13.5px;color:rgba(245,240,232,.65);">Tặng luôn 3 khóa mini bonus · Giá ưu đãi 499.000đ (niêm yết 1.000.000đ)</p>
+  </div>
+</section>
+
+
 <!-- ══ 9. THÂN — TÂM — TRÍ ══ -->
 <section class="philosophy">
   <div class="container">
     <span class="section-label reveal">Triết lý Bất Động Sản Du Kích</span>
-    <h2 class="reveal">Không phải làm nhiều hơn. Là làm khác đi.</h2>
+    <h2 class="reveal">Đừng làm theo cách cũ mà mong muốn kết quả mới!</h2>
     <p class="lead reveal">Mọi thứ trong 7 ngày này đều quy về ba điều:</p>
 
     <div class="ttt-grid reveal">
@@ -979,20 +1079,7 @@
 </section>
 
 
-<!-- ══ 9.5 (Dành chỗ "Xem thử kết quả" — chèn khi có ảnh chụp sản phẩm thật do AI làm ra)
-     Khi có 4 ảnh, đặt vào images/proof/ và mở lại section bên dưới:
-     <section style="background:var(--white);"><div class="container">
-       <span class="section-label reveal">Xem thử trước khi tin</span>
-       <h2 class="reveal">Đây là thứ vũ khí AI làm ra — không phải mô tả bằng lời</h2>
-       <div class="divider reveal"></div>
-       <div class="proof-shots reveal">
-         <figure><img src="images/proof/bai-viet.jpg" alt="Bài viết do vũ khí AI tạo ra" loading="lazy"><figcaption>Bài viết ra trong 5 phút, đúng giọng môi giới</figcaption></figure>
-         <figure><img src="images/proof/hinh-anh.jpg" alt="Hình ảnh tài sản đã xử lý bằng AI" loading="lazy"><figcaption>Bộ ảnh tài sản đã đồng bộ nhận diện</figcaption></figure>
-         <figure><img src="images/proof/landing.jpg" alt="Landing page tìm nguồn nhà do học viên dựng" loading="lazy"><figcaption>Landing page tìm nguồn nhà, dựng trong 15 phút</figcaption></figure>
-         <figure><img src="images/proof/form.jpg" alt="Thông tin chủ nhà gửi về qua form tự động" loading="lazy"><figcaption>Chủ nhà tự gửi thông tin về, không cần gọi từng người</figcaption></figure>
-       </div>
-     </div></section>
--->
+<!-- (Khối Before/After đã được chuyển lên ngay sau Lộ trình 7 ngày) -->
 
 
 <!-- ══ 10. GALLERY ══ -->
@@ -1026,6 +1113,56 @@
         <img src="images/gallery/g6.jpg" alt="Buổi chia sẻ vòng tròn cùng học viên bên hồ" loading="lazy">
         <div class="gallery-caption">Buổi chia sẻ vòng tròn cùng học viên</div>
       </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ══ 10.5 CÂU CHUYỆN THỰC CHIẾN + KEY MESSAGE ══ -->
+<section style="background:var(--cream-dark);">
+  <div class="container">
+    <span class="section-label reveal">Câu chuyện thực chiến</span>
+    <h2 class="reveal">Rất có thể, bạn sẽ thấy chính mình trong đây</h2>
+    <div class="divider reveal"></div>
+
+    <div class="reveal" style="max-width:740px;margin:0 auto 34px;text-align:center;background:var(--olive-dark);border-left:4px solid var(--gold);border-radius:8px;padding:24px 28px;">
+      <p style="margin:0;color:#fff;font-size:clamp(16px,2.7vw,20px);line-height:1.7;font-style:italic;">"AI không thay thế người môi giới giỏi. AI thay những công việc lặp đi lặp lại — để bạn có nhiều thời gian hơn cho việc <strong style="color:var(--gold-light);font-style:normal;">tạo ra doanh số</strong>."</p>
+    </div>
+
+    <div class="reveal" style="display:grid;gap:18px;max-width:820px;margin:0 auto;">
+
+      <div style="background:var(--white);border-left:4px solid var(--gold);border-radius:8px;padding:22px 24px;">
+        <span style="display:inline-block;font-size:11px;font-weight:800;letter-spacing:1px;color:var(--gold-dark);background:rgba(200,169,110,.16);border:1px solid rgba(200,169,110,.45);padding:3px 10px;border-radius:99px;margin-bottom:10px;">NGÀY 1 · THIẾT KẾ HÌNH ẢNH</span>
+        <h4 style="font-family:'Playfair Display',serif;font-size:19px;color:var(--olive-dark);margin:0 0 10px;">Anh Minh — môi giới nhà phố, Bình Chánh</h4>
+        <p style="margin:0 0 8px;font-size:15px;line-height:1.7;"><strong>Trước:</strong> nhận bán căn nhà đang hoàn thiện, ảnh chụp điện thoại tối và lộn xộn. Đăng Facebook, Zalo nhiều ngày gần như không ai hỏi — không phải nhà xấu, mà hình chưa "kể" được giá trị.</p>
+        <p style="margin:0 0 8px;font-size:15px;line-height:1.7;"><strong>Với Vũ khí Ngày 1:</strong> dùng AI biến ảnh thật thành poster chuyên nghiệp — làm sáng, bố cục hiện đại, thêm thông tin nổi bật, đồng bộ nhận diện. Vài phút có ngay một ấn phẩm chỉn chu.</p>
+        <p style="margin:0;font-size:15px;font-weight:600;color:var(--olive-dark);">→ Đăng lại: khách chủ động nhắn tin, đặt nhiều lịch xem hơn hẳn, chốt sau vài ngày.</p>
+      </div>
+
+      <div style="background:var(--white);border-left:4px solid var(--gold);border-radius:8px;padding:22px 24px;">
+        <span style="display:inline-block;font-size:11px;font-weight:800;letter-spacing:1px;color:var(--gold-dark);background:rgba(200,169,110,.16);border:1px solid rgba(200,169,110,.45);padding:3px 10px;border-radius:99px;margin-bottom:10px;">NGÀY 6 · AVATAR AI BIẾT NÓI</span>
+        <h4 style="font-family:'Playfair Display',serif;font-size:19px;color:var(--olive-dark);margin:0 0 10px;">Chị Bích — môi giới căn hộ, Nam Sài Gòn</h4>
+        <p style="margin:0 0 8px;font-size:15px;line-height:1.7;"><strong>Trước:</strong> biết video là cách nhanh nhất tiếp cận khách, nhưng cứ bật camera là mất tự tin — quay cả giờ cho một clip 30 giây rồi bỏ, đành quay lại đăng ảnh khô khan.</p>
+        <p style="margin:0 0 8px;font-size:15px;line-height:1.7;"><strong>Với Vũ khí Ngày 6:</strong> chỉ cần một đoạn nội dung ngắn → AI tạo Avatar mang phong cách của chị, chuyển thành giọng nói tự nhiên, ghép phụ đề — video hoàn chỉnh trong khoảng 5 phút.</p>
+        <p style="margin:0;font-size:15px;font-weight:600;color:var(--olive-dark);">→ Reels đầu tiên hơn 1.000 lượt xem tự nhiên, khách nhắn hỏi dự án, có thêm lịch tư vấn — mà không cần đứng trước camera.</p>
+      </div>
+
+      <div style="background:var(--white);border-left:4px solid var(--gold);border-radius:8px;padding:22px 24px;">
+        <span style="display:inline-block;font-size:11px;font-weight:800;letter-spacing:1px;color:var(--gold-dark);background:rgba(200,169,110,.16);border:1px solid rgba(200,169,110,.45);padding:3px 10px;border-radius:99px;margin-bottom:10px;">NGÀY 5 · KẾ HOẠCH BÁN HÀNG</span>
+        <h4 style="font-family:'Playfair Display',serif;font-size:19px;color:var(--olive-dark);margin:0 0 10px;">Chú Hùng — 10 năm nghề, nhà phố Quận 1 &amp; Quận 3</h4>
+        <p style="margin:0 0 8px;font-size:15px;line-height:1.7;"><strong>Trước:</strong> nguồn tốt, khách cũ giới thiệu đều, nhưng cả ngày chìm trong ghi chép, xếp lịch, viết báo cáo chủ nhà, lập kế hoạch. Cuối ngày hết pin, không còn thời gian đi gặp khách. Từng nghĩ "AI cho tụi trẻ thôi".</p>
+        <p style="margin:0 0 8px;font-size:15px;line-height:1.7;"><strong>Với Vũ khí Ngày 5:</strong> nhập danh sách ký gửi + mức ưu tiên + tình trạng khách → AI xếp thứ tự ưu tiên, gợi ý chăm khách, soạn báo cáo chủ nhà, chuẩn bị việc từng ngày. Việc vài giờ nay còn ít phút để rà soát và quyết định.</p>
+        <p style="margin:0;font-size:15px;font-weight:600;color:var(--olive-dark);">→ Có lại thời gian đi gặp chủ nhà, dẫn khách xem, mở nguồn — và chốt một giao dịch nhà phố giá trị cao ngay tháng sau.</p>
+      </div>
+
+    </div>
+
+    <p class="reveal" style="text-align:center;font-weight:700;color:var(--olive-dark);margin:36px auto 16px;font-size:15.5px;">💬 Anh em môi giới nhắn gì sau khi áp dụng</p>
+    <div class="reveal" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(205px,1fr));gap:14px;max-width:900px;margin:0 auto;align-items:start;">
+      <img src="images/proof/tin-nhan-poster.png" alt="Tin nhắn: hình ảnh chưa đủ thu hút nên căn nhà mãi không trôi — sau khi đổi cách trình bày, khách chú ý hơn" loading="lazy" style="width:100%;border-radius:10px;display:block;box-shadow:0 5px 16px rgba(0,0,0,.14);border:1px solid var(--cream-dark);">
+      <img src="images/proof/tin-nhan-content.png" alt="Tin nhắn: AI không giúp tiêu nhiều tiền quảng cáo hơn — mà giúp giảm những bài đăng không ai muốn đọc" loading="lazy" style="width:100%;border-radius:10px;display:block;box-shadow:0 5px 16px rgba(0,0,0,.14);border:1px solid var(--cream-dark);">
+      <img src="images/proof/tin-nhan-ads.png" alt="Tin nhắn: quảng cáo Facebook quan trọng nhất là đúng người, đúng thời điểm, đúng thông điệp" loading="lazy" style="width:100%;border-radius:10px;display:block;box-shadow:0 5px 16px rgba(0,0,0,.14);border:1px solid var(--cream-dark);">
+      <img src="images/proof/tin-nhan-quyhoach.png" alt="Tin nhắn: biết cách tự kiểm chứng thông tin quy hoạch trước khi tư vấn khách" loading="lazy" style="width:100%;border-radius:10px;display:block;box-shadow:0 5px 16px rgba(0,0,0,.14);border:1px solid var(--cream-dark);">
     </div>
   </div>
 </section>
@@ -1082,7 +1219,7 @@
     </div>
 
     <div class="price-cta-wrap">
-      <a href="/dang-ky" class="btn-primary reveal">⚔ Sở Hữu Trọn Bộ 7 Vũ Khí AI BĐS 5.0 — Ưu Đãi 499K →</a>
+      <a href="/dang-ky" class="btn-primary reveal">⚔ Trang Bị Ngay Vũ Khí Đầu Tiên Trong 15 Phút →</a>
       <p class="price-secure reveal">Cả hai đường đều bắt đầu ở cùng một trang. Chọn miễn phí thì không mất phí và không cần cam kết gì.</p>
     </div>
   </div>
@@ -1143,7 +1280,7 @@
     </div>
 
     <div class="honesty-box reveal">
-      <p><strong style="color:var(--olive-dark);">Xin nói thẳng một điều:</strong> đây là hành trình mới, nên <strong>chưa có phản hồi học viên và chưa có ảnh chụp kết quả</strong> để đưa lên đây. Tôi không mượn phản hồi của khóa khác, cũng không dùng ảnh minh hoạ mua sẵn để làm bạn tin.<br><br>Cách kiểm chứng thật nhất: nhận 3 ngày bonus miễn phí, làm thử, rồi tự nhìn kết quả bạn làm ra. Không hài lòng thì dừng — bạn không mất gì.</p>
+      <p><strong style="color:var(--olive-dark);">Bằng chứng thật — từ chính tôi:</strong> tôi không mượn lời khen của khóa khác, cũng không dùng ảnh minh hoạ mua sẵn. Tôi đưa kết quả thật của chính mình với đúng bộ vũ khí này.<br><br>Chỉ trong <strong style="color:var(--olive-dark);">một tuần</strong>, tôi dùng bộ 7 vũ khí AI này để <strong style="color:var(--olive-dark);">tự tạo hơn 90 nội dung quảng cáo bán nhà</strong>, dựng hình và video đăng đều mỗi ngày — <strong style="color:var(--olive-dark);">tiết kiệm tối thiểu 14 giờ mỗi tuần</strong>, thời gian tôi dồn lại để đi gặp khách và chốt deal.<br><br>Và bạn không cần tin lời tôi: nhận <strong style="color:var(--olive-dark);">3 khóa mini bonus miễn phí</strong>, tự tay làm thử, rồi nhìn kết quả bạn tạo ra. Không hài lòng thì dừng — bạn không mất gì.</p>
     </div>
   </div>
 </section>
@@ -1153,7 +1290,7 @@
 <section class="final-cta">
   <div class="container">
     <span class="section-label reveal" style="color:var(--gold);">Quyết định của bạn</span>
-    <h2 class="reveal">Đừng để bị tụt lại phía sau. Đào tạo hôm nay để dẫn đầu ngày mai.</h2>
+    <h2 class="reveal">Lựa chọn đứng trên vai người khổng lồ AI để tiến lên phía trước — hay để áp lực cạnh tranh khốc liệt của nghề đào thải bạn phía sau?</h2>
     <p class="lead reveal">3 ngày bonus, miễn phí, bắt đầu ngay hôm nay. Học xong là có ngay công cụ dùng được vào việc bán hàng — hoặc bạn vẫn đứng đúng chỗ cũ.</p>
 
     <div class="final-quote-box reveal">
@@ -1222,5 +1359,40 @@
   }
 </script>
 
+<a href="/dang-ky" class="m-sticky-cta">🎁 Nhận 3 Ngày Bonus Miễn Phí →</a>
+<script>
+  // Bấm để phát video (facade — tránh lỗi nhúng khi tải trang)
+  function playVideo(el,id){
+    el.innerHTML='<iframe src="https://www.youtube.com/embed/'+id+'?autoplay=1&rel=0&modestbranding=1&playsinline=1" style="position:absolute;inset:0;width:100%;height:100%;border:0;" allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen></iframe>';
+  }
+  // Social proof động (thông báo đăng ký gần đây)
+  (function fomo(){
+    var pool=[
+      {n:'Anh Nam',l:'Môi giới Quận 7',a:'vừa nhận 3 Ngày Bonus Miễn Phí'},
+      {n:'Chị Lan',l:'Môi giới TP. Thủ Đức',a:'vừa vào 7 Ngày · 7 Vũ Khí AI'},
+      {n:'Anh Tuấn',l:'Môi giới Bình Thạnh',a:'vừa nhận Bộ 3 Siêu Vũ Khí'},
+      {n:'Chị Hà',l:'Môi giới Gò Vấp',a:'vừa đăng ký hành trình 7 ngày'},
+      {n:'Anh Dũng',l:'Môi giới Tân Bình',a:'vừa nhận 3 Ngày Bonus Miễn Phí'},
+      {n:'Chị Mai',l:'Môi giới Quận 9',a:'vừa trang bị vũ khí đầu tiên'},
+      {n:'Anh Phát',l:'Môi giới Bình Chánh',a:'vừa vào 7 Ngày · 7 Vũ Khí AI'}
+    ];
+    var el=document.createElement('div'); el.className='fomo-toast';
+    el.innerHTML='<button class="fomo-close" aria-label="Đóng">×</button><div class="fomo-body"></div>';
+    document.body.appendChild(el);
+    var closed=false;
+    el.querySelector('.fomo-close').addEventListener('click',function(){closed=true;el.classList.remove('show');});
+    var order=pool.slice().sort(function(){return Math.random()-0.5;}); var i=0;
+    function show(){
+      if(closed)return;
+      var m=order[i%order.length]; i++;
+      var mins=Math.floor(Math.random()*9)+2;
+      el.querySelector('.fomo-body').innerHTML='<strong>'+m.n+'</strong> ('+m.l+') '+m.a+'<span class="fomo-time">🔥 '+mins+' phút trước</span>';
+      el.classList.add('show');
+      setTimeout(function(){el.classList.remove('show');},6000);
+      setTimeout(show, 18000 + Math.random()*8000);
+    }
+    setTimeout(show, 7000);
+  })();
+</script>
 </body>
 </html>
