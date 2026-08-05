@@ -207,6 +207,7 @@ src="https://www.facebook.com/tr?id=2519402271814770&ev=PageView&noscript=1"
 
   let path = 'free';
   let coach = false;
+  let pathReady = false;   // false trong lúc khởi tạo → không đếm lần chọn mặc định vào Pixel
 
   function formatVnd(n){ return Number(n).toLocaleString('en-US').replace(/,/g,'.'); }
 
@@ -241,6 +242,16 @@ src="https://www.facebook.com/tr?id=2519402271814770&ev=PageView&noscript=1"
         '🔒 Thanh toán VietQR / chuyển khoản ngân hàng · Xác nhận tự động<br>Nhận quyền truy cập ngay sau khi thanh toán được xác nhận.';
     }
     updateTotal();
+
+    // Meta Pixel — khách chọn đường nào (miễn phí hay trả phí).
+    // Bỏ qua lần gọi khởi tạo lúc tải trang, chỉ đo khi khách thật sự bấm chọn.
+    if (pathReady && typeof vncTrack === 'function') {
+      vncTrack('SelectPath', {
+        path_type: p === 'paid' ? 'mua-7-ngay' : 'nhan-bonus',
+        value: p === 'paid' ? PRICE_FULL : 0,
+        currency: 'VND'
+      });
+    }
   }
 
   function toggleBump(){
@@ -248,6 +259,15 @@ src="https://www.facebook.com/tr?id=2519402271814770&ev=PageView&noscript=1"
     coach = !coach;
     document.getElementById('bumpCoach').classList.toggle('checked', coach);
     updateTotal();
+
+    // Meta Pixel — khách bật/tắt gói kèm riêng 1-1 (688k)
+    if (typeof vncTrack === 'function') {
+      vncTrack('ToggleOrderBump', {
+        enabled: coach,
+        value: coach ? PRICE_COACH : 0,
+        currency: 'VND'
+      });
+    }
   }
 
   function updateTotal(){
@@ -273,6 +293,16 @@ src="https://www.facebook.com/tr?id=2519402271814770&ev=PageView&noscript=1"
       pain: form.get('pain'),
       source: 'landing-du-kich-5.0'
     };
+
+    // Meta Pixel — khách bấm gửi form (đo cả những đơn lỗi giữa chừng)
+    if (typeof vncTrack === 'function') {
+      vncTrack('SubmitForm', {
+        path_type: path === 'paid' ? 'mua-7-ngay' : 'nhan-bonus',
+        coach: coach,
+        role: base.role,
+        pain: base.pain
+      });
+    }
 
     try {
       if (path === 'free') {
@@ -300,9 +330,28 @@ src="https://www.facebook.com/tr?id=2519402271814770&ev=PageView&noscript=1"
           orderId: json.orderId, ckContent: json.ckContent, totalAmount: json.totalAmount,
           name: base.name, email: base.email, phone: base.phone, coach: coach
         }));
+
+        // Meta Pixel — sự kiện chuẩn: đơn hàng đã tạo, khách chuẩn bị thanh toán
+        if (typeof fbq === 'function') {
+          fbq('track', 'InitiateCheckout', {
+            value: json.totalAmount || totalAmount,
+            currency: 'VND',
+            content_name: coach ? '7 Vu Khi AI + Kem rieng 1-1' : '7 Vu Khi AI',
+            content_category: '7-vu-khi-ai',
+            num_items: coach ? 2 : 1
+          });
+        }
+
         window.location.href = '/thanh-toan';
       }
     } catch (err) {
+      // Meta Pixel — đơn lỗi: biết ngay khi form hỏng thay vì mất khách âm thầm
+      if (typeof vncTrack === 'function') {
+        vncTrack('FormError', {
+          path_type: path === 'paid' ? 'mua-7-ngay' : 'nhan-bonus',
+          message: String(err.message || err).slice(0, 100)
+        });
+      }
       errEl.textContent = 'Lỗi: ' + err.message + '. Vui lòng thử lại hoặc nhắn Zalo 0938 139 789.';
       errEl.style.display = 'block';
       btn.disabled = false;
@@ -311,6 +360,9 @@ src="https://www.facebook.com/tr?id=2519402271814770&ev=PageView&noscript=1"
   });
 
   selectPath('free');
+  pathReady = true;   // từ đây trở đi, mọi lần đổi gói đều được Pixel ghi nhận
 </script>
+<!-- Meta Pixel — sự kiện hành vi toàn trang -->
+<script src="/pixel-events.js" defer></script>
 </body>
 </html>

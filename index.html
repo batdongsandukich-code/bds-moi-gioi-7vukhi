@@ -306,6 +306,21 @@
   .video-embed { position:relative; width:100%; aspect-ratio:16/9; background:var(--olive-dark); border:1px solid var(--gold-dark); border-radius:8px; overflow:hidden; margin:30px 0; }
   .video-embed iframe, .video-embed video { position:absolute; inset:0; width:100%; height:100%; border:0; display:block; object-fit:cover; }
 
+  /* ══ MEDIA: VIDEO VSL (9 đoạn rải theo trang — nội dung nạp từ vsl.js) ══ */
+  .vsl-block { max-width:760px; margin:34px auto; text-align:center; }
+  .vsl-tua { font-family:'Playfair Display',serif; font-size:clamp(17px,2.8vw,22px); font-weight:700; line-height:1.4; margin:0 0 14px; color:var(--olive-dark); }
+  .vsl-frame { position:relative; aspect-ratio:16/9; border-radius:12px; overflow:hidden; cursor:pointer; background:var(--olive-dark); border:2px solid rgba(200,169,110,.55); box-shadow:0 12px 32px rgba(0,0,0,.22); }
+  .vsl-frame:focus-visible { outline:3px solid var(--gold); outline-offset:3px; }
+  .vsl-thumb { width:100%; height:100%; object-fit:cover; display:block; }
+  .vsl-play { position:absolute; inset:0; display:flex; align-items:center; justify-content:center; background:rgba(20,24,12,.28); transition:background .25s; }
+  .vsl-frame:hover .vsl-play { background:rgba(20,24,12,.14); }
+  .vsl-tri { width:74px; height:74px; border-radius:50%; background:rgba(200,169,110,.96); display:flex; align-items:center; justify-content:center; color:#2C3020; font-size:28px; padding-left:5px; box-shadow:0 6px 20px rgba(0,0,0,.45); transition:transform .25s; }
+  .vsl-frame:hover .vsl-tri { transform:scale(1.08); }
+  .vsl-mo { font-size:14px; color:var(--text-muted); margin:12px 0 0; line-height:1.6; }
+  /* Khối nằm trên nền tối thì đổi màu chữ cho đọc được */
+  .vsl-slot.on-dark .vsl-tua { color:var(--gold-light); }
+  .vsl-slot.on-dark .vsl-mo { color:rgba(245,240,232,.75); }
+
   /* ══ MEDIA: SLOT PLACEHOLDER (vị trí chờ chèn ảnh/video) ══ */
   .media-slot { border:2px dashed var(--gold); background:rgba(74,82,64,.06); border-radius:8px; padding:44px 24px; text-align:center; margin:30px 0; }
   .media-slot.as-video { aspect-ratio:16/9; display:flex; flex-direction:column; align-items:center; justify-content:center; }
@@ -471,19 +486,15 @@ src="https://www.facebook.com/tr?id=2519402271814770&ev=PageView&noscript=1"
   <p>⚡ 15 phút mở khóa + 15 phút thực hành mỗi ngày &nbsp;·&nbsp; ⬡ Học bằng việc thật của bạn &nbsp;·&nbsp; ⊕ AI được nạp nghề sẵn, bạn chỉ ra lệnh</p>
 </div>
 
-
-<!-- ══ 1A. VIDEO DEMO TOOL (ngay dưới hero) ══ -->
-<section style="background:var(--olive-dark);padding:16px 20px 10px;">
-  <div class="container">
-    <p class="reveal" style="text-align:center;color:var(--gold-light);font-weight:600;font-size:clamp(15px,2.4vw,18px);margin:0 auto 16px;max-width:660px;line-height:1.6;">Dễ tới mức này: chỉ cần <strong style="color:#fff;">nhập 5 thông số</strong>, Tool tự chạy ra <strong style="color:#fff;">khoảng giá định giá an toàn</strong> trong 30 giây. Xem thử ngay:</p>
-    <div class="reveal" onclick="playVideo(this,'5BXxa4RZbms')" style="position:relative;aspect-ratio:16/9;max-width:760px;margin:0 auto;border-radius:12px;overflow:hidden;box-shadow:0 12px 32px rgba(0,0,0,.35);border:2px solid rgba(200,169,110,.5);cursor:pointer;">
-      <img src="https://img.youtube.com/vi/5BXxa4RZbms/hqdefault.jpg" alt="Video hướng dẫn dùng Tool Định Giá Du Kích — nhập 5 thông số, ra khoảng giá trong 30 giây" style="width:100%;height:100%;object-fit:cover;display:block;" loading="lazy">
-      <span style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;background:rgba(20,24,12,.28);">
-        <span style="width:74px;height:74px;border-radius:50%;background:rgba(200,169,110,.96);display:flex;align-items:center;justify-content:center;box-shadow:0 6px 20px rgba(0,0,0,.45);"><span style="color:#2C3020;font-size:28px;margin-left:5px;line-height:1;">▶</span></span>
-      </span>
-    </div>
-  </div>
+<!-- ══ VSL 1 · HOOK — chặn người lạ đang định thoát trang ══ -->
+<section style="background:var(--olive-dark);padding:34px 20px 10px;" data-vsl-wrap>
+  <div class="container"><div class="vsl-slot on-dark" data-vsl="1"></div></div>
 </section>
+
+
+<!-- ══ 1A. Video demo Tool Định Giá đã được dời xuống mục "Bộ 03 Siêu Vũ Khí"
+     (thẻ Khóa mini 3 · Định Giá Nhanh) — chỗ trang đang nói đúng về nó.
+     Đầu trang giữ đúng MỘT video: VSL 1 · Hook, làm nhiệm vụ giữ chân. ══ -->
 
 
 <!-- ══ 1B. USP — "AI CHƯA NẠP NGHỀ" (đưa lên ngay dưới hero) ══
@@ -507,6 +518,9 @@ src="https://www.facebook.com/tr?id=2519402271814770&ev=PageView&noscript=1"
       </div>
     </div>
     <p class="reveal" style="text-align:center;color:rgba(245,240,232,.72);font-size:14.5px;margin-top:20px;">Đây chính là <strong style="color:var(--gold-light);">"Bộ Não Nghề"</strong> đã nạp sẵn — lý do ai cũng làm được, kể cả người không rành công nghệ.</p>
+
+    <!-- ══ VSL 2 · AUTHORITY INTRO — xây niềm tin vào người hướng dẫn ══ -->
+    <div class="vsl-slot on-dark" data-vsl="2"></div>
   </div>
 </section>
 
@@ -533,6 +547,9 @@ src="https://www.facebook.com/tr?id=2519402271814770&ev=PageView&noscript=1"
     <div class="pain-verdict reveal">
       <p>Nếu bạn tick từ <strong>3 dấu ✔ trở lên</strong> — vấn đề không phải bạn thiếu cố gắng. Bạn đang làm việc của 4 người cùng lúc: người viết, người thiết kế, người chăm khách, và người bán hàng. <strong>Bạn đang thiếu một bộ vũ khí.</strong></p>
     </div>
+
+    <!-- ══ VSL 3 · GỌI TÊN VẤN ĐỀ — ngay sau khi khách tự tick vào nỗi đau ══ -->
+    <div class="vsl-slot" data-vsl="3"></div>
   </div>
 </section>
 
@@ -558,7 +575,8 @@ src="https://www.facebook.com/tr?id=2519402271814770&ev=PageView&noscript=1"
 
     <p class="reveal">Vậy nên câu hỏi đúng không phải <em>"làm sao cố gắng nhiều hơn?"</em> mà là: <strong>làm sao được trang bị đầy đủ, khi bạn chưa đủ ngân sách thuê cả một đội?</strong></p>
 
-    <!-- (Có thể chèn video Tiến giải thích lý do cốt lõi ở đây sau khi quay xong) -->
+    <!-- ══ VSL 4 · BA VÒNG LẶP BẾ TẮC — đúng chỗ trang đang nói "lý do cốt lõi" ══ -->
+    <div class="vsl-slot" data-vsl="4"></div>
   </div>
 </section>
 
@@ -583,6 +601,9 @@ src="https://www.facebook.com/tr?id=2519402271814770&ev=PageView&noscript=1"
         <p>Nay tôi đóng gói toàn bộ thành bộ vũ khí này — cùng một người bạn AI có bộ não suy luận cực nhanh và trí nhớ siêu hạng. Tôi tin bạn cần bộ công cụ này để trở thành phiên bản "Super" của chính mình. Sớm hay muộn, cơn bão AI cũng sẽ tràn qua khu vực của bạn — <strong>biết sớm, bạn giành được lợi thế trước.</strong></p>
       </div>
     </div>
+
+    <!-- ══ VSL 5 · NGUYÊN NHÂN GỐC — đoạn nặng ký nhất, đặt sau khi khách đã biết Tiến là ai ══ -->
+    <div class="vsl-slot" data-vsl="5"></div>
   </div>
 </section>
 
@@ -608,6 +629,9 @@ src="https://www.facebook.com/tr?id=2519402271814770&ev=PageView&noscript=1"
       <h3>Bạn sẽ tự tay dựng <em>bộ vũ khí AI</em> — cấu hình theo đúng cách bạn bán hàng, trên đúng tài sản bạn đang bán</h3>
       <p>Cùng một trang bị, mười môi giới dùng ra mười kết quả khác nhau. Khác biệt nằm ở chỗ bộ vũ khí đó có được cấu hình theo đúng thị trường bạn làm, đúng loại tài sản bạn bán, đúng cách bạn nói chuyện với khách — hay không.</p>
     </div>
+
+    <!-- ══ VSL 6 · ĐẬP CÁCH CŨ — đúng chỗ trang đang bác bỏ "vài prompt lẻ trên mạng" ══ -->
+    <div class="vsl-slot on-dark" data-vsl="6"></div>
   </div>
 </section>
 
@@ -813,7 +837,7 @@ src="https://www.facebook.com/tr?id=2519402271814770&ev=PageView&noscript=1"
 
 
 <!-- ══ 7. BOOTCAMP 3 NGÀY MIỄN PHÍ ══ -->
-<section class="bootcamp" id="bootcamp">
+<section class="bootcamp" id="bootcamp" data-vnc-view="Bo3SieuVuKhi">
   <div class="container">
     <span class="section-label reveal">Nhận miễn phí ngay</span>
     <h2 class="reveal">Bộ 03 Siêu Vũ Khí — anh em môi giới nào cũng cần</h2>
@@ -833,7 +857,7 @@ src="https://www.facebook.com/tr?id=2519402271814770&ev=PageView&noscript=1"
         <span style="font-size:11px;font-weight:800;color:var(--gold-dark);background:rgba(200,169,110,.16);border:1px solid rgba(200,169,110,.45);padding:3px 10px;border-radius:99px;">Công cụ độc quyền</span>
       </div>
       <h4>AI Viết Content Bán Hàng Hàng Loạt</h4>
-      <div onclick="playVideo(this,'KDrYWGhVh_o')" style="position:relative;aspect-ratio:16/9;margin:14px 0;border-radius:8px;overflow:hidden;box-shadow:0 6px 20px rgba(0,0,0,.1);cursor:pointer;">
+      <div onclick="playVideo(this,'KDrYWGhVh_o','Demo Content Hang Loat')" style="position:relative;aspect-ratio:16/9;margin:14px 0;border-radius:8px;overflow:hidden;box-shadow:0 6px 20px rgba(0,0,0,.1);cursor:pointer;">
         <img src="https://img.youtube.com/vi/KDrYWGhVh_o/hqdefault.jpg" alt="Kết quả viết content bán hàng hàng loạt bằng AI" style="width:100%;height:100%;object-fit:cover;display:block;" loading="lazy">
         <span style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;background:rgba(20,24,12,.25);">
           <span style="width:64px;height:64px;border-radius:50%;background:rgba(200,169,110,.96);display:flex;align-items:center;justify-content:center;box-shadow:0 6px 18px rgba(0,0,0,.4);"><span style="color:#2C3020;font-size:24px;margin-left:4px;line-height:1;">▶</span></span>
@@ -869,8 +893,13 @@ src="https://www.facebook.com/tr?id=2519402271814770&ev=PageView&noscript=1"
         <span style="font-size:11px;font-weight:800;color:var(--gold-dark);background:rgba(200,169,110,.16);border:1px solid rgba(200,169,110,.45);padding:3px 10px;border-radius:99px;">Dùng chính Tool Định Giá Du Kích</span>
       </div>
       <h4>Định Giá Nhanh Theo Phong Cách Du Kích</h4>
-      <img src="images/proof/bonus-dinh-gia-tool.png" alt="Giao diện thật Tool Định Giá Du Kích — nhập 5 thông số, ra khoảng giá an toàn trong 30 giây" style="width:100%;border-radius:8px;margin:14px 0 6px;display:block;box-shadow:0 6px 20px rgba(0,0,0,.12);" loading="lazy">
-      <p style="text-align:center;margin:0 0 12px;"><a href="https://youtu.be/5BXxa4RZbms" target="_blank" rel="noopener" style="color:var(--gold-dark);font-weight:700;font-size:14px;text-decoration:none;border-bottom:1px solid var(--gold);">▶ Xem Tool chạy thật trong video hướng dẫn</a></p>
+      <div onclick="playVideo(this,'5BXxa4RZbms','Demo Tool Dinh Gia')" style="position:relative;aspect-ratio:16/9;margin:14px 0;border-radius:8px;overflow:hidden;box-shadow:0 6px 20px rgba(0,0,0,.1);cursor:pointer;">
+        <img src="https://img.youtube.com/vi/5BXxa4RZbms/hqdefault.jpg" alt="Video hướng dẫn dùng Tool Định Giá Du Kích — nhập 5 thông số, ra khoảng giá trong 30 giây" style="width:100%;height:100%;object-fit:cover;display:block;" loading="lazy">
+        <span style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;background:rgba(20,24,12,.25);">
+          <span style="width:64px;height:64px;border-radius:50%;background:rgba(200,169,110,.96);display:flex;align-items:center;justify-content:center;box-shadow:0 6px 18px rgba(0,0,0,.4);"><span style="color:#2C3020;font-size:24px;margin-left:4px;line-height:1;">▶</span></span>
+        </span>
+      </div>
+      <p style="text-align:center;margin:0 0 12px;font-size:13.5px;color:var(--text-muted);">Xem Tool chạy thật — nhập 5 thông số, ra khoảng giá trong 30 giây</p>
       <ul class="day-out">
         <li>Nhập 5 thông số → ra khoảng giá an toàn của một BĐS trong 30 giây</li>
         <li>So sánh với các BĐS tương đồng, biết ngay giá đang bị "thổi" bao nhiêu</li>
@@ -1022,15 +1051,13 @@ src="https://www.facebook.com/tr?id=2519402271814770&ev=PageView&noscript=1"
 </section>
 
 
-<!-- ══ 8B. (Dành chỗ cho video tổng kết hành trình — chèn khi quay xong)
-     Khi có video, mở lại section bên dưới và thay ID_VIDEO:
-     <section style="background:var(--cream-dark);"><div class="container">
-       <span class="section-label reveal">Xem toàn cảnh</span>
-       <h2 class="reveal">Nghe Tiến kể trọn hành trình trong vài phút</h2>
-       <div class="divider reveal"></div>
-       <div class="video-embed"><iframe src="https://www.youtube.com/embed/ID_VIDEO?rel=0&modestbranding=1" title="Toàn cảnh Hành Trình 7 Ngày" allowfullscreen loading="lazy"></iframe></div>
-     </div></section>
--->
+<!-- ══ 8B. VSL 7 · CÂU CHUYỆN KHỞI NGUỒN + GIẢI PHÁP ══
+     Ai đọc được tới đây là đang cân nhắc nghiêm túc — đây là chỗ gắn kết con người. -->
+<section style="background:var(--cream-dark);" data-vsl-wrap>
+  <div class="container">
+    <div class="vsl-slot" data-vsl="7"></div>
+  </div>
+</section>
 
 
 <!-- ══ 8C. XEM THỬ KẾT QUẢ — Before/After (ngay sau Lộ trình) ══ -->
@@ -1186,7 +1213,12 @@ src="https://www.facebook.com/tr?id=2519402271814770&ev=PageView&noscript=1"
 
 
 <!-- ══ 11. GIÁ ══ -->
-<section class="pricing">
+<!-- ══ VSL 8 · BẰNG CHỨNG + CHÀO GIÁ NEO — ngay trước bảng giá, đúng giây quyết định ══ -->
+<section style="background:var(--white);padding:30px 20px 0;" data-vsl-wrap>
+  <div class="container"><div class="vsl-slot" data-vsl="8"></div></div>
+</section>
+
+<section class="pricing" data-vnc-view="BangGia" data-vnc-view-content>
   <div class="container">
     <span class="section-label reveal">Đầu tư của bạn</span>
     <h2 class="reveal">Hai đường vào — bạn chọn đường nào cũng được</h2>
@@ -1244,7 +1276,7 @@ src="https://www.facebook.com/tr?id=2519402271814770&ev=PageView&noscript=1"
 
 
 <!-- ══ 12. FAQ ══ -->
-<section class="faq-section">
+<section class="faq-section" data-vnc-view="FAQ">
   <div class="container">
     <span class="section-label reveal" style="text-align:center; display:block;">Câu hỏi thường gặp</span>
     <h2 class="reveal">Có thể bạn đang thắc mắc</h2>
@@ -1304,11 +1336,14 @@ src="https://www.facebook.com/tr?id=2519402271814770&ev=PageView&noscript=1"
 
 
 <!-- ══ 13. FINAL CTA ══ -->
-<section class="final-cta">
+<section class="final-cta" data-vnc-view="CTA-Cuoi">
   <div class="container">
     <span class="section-label reveal" style="color:var(--gold);">Quyết định của bạn</span>
     <h2 class="reveal">Lựa chọn đứng trên vai người khổng lồ AI để tiến lên phía trước — hay để áp lực cạnh tranh khốc liệt của nghề đào thải bạn phía sau?</h2>
     <p class="lead reveal">3 ngày bonus, miễn phí, bắt đầu ngay hôm nay. Học xong là có ngay công cụ dùng được vào việc bán hàng — hoặc bạn vẫn đứng đúng chỗ cũ.</p>
+
+    <!-- ══ VSL 9 · KÊU GỌI HÀNH ĐỘNG — lời cuối trước khi khách rời trang ══ -->
+    <div class="vsl-slot on-dark" data-vsl="9"></div>
 
     <div class="final-quote-box reveal">
       <p class="final-quote-text">"Đối thủ của bạn không giỏi hơn. Họ chỉ được trang bị tốt hơn. Và việc trang bị — bạn có thể bắt đầu ngay trong 30 phút tới."</p>
@@ -1379,8 +1414,16 @@ src="https://www.facebook.com/tr?id=2519402271814770&ev=PageView&noscript=1"
 <a href="/dang-ky" class="m-sticky-cta">🎁 Nhận 3 Ngày Bonus Miễn Phí →</a>
 <script>
   // Bấm để phát video (facade — tránh lỗi nhúng khi tải trang)
-  function playVideo(el,id){
+  // Tham số thứ 3 (tên) là tuỳ chọn — dùng để phân biệt từng video trong Events Manager.
+  function playVideo(el,id,ten){
+    if (el.querySelector('iframe')) return;   // đang chạy rồi, bấm nữa không làm gì
+    // Tắt mọi video khác trước — mỗi lúc chỉ một clip được nói, tránh chồng tiếng
+    if (typeof vncTatVideoKhac === 'function') { vncTatVideoKhac(el); }
     el.innerHTML='<iframe src="https://www.youtube.com/embed/'+id+'?autoplay=1&rel=0&modestbranding=1&playsinline=1" style="position:absolute;inset:0;width:100%;height:100%;border:0;" allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen></iframe>';
+    // Meta Pixel — đo lượt bấm xem từng video (biết VSL nào giữ chân, VSL nào bị bỏ)
+    if (typeof vncTrack === 'function') {
+      vncTrack('VideoPlay', { video_id: id, video_name: ten || id });
+    }
   }
   // Social proof động (thông báo đăng ký gần đây)
   (function fomo(){
@@ -1411,5 +1454,24 @@ src="https://www.facebook.com/tr?id=2519402271814770&ev=PageView&noscript=1"
     setTimeout(show, 14000);
   })();
 </script>
+<script>
+  /* Meta Pixel - Theo dõi click nút CTA trên salepage (Đăng ký / Mua 7 ngày) */
+  (function(){
+    document.addEventListener('click', function(e){
+      var a = e.target && e.target.closest ? e.target.closest('a[href*="/dang-ky"]') : null;
+      if (!a || typeof fbq !== 'function') return;
+      var label = (a.textContent || '').replace(/\s+/g,' ').trim().slice(0,100);
+      var isPaid = /499|7\s*ng[aà]y/i.test(label);
+      fbq('trackCustom', 'ClickCTA', {
+        cta_text: label,
+        cta_type: isPaid ? 'mua-7-ngay' : 'nhan-bonus',
+        page: 'salepage'
+      });
+    }, true);
+  })();
+</script>
+<!-- Meta Pixel — sự kiện hành vi toàn trang -->
+<script src="/vsl.js" defer></script>
+<script src="/pixel-events.js" defer></script>
 </body>
 </html>
